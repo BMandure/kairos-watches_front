@@ -46,7 +46,7 @@ function Product3() {
             with its remarkable timepieces capturing the essence of enduring
             elegance. From their commitment to innovation in watchmaking to
             their dedication to precision and functionality, Victorinox Swiss
-            Army watches inspire with their unwavering pursuit of excellence.
+            Army watches inspire with their unwavering pursuit of excellence!
           </p>
 
           <div>
