@@ -1,5 +1,4 @@
 import React from "react";
-import "./Product3.css";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "./Product3.css";
 
@@ -9,8 +8,8 @@ import video1 from "../assets/INOX.mp4";
 function Product3() {
   return (
     <Container id="about-intro-container-product3">
-      <Row className="about-row">
-        <Col xs={5} className="about-col-product3">
+      <Row className="product3-row">
+        <Col xs={5} className="about-col-product3 my-auto">
           <Carousel fade controls={false} indicators={false}>
             <Carousel.Item className="carousel-item-product3 my-auto">
               <video
@@ -34,7 +33,7 @@ function Product3() {
             </Carousel.Item>
           </Carousel>
         </Col>
-        <Col xs={7} className="about-col-product3 d-flex flex-column">
+        <Col xs={7} className="about-col-product3 d-flex flex-column p-4">
           <h2 className="about-intro-title-product3">
             Victorinox{" "}
             <img

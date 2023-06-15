@@ -14,14 +14,13 @@
   height: auto;
   object-fit: cover;
   margin-left: 2rem;
-  clip-path: polygon(0 10%, 100% 10%, 100% 95%, 0% 95%);
+  clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0% 90%);
 }
 
 .about-col-product3 {
   padding: 0;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-main);
   color: whitesmoke;
 }
 
@@ -60,4 +59,11 @@
   flex-direction: column;
   gap: 20px;
   font-family: Quicksand;
+}
+
+.product3-row {
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  background-color: var(--color-main);
 }
