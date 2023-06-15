@@ -19,24 +19,16 @@
 
 .about-col-product3 {
   padding: 0;
-
   justify-content: center;
   align-items: center;
   background-color: var(--color-main);
   color: whitesmoke;
-  margin-top: 0px;
 }
 
 .about-row-product3 {
   max-width: 100%;
   min-height: 100%;
   margin: auto;
-}
-
-.div-video-product3 {
-  display: flex;
-  margin-bottom: 0px;
-  margin-top: 25px;
 }
 
 .about-intro-text-product3 {
