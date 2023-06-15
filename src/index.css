@@ -15,7 +15,7 @@
 
   --color-main: #021d35;
   --color-white: #fdedbd;
-  --color-black: #404040;
+  --color-black: #1d1c1ce6;
 }
 @font-face {
   font-family: Pinyon;
@@ -38,7 +38,7 @@ body {
   min-height: 100vh;
 }
 button {
-  font-size: 18px;
+  font-size: 15px;
   color: var(--color-white);
   font-family: Quicksand;
   font-weight: 400;

@@ -12,7 +12,7 @@
 }
 
 #footer {
-  background-color: var(--color-main);
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 .footer-text {
@@ -27,7 +27,7 @@
   pointer-events: none;
   letter-spacing: 3px;
   font-family: Cormorant;
-  font-size: 35px;
+  font-size: 25px;
   border-bottom: 2px solid var(--color-white);
   margin: 0 70px 16px 70px;
   width: 100%;
@@ -58,7 +58,7 @@
   font-size: 15px;
 }
 .footer-ubication {
-  width: 400px;
+  width: 300px;
 }
 
 .footer-fat,

@@ -12,7 +12,7 @@ function AboutIntroduction() {
   return (
     <Container className="about-intro-container">
       <Row className="about-row">
-        <Col xs={7} className="about-col d-flex flex-column">
+        <Col xs={7} className="about-col p-5 d-flex flex-column">
           <h2 className="about-intro-title">About The Proyect</h2>
           <p className="about-intro-text">
             (Nombre de e-commerce) es un e-commerce de relojes de alta gama,
