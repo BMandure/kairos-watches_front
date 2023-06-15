@@ -1,8 +1,6 @@
 import React from "react";
-import "./Product3.css";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "./Product3.css";
-
 import video2 from "../assets/maverick.mp4";
 import video1 from "../assets/INOX.mp4";
 
