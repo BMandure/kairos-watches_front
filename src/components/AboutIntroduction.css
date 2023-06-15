@@ -5,12 +5,11 @@
 }
 
 .about-intro-img {
-  height: 100%;
-  width: auto;
+  min-height: 100%;
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
-  padding: 0;
+  padding: 1rem;
 }
 .about-col {
   padding: 0;
@@ -54,4 +53,7 @@
   flex-direction: column;
   gap: 20px;
   font-family: Quicksand;
+}
+.about-carousel {
+  min-height: 100%;
 }

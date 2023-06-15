@@ -42,7 +42,12 @@ function AboutIntroduction() {
           </div>
         </Col>
         <Col xs={5} className="about-col">
-          <Carousel fade controls={false} indicators={false}>
+          <Carousel
+            className="about-carousel"
+            fade
+            controls={false}
+            indicators={false}
+          >
             <Carousel.Item>
               <img
                 className="about-intro-img"
