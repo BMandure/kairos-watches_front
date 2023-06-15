@@ -6,13 +6,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
 
-import Navbar from "./components/Navbar";
+import NavbarSite from "./components/NavbarSite";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <NavbarSite />
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />

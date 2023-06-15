@@ -41,7 +41,7 @@ function AboutIntroduction() {
             <button>View MER</button>
           </div>
         </Col>
-        <Col xs={5} className="about-col p-5">
+        <Col xs={5} className="about-col">
           <Carousel fade controls={false} indicators={false}>
             <Carousel.Item>
               <img
