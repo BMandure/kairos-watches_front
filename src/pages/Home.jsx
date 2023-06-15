@@ -1,7 +1,12 @@
 import React from "react";
+import Product2 from "../components/Product2";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Product2 />
+    </div>
+  );
 }
 
 export default Home;
