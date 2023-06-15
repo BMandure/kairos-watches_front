@@ -11,9 +11,9 @@ function Footer() {
   return (
     <footer id="footer">
       <Row className="footer-fat">
-        <Col className="d-flex flex-column align-items-center">
+        <Col className="d-flex flex-column align-items-center ">
           <p className="footer-subtitle">Contact Us</p>
-          <div className="footer-row-contact footer-gap">
+          <div className="footer-row-contact footer-gap py-3">
             <img className="footer-icon" src={fb} alt="facebook link" />
             <img className="footer-icon" src={insta} alt="instagram link" />
             <img className="footer-icon" src={twitter} alt="twitter link" />
@@ -43,7 +43,7 @@ function Footer() {
         </Col>
         <Col className="d-flex flex-column align-items-center">
           <p className="footer-subtitle">More</p>
-          <div className="footer-col text-align-center">
+          <div className="footer-col text-align-center  py-4">
             <Tooltip placement="left" title="Out of the scope of the proyect">
               <button className="footer-out-scope">Press Room</button>
             </Tooltip>
