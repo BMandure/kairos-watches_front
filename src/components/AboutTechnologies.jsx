@@ -22,7 +22,7 @@ function AboutTechnologies() {
             alt="about the project - introduction"
           />
         </Col>
-        <Col xs={7} className="about-col d-flex flex-column">
+        <Col xs={7} className="about-col d-flex flex-column  p-5">
           <h2 className="about-intro-title">Used Technologies</h2>
           <div className="tech-container">
             <div className="technology-card">

@@ -11,15 +11,17 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app-container">
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/shop" element={<Shop />} />
-      </Routes>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
