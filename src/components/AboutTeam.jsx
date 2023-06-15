@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import TeamCard from "./TeamCard";
 
@@ -12,17 +12,15 @@ import img5 from "../assets/about5.jpg";
 
 function AboutTeam() {
   return (
-    <Container className="about-team-container">
-      <div className="about-team-col d-flex flex-column">
-        <h2 className="about-intro-title">The Team</h2>
-        <div className="team-col">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-        </div>
-      </div>
+    <Container className="about-team-container p-5">
+      <h2 className="about-team-title">The Team</h2>
+      <Row>
+        <TeamCard img="..." />
+        <TeamCard />
+        <TeamCard />
+        <TeamCard />
+        <TeamCard />
+      </Row>
     </Container>
   );
 }

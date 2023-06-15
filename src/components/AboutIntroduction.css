@@ -3,6 +3,14 @@
   min-width: 60vw;
   padding: 50px;
 }
+.about-intro-banner {
+  min-height: 80%;
+  min-width: 100vw;
+  padding: 50px 0 0 0;
+}
+.about-intro-item {
+  max-height: 100%;
+}
 
 .about-intro-img {
   min-height: 100%;
@@ -11,6 +19,7 @@
   object-fit: cover;
   padding: 1rem;
 }
+
 .about-col {
   padding: 0;
   display: flex;
@@ -39,8 +48,8 @@
 }
 
 .tech-img {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   margin: auto;
 }
 .tech-container {
@@ -55,5 +64,5 @@
   font-family: Quicksand;
 }
 .about-carousel {
-  min-height: 100%;
+  min-height: inherit;
 }

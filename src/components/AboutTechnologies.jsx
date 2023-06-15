@@ -15,15 +15,8 @@ function AboutTechnologies() {
   return (
     <Container className="about-intro-container">
       <Row className="about-row">
-        <Col xs={5} className="about-col">
-          <img
-            className="about-intro-img"
-            src={tech}
-            alt="about the project - introduction"
-          />
-        </Col>
-        <Col xs={7} className="about-col d-flex flex-column  p-5">
-          <h2 className="about-intro-title">Used Technologies</h2>
+        <Col xs={12} className="about-col d-flex flex-column  p-5">
+          <h2 className="about-intro-title">Technologies</h2>
           <div className="tech-container">
             <div className="technology-card">
               <img
