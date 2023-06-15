@@ -14,26 +14,29 @@
   height: auto;
   object-fit: cover;
   margin-left: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -16px;
-  margin-bottom: -16px;
+  clip-path: polygon(0 10%, 100% 10%, 100% 95%, 0% 95%);
 }
 
 .about-col-product3 {
   padding: 0;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   background-color: var(--color-main);
   color: whitesmoke;
+  margin-top: 0px;
 }
 
 .about-row-product3 {
   max-width: 100%;
-  min-height: 90%;
+  min-height: 100%;
   margin: auto;
+}
+
+.div-video-product3 {
+  display: flex;
+  margin-bottom: 0px;
+  margin-top: 25px;
 }
 
 .about-intro-text-product3 {
@@ -66,13 +69,3 @@
   gap: 20px;
   font-family: Quicksand;
 }
-
-/*
-#carousel-2 {
-  margin: 20px;
-  padding-top: 7rem;
-  
-}
-#carousel-1 {
-  margin: 20px;
-}*/
