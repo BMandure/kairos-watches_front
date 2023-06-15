@@ -8,6 +8,7 @@
 }
 body {
   overflow-x: hidden;
+  background-color: var(--color-beige);
 }
 
 .logo {
@@ -48,5 +49,4 @@ body {
 .app-container {
   margin: 5.4rem 0 5.4rem 0;
   min-width: 100vw;
-  background-color: whitesmoke;
 }
