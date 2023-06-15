@@ -19,14 +19,14 @@
   pointer-events: none;
   font-family: Quicksand;
   letter-spacing: 2px;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 18px;
   margin: 0;
 }
 .footer-subtitle {
   pointer-events: none;
   letter-spacing: 3px;
-  font-family: Pinyon;
+  font-family: Cormorant;
   font-size: 35px;
   border-bottom: 2px solid var(--color-white);
   margin: 0 70px 16px 70px;
@@ -58,7 +58,7 @@
   font-size: 15px;
 }
 .footer-ubication {
-  width: 500px;
+  width: 400px;
 }
 
 .footer-fat,

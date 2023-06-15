@@ -1,0 +1,43 @@
+.navbar-project {
+  background-color: var(--color-black);
+}
+
+.offcanvas-project {
+  background-color: var(--color-black);
+  overflow-y: hidden;
+}
+
+/* .offcanvas-project::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+} */
+
+.text-navbar-links {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+#toggler-icon-project {
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.text-nabvar-brand {
+  font-family: Pinyon;
+  color: var(--color-white);
+  font-size: 2.5rem;
+}
+
+.navbar-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.img-logo-kairos {
+  width: 150px;
+  object-fit: cover;
+}

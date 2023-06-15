@@ -47,4 +47,5 @@ body {
 }
 .app-container {
   min-width: 100vw;
+  background-color: whitesmoke;
 }
