@@ -13,24 +13,28 @@ function Product3() {
         <Col xs={5} className="about-col-product3">
           <Carousel fade controls={false} indicators={false}>
             <Carousel.Item className="carousel-item-product3">
-              <video
-                autoPlay
-                loop
-                muted
-                className="carousel-video-element-product3"
-              >
-                <source src={video2} type="video/mp4" />
-              </video>
+              <div className="div-video-product3">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className="carousel-video-element-product3"
+                >
+                  <source src={video2} type="video/mp4" />
+                </video>
+              </div>
             </Carousel.Item>
             <Carousel.Item className="carousel-item-product3">
-              <video
-                autoPlay
-                loop
-                muted
-                className="carousel-video-element-product3"
-              >
-                <source src={video1} type="video/mp4" />
-              </video>
+              <div className="div-video-product3">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className="carousel-video-element-product3"
+                >
+                  <source src={video1} type="video/mp4" />
+                </video>
+              </div>
             </Carousel.Item>
           </Carousel>
         </Col>
