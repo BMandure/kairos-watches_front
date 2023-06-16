@@ -27,6 +27,7 @@
   pointer-events: none;
   letter-spacing: 3px;
   font-family: Cormorant;
+  text-align: center;
   font-size: 25px;
   border-bottom: 2px solid var(--color-white);
   margin: 0 70px 16px 70px;
