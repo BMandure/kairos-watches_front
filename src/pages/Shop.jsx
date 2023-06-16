@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import "./Shop.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -21,9 +21,9 @@ function Shop() {
     <>
       <Container>
         <Row>
-          {products.map((product, i) => (
-            <Col xs={3}>
-              <ProductCard key={i} product={product} />
+          {products.map((product) => (
+            <Col xs={3} key={product.id}>
+              <ProductCard product={product} />
             </Col>
           ))}
         </Row>
