@@ -26,7 +26,6 @@ function Product3({ name, logo, description, videos }) {
         </Col>
         <Col xs={7} className="about-col-product3 d-flex flex-column py-3">
           <h2 className="about-intro-title-product3">
-            {name}
             <img src={logo} alt={`${name} logo`} id="product3-logo" />
           </h2>
           <p className="about-intro-text-product3">{description}</p>
