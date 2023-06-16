@@ -6,11 +6,7 @@ function Product1() {
     <div className="product1-container">
       <div className="product1-background">
         <div className="product1-title-container">
-          <img
-            src="../src/assets/KAIROS.png"
-            alt="logo marca"
-            className="product1-logo"
-          />
+          <h1 className="banner-title">Kairos</h1>
           <Link to="/shop" className="product1-button">
             View all watches
           </Link>

@@ -3,7 +3,7 @@
 }
 body {
   overflow-x: hidden;
-  background-color: var(--color-beige);
+  background-color: var(--color-black);
 }
 .app-container {
   margin: 5.4rem 0 5.4rem 0;
