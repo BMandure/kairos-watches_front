@@ -18,8 +18,8 @@ function Product2({ name, logo, description, imgs }) {
         </Col>
         <Col xs={5} className="about-col-product2">
           <Carousel fade controls={false} indicators={false}>
-            {imgs.map((item) => (
-              <Carousel.Item>
+            {imgs.map((item, i) => (
+              <Carousel.Item key={i}>
                 <img
                   className="about-intro-img-product2"
                   src={item}

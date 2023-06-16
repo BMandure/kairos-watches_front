@@ -8,8 +8,8 @@ function Product3({ name, logo, description, videos }) {
       <Row className="product3-row">
         <Col xs={5} className="about-col-product3 my-auto">
           <Carousel fade controls={false} indicators={false}>
-            {videos.map((video) => (
-              <Carousel.Item className="carousel-item-product3 my-auto">
+            {videos.map((video, i) => (
+              <Carousel.Item className="carousel-item-product3 my-auto" key={i}>
                 <video
                   autoPlay
                   loop

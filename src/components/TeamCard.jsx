@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 function TeamCard({ img, name, title }) {
   return (
-    <div class="cardContainer">
-      <div class="profileDiv">
+    <div className="cardContainer">
+      <div className="profileDiv">
         <img className="team-img" src={img} alt="..." />
       </div>
-      <div class="infoDiv">
-        <div class="nameDiv">
-          <p class="name">{name}</p>
-          <p class="role">{title}</p>
+      <div className="infoDiv">
+        <div className="nameDiv">
+          <p className="name">{name}</p>
+          <p className="role">{title}</p>
         </div>
-        <div class="socialDiv">
+        <div className="socialDiv">
           <Link href="#github">
             <img src={github} alt={`${name}'s github`} />
           </Link>

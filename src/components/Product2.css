@@ -45,6 +45,10 @@
   font-family: Pinyon;
   color: var(--color-white);
   font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .tech-img-product2 {

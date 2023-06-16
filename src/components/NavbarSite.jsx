@@ -49,8 +49,10 @@ function NavbarSite() {
             Victorinox Swiss Army
           </Link>
 
-          <Navbar.Brand to="/" className=" mx-4 text-nabvar-brand">
-            Kairos
+          <Navbar.Brand className="mx-4">
+            <Link to="/" className="text-nabvar-brand">
+              Kairos
+            </Link>
           </Navbar.Brand>
           <Link
             className="mx-3 text-navbar-links  d-none d-lg-inline-block"
@@ -94,33 +96,33 @@ function NavbarSite() {
               </Link>
 
               <ul className="mt-1 ">
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Submariner
                   </Link>
                 </li>
 
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Daytona
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Oyster
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     GMT-Master II
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Day-Date
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Pearlmaster
                   </Link>
@@ -131,28 +133,28 @@ function NavbarSite() {
                 Victorinox Swiss Army
               </Link>
               <ul className="mt-1 ">
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Officer's
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Maverick Large
                   </Link>
                 </li>
 
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     INOX
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Alliance
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Alliance XS
                   </Link>
@@ -162,12 +164,12 @@ function NavbarSite() {
                 Omega
               </Link>
               <ul className="mt-1 ">
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Speedmaster
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Constellation
                   </Link>
@@ -177,17 +179,17 @@ function NavbarSite() {
                 Patek Philippe
               </Link>
               <ul className="mt-1 d-block ">
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Calatrava
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary ">
+                <li className="list-group-item bg-transparent text-primary ">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Nautilus
                   </Link>
                 </li>
-                <li class="list-group-item bg-transparent text-primary">
+                <li className="list-group-item bg-transparent text-primary">
                   <Link className="mx-2 text-navbar-links " to="#action1">
                     Aquanaut
                   </Link>
