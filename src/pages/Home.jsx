@@ -73,6 +73,11 @@ function Home() {
         description={descPatek}
         logo={patekLogo}
         videos={patekVideos}
+        style={`
+    .patek-product .patek-name {
+      font-size: 110%;
+    }
+  `}
       />
     </div>
   );

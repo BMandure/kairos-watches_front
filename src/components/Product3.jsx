@@ -10,26 +10,24 @@ function Product3({ name, logo, description, videos }) {
           <Carousel fade controls={false} indicators={false}>
             {videos.map((video, i) => (
               <Carousel.Item className="carousel-item-product3 my-auto" key={i}>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  className="carousel-video-element-product3"
-                >
-                  <source src={video} type="video/mp4" />
-                </video>
+                <div className="video-container-product3">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    className="carousel-video-element-product3"
+                  >
+                    <source src={video} type="video/mp4" />
+                  </video>
+                </div>
               </Carousel.Item>
             ))}
           </Carousel>
         </Col>
-        <Col xs={7} className="about-col-product3 d-flex flex-column p-4">
+        <Col xs={7} className="about-col-product3 d-flex flex-column py-3">
           <h2 className="about-intro-title-product3">
             {name}
-            <img
-              src={logo}
-              alt={`${name} logo`}
-              id="product3-victorinox-logo"
-            />
+            <img src={logo} alt={`${name} logo`} id="product3-logo" />
           </h2>
           <p className="about-intro-text-product3">{description}</p>
 
