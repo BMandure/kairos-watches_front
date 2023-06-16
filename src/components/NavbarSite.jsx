@@ -72,7 +72,7 @@ function NavbarSite() {
             variant="primary"
             className="btn-login border border-none bg-transparent "
           >
-            Login
+            <Link to={"/login"}> Login</Link>
           </Button>
         </div>
         <Navbar.Offcanvas
