@@ -68,7 +68,7 @@ function NavbarSite() {
               className="img-logo-kairos m-0 d-flex justify-content-end position-absolute bottom-0 end-0"
             />
           </Navbar.Brand>
-          <Offcanvas.Body className="d-flex  flex-column align-items-start mx-auto offcanvas-project justify-content-center">
+          <Offcanvas.Body className="d-flex flex-column align-items-start mx-auto offcanvas-project">
             <Nav className="bg-transparent text-primary">
               <Link className="mx-4 text-navbar-links fw-bold" href="#action1">
                 Rolex

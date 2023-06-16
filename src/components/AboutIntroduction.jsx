@@ -14,7 +14,7 @@ function AboutIntroduction() {
       <Row className="about-row">
         <Col xs={12} className="about-col p-5 d-flex flex-column">
           <h2 className="about-intro-title">About The Proyect</h2>
-          <div>
+          <div className="container-text">
             <p className="about-intro-text">
               (Nombre de e-commerce) es un e-commerce de relojes de alta gama,
               desarrollado por un grupo de estudiantes de Hack Academy con fines

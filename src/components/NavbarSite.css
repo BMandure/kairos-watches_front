@@ -5,12 +5,8 @@
 .offcanvas-project {
   background-color: var(--color-black);
   overflow-y: hidden;
+  margin-top: 0;
 }
-
-/* .offcanvas-project::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-} */
 
 .text-navbar-links {
   text-decoration: none;

@@ -5,7 +5,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,10 +12,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --color-main: #021d35;
+  --color-main: #501a1ae6;
   --color-white: #fdedbd;
-  --color-black: #1d1c1ce6;
-  --color-beige: #7a735f;
+  --color-black: #262626; /*021d35*/
+  --color-beige: #ded5bc;
 }
 @font-face {
   font-family: Pinyon;
@@ -39,7 +38,7 @@ body {
   min-height: 100vh;
 }
 button {
-  font-size: 15px;
+  font-size: 20px;
   color: var(--color-white);
   font-family: Quicksand;
   font-weight: 400;

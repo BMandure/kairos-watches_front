@@ -5,8 +5,12 @@ function Product1() {
     <div className="product1-container">
       <div className="product1-background">
         <div className="product1-title-container">
-          <h2 className="product1-title">Patek Philippe</h2>
-          <button className="product1-button">View collections</button>
+          <img
+            src="../src/assets/KAIROS.png"
+            alt="logo marca"
+            className="product1-logo"
+          />
+          <button className="product1-button">View all watches</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 #product3-victorinox-logo {
   height: 4rem;
-  padding-bottom: 1.3rem;
+  padding-bottom: 0.7rem;
 }
 
 #about-intro-container-product3 {
@@ -39,6 +39,9 @@
 .about-intro-title-product3 {
   padding: 0 2rem 1rem 2rem;
   width: 65%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   border-bottom: 1px solid var(--color-white);
   font-family: Pinyon;
   color: var(--color-white);

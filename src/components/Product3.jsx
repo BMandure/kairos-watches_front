@@ -35,7 +35,7 @@ function Product3() {
         </Col>
         <Col xs={7} className="about-col-product3 d-flex flex-column p-4">
           <h2 className="about-intro-title-product3">
-            Victorinox{" "}
+            Victorinox
             <img
               src="../src/assets/victorinoxLogo.png"
               alt="VictorinoxLogo"
