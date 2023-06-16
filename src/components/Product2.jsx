@@ -7,7 +7,6 @@ function Product2({ name, logo, description, imgs }) {
       <Row className="about-row">
         <Col xs={7} className="about-col-product2 d-flex flex-column">
           <h2 className="about-intro-title-product2">
-            {name}
             <img src={logo} alt={`${name} logo`} id="product2-logo"></img>
           </h2>
           <p className="about-intro-text-product2">{description}</p>

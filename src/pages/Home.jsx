@@ -9,11 +9,11 @@ import rolex3 from "../assets/watch-city.jpeg";
 import rolex4 from "../assets/batman.jpeg";
 import rolex5 from "../assets/about5.jpg";
 import rolex6 from "../assets/oysterGold.png";
-import rolexLogo from "../assets/rolexcrown.png";
+import rolexLogo from "../assets/rolex-logo.png";
 
 import victorinox2 from "../assets/maverick.mp4";
 import victorinox1 from "../assets/INOX.mp4";
-import victorinoxLogo from "../assets/victorinoxLogo.png";
+import victorinoxLogo from "../assets/victorinox-brand.png";
 
 import omega1 from "../assets/omegaVintage.jpeg";
 import omega2 from "../assets/omegaGreen.jpeg";
@@ -22,9 +22,9 @@ import omega4 from "../assets/omegaDark.jpeg";
 import omega5 from "../assets/about3.jpg";
 import omega6 from "../assets/omegaVintage.jpeg";
 
-import omegaLogo from "../assets/omegaLogo.png";
+import omegaLogo from "../assets/omega-logo.png";
 
-import patekLogo from "../assets/patekLogo.png";
+import patekLogo from "../assets/patek-philippe-brand.png";
 import patek1 from "../assets/patek1.mp4";
 import patek2 from "../assets/patek2.mp4";
 

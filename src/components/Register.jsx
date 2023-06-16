@@ -4,7 +4,7 @@ import "./Register.css";
 function Register() {
   return (
     <>
-      <div className="w-100 contenedor-login">
+      <div className="w-100 contenedor-register">
         <div className="form-container-register m-auto">
           <p className="title">Register</p>
           <form className="form">
@@ -26,7 +26,7 @@ function Register() {
                 placeholder="Organa"
               />
             </div>
-            <div className="input-group">
+            <div className="input-group-register">
               <label for="email">email</label>
               <input
                 type="text"
@@ -35,7 +35,7 @@ function Register() {
                 placeholder="leia@starwars.com"
               />
             </div>
-            <div className="input-group">
+            <div className="input-group-register">
               <label for="address">address</label>
               <input
                 type="text"
@@ -44,11 +44,11 @@ function Register() {
                 placeholder="Avenida Alderaan 2356"
               />
             </div>
-            <div className="input-group">
+            <div className="input-group-register">
               <label for="phone">phone</label>
               <input type="text" name="phone" id="phone" placeholder="+598.." />
             </div>
-            <div className="input-group">
+            <div className="input-group-register">
               <label for="password">Password</label>
               <input
                 type="password"
