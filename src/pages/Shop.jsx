@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ProductCard from "../components/ProductCard";
+import "./Shop.css";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -16,9 +19,15 @@ function Shop() {
 
   return (
     <>
-      {products.map((product) => (
-        <p>{product.name}</p>
-      ))}
+      <Container>
+        <Row>
+          {products.map((product, i) => (
+            <Col xs={3}>
+              <ProductCard key={i} product={product} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
   );
 }
