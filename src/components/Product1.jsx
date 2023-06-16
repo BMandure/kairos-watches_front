@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Product1.css";
 
 function Product1() {
@@ -10,7 +11,9 @@ function Product1() {
             alt="logo marca"
             className="product1-logo"
           />
-          <button className="product1-button">View all watches</button>
+          <Link to="/shop" className="product1-button">
+            View all watches
+          </Link>
         </div>
       </div>
     </div>

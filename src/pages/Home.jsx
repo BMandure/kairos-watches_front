@@ -9,12 +9,15 @@ import rolex3 from "../assets/watch-city.jpeg";
 import rolex4 from "../assets/batman.jpeg";
 import rolex5 from "../assets/about5.jpg";
 import rolex6 from "../assets/oysterGold.png";
-
 import rolexLogo from "../assets/rolexcrown.png";
 
 import victorinox2 from "../assets/maverick.mp4";
 import victorinox1 from "../assets/INOX.mp4";
 import victorinoxLogo from "../assets/victorinoxLogo.png";
+
+import omegaLogo from "../assets/omegaLogo.png";
+
+import patekLogo from "../assets/patek-philippe.svg";
 
 function Home() {
   const imgRolex = [rolex1, rolex2, rolex3, rolex4, rolex5, rolex6];
@@ -24,6 +27,9 @@ function Home() {
   const victorinoxVideos = [victorinox1, victorinox2];
   const descVictorinox =
     "Victorinox Swiss Army stands as a symbol of timeless sophistication, with its remarkable timepieces capturing the essence of enduring elegance. From their commitment to innovation in watchmaking to their dedication to precision and functionality, Victorinox Swiss Army watches inspire with their unwavering pursuit of excellence!";
+
+  const descLorem =
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis necessitatibus iste sit assumenda modi eos totam consectetur rerum, doloribus inventore repellendus incidunt optio similique quae maxime ea libero neque eum!";
 
   return (
     <div>
@@ -42,14 +48,14 @@ function Home() {
       />
       <Product2
         name="Patek Philippe"
-        description={descRolex}
+        description={descLorem}
         imgs={imgRolex}
-        logo={rolexLogo}
+        logo={patekLogo}
       />
       <Product3
         name="Omega"
-        description={descVictorinox}
-        logo={victorinoxLogo}
+        description={descLorem}
+        logo={omegaLogo}
         videos={victorinoxVideos}
       />
     </div>
