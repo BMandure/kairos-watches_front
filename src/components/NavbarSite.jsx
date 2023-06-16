@@ -7,6 +7,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import Button from "react-bootstrap/Button";
+import cart from "../assets/cart.svg";
 
 function NavbarSite() {
   const expand = false;
@@ -68,6 +69,11 @@ function NavbarSite() {
           </Link>
         </div>
         <div className="position-absolute top-2 end-0 p-4">
+          <Link to={"/cart"}>
+            <span className="me-3">
+              <img src={cart} alt="" />
+            </span>
+          </Link>
           <Button
             variant="primary"
             className="btn-login border border-none bg-transparent "
