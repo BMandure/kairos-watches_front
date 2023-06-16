@@ -49,3 +49,8 @@
   top: 28px;
   left: 70px;
 }
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}

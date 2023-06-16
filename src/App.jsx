@@ -7,8 +7,10 @@ import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 
+import Register from "./components/Register";
 import NavbarSite from "./components/NavbarSite";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
       <Footer />
