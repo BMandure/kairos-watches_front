@@ -34,6 +34,17 @@
 }
 
 .img-logo-kairos {
-  width: 150px;
+  width: 120px;
   object-fit: cover;
+}
+
+.btn-login {
+  color: var(--color-white);
+  font-family: Cormorant;
+}
+
+.about-project-link {
+  position: absolute;
+  top: 28px;
+  left: 70px;
 }
