@@ -1,5 +1,5 @@
-#product3-victorinox-logo {
-  height: 4rem;
+#product3-logo {
+  height: 5rem;
   padding-bottom: 0.7rem;
 }
 
@@ -13,8 +13,14 @@
   width: 95%;
   height: auto;
   object-fit: cover;
-  margin-left: 2rem;
-  clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0% 90%);
+
+  border-radius: 5px;
+  display: flex;
+}
+
+.carousel-item-product3 {
+  padding-top: 8px;
+  padding-left: 2rem;
 }
 
 .about-col-product3 {
