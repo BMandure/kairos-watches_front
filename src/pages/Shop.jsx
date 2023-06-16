@@ -19,25 +19,6 @@ function Shop() {
 
   return (
     <>
-      <div className="shop-carousel">
-        <Carousel indicators={false} className="shop-carousel-container">
-          {products &&
-            products.map(
-              (product) =>
-                product.trending && (
-                  <Carousel.Item key={product.id}>
-                    <img
-                      className="carousel-img"
-                      src={`${import.meta.env.VITE_APP_DOMAIN}/img/products/${
-                        product.image[0]
-                      }`}
-                      alt={`${product}'s image`}
-                    />
-                  </Carousel.Item>
-                )
-            )}
-        </Carousel>
-      </div>
       <Container>
         <Row>
           {products.map((product) => (
