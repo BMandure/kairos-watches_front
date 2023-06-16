@@ -46,6 +46,7 @@
   font-family: Pinyon;
   color: var(--color-white);
   font-size: 3.6rem;
+  white-space: nowrap;
 }
 
 .tech-img-product3 {
