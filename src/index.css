@@ -6,15 +6,15 @@
 }
 @font-face {
   font-family: Pinyon;
-  src: url(src/assets/fonts/Pinyon.ttf);
+  src: url(./assets/fonts/Pinyon.ttf);
 }
 @font-face {
   font-family: Quicksand;
-  src: url(src/assets/fonts/Quicksand.ttf);
+  src: url(./assets/fonts/Quicksand.ttf);
 }
 @font-face {
   font-family: Cormorant;
-  src: url(src/assets/fonts/cgB.ttf);
+  src: url(./assets/fonts/cgB.ttf);
 }
 
 body {
