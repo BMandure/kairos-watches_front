@@ -8,6 +8,7 @@ import Shop from "./pages/Shop";
 
 import NavbarSite from "./components/NavbarSite";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </div>
       <Footer />
