@@ -1,7 +1,0 @@
-.prod-video {
-  width: 100vw;
-  max-height: 100vh;
-  height: auto;
-  object-fit: cover;
-  display: flex;
-}
