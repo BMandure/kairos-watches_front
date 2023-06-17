@@ -1,64 +1,82 @@
 .footer-thin {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border-top: 2px solid var(--color-white);
   padding: 1rem;
 }
-.footer-out-scope {
-  text-decoration: none;
+.footer-option {
+  font-size: 1rem;
+  background-color: transparent;
+  border: transparent;
   color: var(--color-white);
-  text-align: center;
+  display: flex;
   justify-content: center;
 }
 
 #footer {
   background-color: var(--color-black);
   color: var(--color-white);
+  width: 100vw;
 }
 .footer-text {
-  pointer-events: none;
   font-family: Quicksand;
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 18px;
-  margin: 0;
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0rem 1rem 0rem;
 }
 .footer-subtitle {
   pointer-events: none;
   letter-spacing: 3px;
-  font-family: Cormorant;
+  font-family: Quicksand;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   border-bottom: 2px solid var(--color-white);
-  margin: 0 70px 16px 70px;
+  margin: 2rem 0 2rem 0;
   width: 100%;
 }
-.footer-col {
+.col-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footer-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  padding: 0 0 2rem 0;
 }
+
 .footer-fat {
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
 }
 .footer-icon {
   width: 40px;
   height: auto;
   cursor: pointer;
 }
-.footer-gap {
+.footer-row-contact {
+  padding: 0 70px 0 70px;
   display: flex;
   gap: 20px;
-  justify-content: center;
-}
-.footer-row-contact {
-  padding: 0 70px 16px 70px;
 }
 .footer-text-small {
   font-size: 15px;
 }
 .footer-ubication {
   width: 300px;
+  padding-bottom: 3rem;
 }
 
 .footer-fat,

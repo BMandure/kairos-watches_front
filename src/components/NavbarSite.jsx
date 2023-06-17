@@ -27,13 +27,13 @@ function NavbarSite() {
         <div className="nav-general-cont">
           <div className="nav-brands-left">
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Rolex
             </Link>
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Victorinox
@@ -48,13 +48,13 @@ function NavbarSite() {
           </div>
           <div className="nav-brands-right">
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Omega
             </Link>
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Patek Philippe

@@ -11,63 +11,75 @@ function Footer() {
   return (
     <footer id="footer">
       <Row className="footer-fat">
-        <Col className="d-flex flex-column align-items-center ">
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-subtitle">Contact Us</p>
-          <div className="footer-row-contact footer-gap py-3">
-            <img className="footer-icon" src={fb} alt="facebook link" />
-            <img className="footer-icon" src={insta} alt="instagram link" />
-            <img className="footer-icon" src={twitter} alt="twitter link" />
-          </div>
-          <div className="footer-row-contact">
-            <p className="footer-text footer-text-small">
-              e-mail: adLoremIpsum@gmail.com
-            </p>
-            <p className="footer-text footer-text-small">phone: 099 999 999</p>
-          </div>
-        </Col>
-        <Col className="d-flex flex-column align-items-center">
-          <p className="footer-subtitle">Costumer Services</p>
-          <div className="footer-col text-align-center">
-            <Tooltip placement="left" title="Out of the scope of the proyect">
-              <button className="footer-out-scope">
-                Find Costumer Service
-              </button>
-            </Tooltip>
-            <Tooltip placement="left" title="Out of the scope of the proyect">
-              <button className="footer-out-scope">FAQ</button>
-            </Tooltip>
-            <Tooltip placement="left" title="Out of the scope of the proyect">
-              <button className="footer-out-scope">Order A Catalogue</button>
-            </Tooltip>
+          <div className="d-flex  flex-column gap-4">
+            <div className="footer-row-contact">
+              <img className="footer-icon" src={fb} alt="facebook link" />
+              <img className="footer-icon" src={insta} alt="instagram link" />
+              <img className="footer-icon" src={twitter} alt="twitter link" />
+            </div>
+            <div className="footer-list">
+              <p className="footer-text footer-text-small">
+                e-mail: adLoremIpsum@gmail.com
+              </p>
+              <p className="footer-text footer-text-small">
+                phone: 099 999 999
+              </p>
+            </div>
           </div>
         </Col>
-        <Col className="d-flex flex-column align-items-center">
+        <Col xs={12} lg={3} className="col-footer">
+          <p className="footer-subtitle">Service</p>
+          <div className="footer-list">
+            <Tooltip placement="left" title="Out of the scope of the proyect">
+              <button className="footer-option">Find Costumer Service</button>
+            </Tooltip>
+            <Tooltip placement="left" title="Out of the scope of the proyect">
+              <button className="footer-option">FAQ</button>
+            </Tooltip>
+            <Tooltip placement="left" title="Out of the scope of the proyect">
+              <button className="footer-option">Order A Catalogue</button>
+            </Tooltip>
+          </div>
+        </Col>
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-subtitle">More</p>
-          <div className="footer-col text-align-center  py-4">
+          <div className="footer-list">
             <Tooltip placement="left" title="Out of the scope of the proyect">
-              <button className="footer-out-scope">Press Room</button>
+              <button className="footer-option">Press Room</button>
             </Tooltip>
             <Tooltip placement="left" title="Out of the scope of the proyect">
-              <button className="footer-out-scope">Jobs</button>
+              <button className="footer-option">Jobs</button>
             </Tooltip>
           </div>
         </Col>
-        <Col>
+        <Col xs={12} lg={3} className="col-footer">
+          <p className="footer-subtitle">Location</p>
           <img src={map} alt="Map" className="footer-ubication" />
         </Col>
       </Row>
-      <div className="footer-thin">
-        <Tooltip title="Out of the scope of the proyect">
-          <button className="footer-out-scope">Use Terms</button>
-        </Tooltip>
-        <p className="footer-text">
-          © 2022 Joaquin González, Gastón Laffitte, Augusto Riccardi,
-          Maximiliano Quintana & Bruno Manduré.
-        </p>
-        <Tooltip title="Out of the scope of the proyect">
-          <button className="footer-out-scope">Privacy</button>
-        </Tooltip>
-      </div>
+      <Row className="footer-thin">
+        <Col xs={12} lg={3} className="d-flex align-items-center">
+          <Tooltip
+            title="Out of the scope of the proyect"
+            className="footer-text"
+          >
+            <button className="footer-option">Use Terms</button>
+          </Tooltip>
+        </Col>
+        <Col xs={12} lg={6}>
+          <p className="footer-text">
+            © 2022 Joaquin González, Gastón Laffitte, Augusto Riccardi,
+            Maximiliano Quintana & Bruno Manduré.
+          </p>
+        </Col>
+        <Col xs={12} lg={3} className="d-flex align-items-center">
+          <Tooltip title="Out of the scope of the proyect">
+            <button className="footer-option footer-text">Privacy</button>
+          </Tooltip>
+        </Col>
+      </Row>
     </footer>
   );
 }
