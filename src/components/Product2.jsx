@@ -17,7 +17,7 @@ function Product2({ name, logo, description, imgs }) {
           <p className="about-intro-text-product2">{description}</p>
 
           <div>
-            <button>View collections</button>
+            <button className="btn">View collections</button>
           </div>
         </Col>
         <Col xs={12} lg={6} className="about-col-product2">

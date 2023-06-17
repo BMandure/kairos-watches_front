@@ -40,7 +40,7 @@ function Product3({ name, logo, description, videos }) {
           <p className="about-intro-text-product3">{description}</p>
 
           <div>
-            <button>View collections</button>
+            <button className="btn">View collections</button>
           </div>
         </Col>
       </Row>
