@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <NavbarSite />
-      <div className="app-container">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

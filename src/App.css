@@ -2,10 +2,5 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
   background-color: var(--color-black);
-}
-.app-container {
-  min-width: 100vw;
-  min-height: 100vh;
 }
