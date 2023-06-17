@@ -6,7 +6,7 @@ function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
       <Row className="about-row">
-        <Col xs={12} className="about-col p-5 d-flex flex-column">
+        <Col xs={12} className="about-col">
           <h2 className="about-intro-title">About The Proyect</h2>
           <div className="container-text">
             <p className="about-intro-text">
@@ -36,7 +36,7 @@ function AboutIntroduction() {
             </p>
           </div>
           <div>
-            <button className="fw-bolder">View MER</button>
+            <button className="btn">View MER</button>
           </div>
         </Col>
       </Row>

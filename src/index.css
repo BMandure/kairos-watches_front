@@ -16,11 +16,3 @@
   font-family: Cormorant;
   src: url(./assets/fonts/cgB.ttf);
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-}

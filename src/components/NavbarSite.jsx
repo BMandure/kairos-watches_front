@@ -6,9 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import Button from "react-bootstrap/Button";
-import cart from "../assets/cart.svg";
-
 function NavbarSite() {
   const expand = false;
   return (
@@ -27,13 +24,13 @@ function NavbarSite() {
         <div className="nav-general-cont">
           <div className="nav-brands-left">
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Rolex
             </Link>
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Victorinox
@@ -48,13 +45,13 @@ function NavbarSite() {
           </div>
           <div className="nav-brands-right">
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Omega
             </Link>
             <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
               to="#action1"
             >
               Patek Philippe
@@ -62,11 +59,6 @@ function NavbarSite() {
           </div>
         </div>
         <div className="login-container">
-          <Link to={"/cart"}>
-            <span className="me-3">
-              <img src={cart} alt="" />
-            </span>
-          </Link>
           <Link to={"/login"} className="text-navbar-links">
             Login
           </Link>
