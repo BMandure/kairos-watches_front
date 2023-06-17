@@ -24,17 +24,11 @@ function NavbarSite() {
         />
       </NavbarToggle>
       <Container>
-        <Button
-          variant="primary"
-          className="btn-login border border-0 bg-transparent me-2 about-project-link"
-        >
-          <Link
-            className="mx-3 text-navbar-links d-none d-lg-inline-block"
-            to="/about"
-          >
-            About
+        <div className="left-container">
+          <Link className="text-navbar-links" to="/about">
+            ABOUT THE PROJECT
           </Link>
-        </Button>
+        </div>
 
         <div className="mx-auto d-flex align-items-center">
           <Link
@@ -47,7 +41,7 @@ function NavbarSite() {
             className="mx-3 text-navbar-links  d-none d-lg-inline-block"
             to="#action1"
           >
-            Victorinox Swiss Army
+            Victorinox
           </Link>
 
           <Navbar.Brand className="mx-4">
@@ -68,18 +62,15 @@ function NavbarSite() {
             Patek Philippe
           </Link>
         </div>
-        <div className="position-absolute top-2 end-0 p-4">
+        <div className="login-container">
           <Link to={"/cart"}>
             <span className="me-3">
               <img src={cart} alt="" />
             </span>
           </Link>
-          <Button
-            variant="primary"
-            className="btn-login border border-none bg-transparent "
-          >
-            <Link to={"/login"}> Login</Link>
-          </Button>
+          <Link to={"/login"} className="text-navbar-links">
+            Login
+          </Link>
         </div>
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
@@ -87,13 +78,9 @@ function NavbarSite() {
           placement="start"
           className="offcanvas-project"
         >
-          <Offcanvas.Header closeButton></Offcanvas.Header>
+          <Offcanvas.Header closeButton closeVariant="white"></Offcanvas.Header>
           <Navbar.Brand to="/" className="px-4 text-nabvar-brand m-auto">
-            <img
-              src="../src/assets/KAIROS.png"
-              alt="logo marca"
-              className="img-logo-kairos m-0 d-flex justify-content-end position-absolute bottom-0 end-0"
-            />
+            Kairos
           </Navbar.Brand>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-auto offcanvas-project p-0">
             <Nav className="bg-transparent text-primary">

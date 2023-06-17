@@ -1,23 +1,20 @@
 #product2-logo {
-  height: 5rem;
+  height: 80%;
   padding-bottom: 1rem;
   margin-left: 1rem;
 }
 
 #about-intro-container-product2 {
-  min-height: 80%;
-  min-width: 90vw;
-  padding: 0 0 5rem 0;
+  min-height: 100%;
+  min-width: 100vw;
 }
 
 .about-intro-img-product2 {
-  min-height: 70vh;
+  min-height: 100vh;
   width: auto;
   max-width: 100%;
   overflow: hidden;
   object-fit: cover;
-  padding: 29px;
-  border-radius: 35px;
 }
 
 .about-col-product2 {
@@ -30,11 +27,11 @@
 }
 .about-row-product2 {
   max-width: 100%;
-  min-height: 90%;
+  min-height: 100%;
   margin: auto;
 }
 .about-intro-text-product2 {
-  text-align: left;
+  text-align: center;
   padding: 1rem 3rem 0 3rem;
   font-family: Quicksand;
 }

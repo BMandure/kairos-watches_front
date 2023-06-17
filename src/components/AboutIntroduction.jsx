@@ -2,12 +2,6 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 import "./AboutIntroduction.css";
 
-import img from "../assets/about1.jpg";
-import img2 from "../assets/about2.jpg";
-import img3 from "../assets/about3.jpg";
-import img4 from "../assets/about4.jpg";
-import img5 from "../assets/about5.jpg";
-
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">

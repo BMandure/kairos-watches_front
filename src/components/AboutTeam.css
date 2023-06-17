@@ -29,4 +29,9 @@
   font-family: Pinyon;
   color: var(--color-white);
   font-size: 4rem;
+  text-align: center;
+  margin: auto;
+}
+.team-row {
+  margin: auto;
 }

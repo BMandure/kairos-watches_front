@@ -2,7 +2,7 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 import tech from "../assets/tech.jpg";
 import bootstrap from "../assets/bootstrap.svg";
-import github from "../assets/github.svg";
+import github from "../assets/githubWhite.svg";
 import js from "../assets/js.svg";
 import mongoDB from "../assets/mongoDB.svg";
 import node from "../assets/node.svg";
@@ -13,7 +13,7 @@ import vercel from "../assets/vercel.svg";
 
 function AboutTechnologies() {
   return (
-    <Container className="about-intro-container">
+    <Container className="about-intro-banner">
       <Row className="about-row">
         <Col xs={12} className="about-col d-flex flex-column  p-5">
           <h2 className="about-intro-title">Technologies</h2>
