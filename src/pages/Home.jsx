@@ -26,6 +26,8 @@ import patekLogo from "../assets/patek-philippe-sa-logo.svg";
 import patek1 from "../assets/patek1.mp4";
 import patek2 from "../assets/patek2.mp4";
 
+import Cart from "../components/Cart";
+
 function Home() {
   const imgRolex = [rolex1, rolex2, rolex3, rolex5, rolex6];
   const descRolex =
@@ -72,6 +74,8 @@ function Home() {
         logo={patekLogo}
         videos={patekVideos}
       />
+
+      <Cart />
     </div>
   );
 }

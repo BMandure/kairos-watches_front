@@ -6,9 +6,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import Button from "react-bootstrap/Button";
-import cart from "../assets/cart.svg";
-
 function NavbarSite() {
   const expand = false;
   return (
@@ -62,11 +59,6 @@ function NavbarSite() {
           </div>
         </div>
         <div className="login-container">
-          <Link to={"/cart"}>
-            <span className="me-3">
-              <img src={cart} alt="" />
-            </span>
-          </Link>
           <Link to={"/login"} className="text-navbar-links">
             Login
           </Link>
