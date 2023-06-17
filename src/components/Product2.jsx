@@ -6,8 +6,13 @@ function Product2({ name, logo, description, imgs }) {
     <Container id="about-intro-container-product2">
       <Row className="about-row">
         <Col xs={6} className="about-col-product2 d-flex flex-column">
-          <h2 className="about-intro-title-product2">
-            <img src={logo} alt={`${name} logo`} id="product2-logo"></img>
+          <h2 className="about-intro-title-product2 w-50 py-0">
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              id="product2-logo"
+              className="img-fluid py-0"
+            ></img>
           </h2>
           <p className="about-intro-text-product2">{description}</p>
 

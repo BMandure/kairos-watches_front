@@ -25,8 +25,13 @@ function Product3({ name, logo, description, videos }) {
           </Carousel>
         </Col>
         <Col xs={6} className="about-col-product3 d-flex flex-column py-3">
-          <h2 className="about-intro-title-product3">
-            <img src={logo} alt={`${name} logo`} id="product3-logo" />
+          <h2 className="about-intro-title-product3 w-50">
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              id="product3-logo"
+              className="img-fluid"
+            />
           </h2>
           <p className="about-intro-text-product3">{description}</p>
 
