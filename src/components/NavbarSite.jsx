@@ -23,38 +23,43 @@ function NavbarSite() {
           className="navbar-icon"
         />
       </NavbarToggle>
-      <Container>
-        <div className="mx-auto d-flex align-items-center">
-          <Link
-            className="mx-3 text-navbar-links  d-none d-lg-inline-block"
-            to="#action1"
-          >
-            Rolex
-          </Link>
-          <Link
-            className="mx-3 text-navbar-links  d-none d-lg-inline-block"
-            to="#action1"
-          >
-            Victorinox
-          </Link>
-
-          <Navbar.Brand className="mx-4">
-            <Link to="/" className="text-nabvar-brand">
-              Kairos
+      <Container className="d-flex justify-content-center">
+        <div className="nav-general-cont">
+          <div className="nav-brands-left">
+            <Link
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              to="#action1"
+            >
+              Rolex
             </Link>
-          </Navbar.Brand>
-          <Link
-            className="mx-3 text-navbar-links  d-none d-lg-inline-block"
-            to="#action1"
-          >
-            Omega
-          </Link>
-          <Link
-            className="mx-3 text-navbar-links  d-none d-lg-inline-block"
-            to="#action1"
-          >
-            Patek Philippe
-          </Link>
+            <Link
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              to="#action1"
+            >
+              Victorinox
+            </Link>
+          </div>
+          <div className="nav-brand">
+            <Navbar.Brand>
+              <Link to="/" className="text-nabvar-brand">
+                Kairos
+              </Link>
+            </Navbar.Brand>
+          </div>
+          <div className="nav-brands-right">
+            <Link
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              to="#action1"
+            >
+              Omega
+            </Link>
+            <Link
+              className="mx-3 text-navbar-links  d-none d-lg-inline-block"
+              to="#action1"
+            >
+              Patek Philippe
+            </Link>
+          </div>
         </div>
         <div className="login-container">
           <Link to={"/cart"}>
