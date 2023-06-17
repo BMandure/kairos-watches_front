@@ -9,8 +9,6 @@
   background-color: transparent;
   border: transparent;
   color: var(--color-white);
-  display: flex;
-  justify-content: center;
 }
 
 #footer {
