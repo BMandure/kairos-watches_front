@@ -5,7 +5,7 @@ function Product2({ name, logo, description, imgs }) {
   return (
     <Container id="about-intro-container-product2">
       <Row className="about-row">
-        <Col xs={6} className="about-col-product2 d-flex flex-column">
+        <Col xs={12} lg={6} className="about-col-product2">
           <h2 className="about-intro-title-product2 w-50 py-0">
             <img
               src={logo}
@@ -17,10 +17,10 @@ function Product2({ name, logo, description, imgs }) {
           <p className="about-intro-text-product2">{description}</p>
 
           <div>
-            <button>View collections</button>
+            <button className="btn">View collections</button>
           </div>
         </Col>
-        <Col xs={6} className="about-col-product2">
+        <Col xs={12} lg={6} className="about-col-product2">
           <Carousel fade controls={false} indicators={false}>
             {imgs.map((item, i) => (
               <Carousel.Item key={i}>

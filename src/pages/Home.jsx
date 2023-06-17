@@ -1,7 +1,7 @@
 import React from "react";
 import Product3 from "../components/Product3";
 import Product2 from "../components/Product2";
-import Product1 from "../components/Product1";
+import Banner from "../components/Banner";
 
 import rolex1 from "../assets/Datejust-everose.png";
 import rolex2 from "../assets/submarinerGreen.jpeg";
@@ -47,7 +47,7 @@ function Home() {
 
   return (
     <div>
-      <Product1 />
+      <Banner />
       <Product2
         name="Rolex"
         description={descRolex}

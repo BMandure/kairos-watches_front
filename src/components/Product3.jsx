@@ -6,7 +6,7 @@ function Product3({ name, logo, description, videos }) {
   return (
     <Container id="about-intro-container-product3">
       <Row className="product3-row">
-        <Col xs={6} className="about-col-product3 my-auto">
+        <Col xs={12} lg={6} className="about-col-product3 my-auto">
           <Carousel fade controls={false} indicators={false}>
             {videos.map((video, i) => (
               <Carousel.Item className="carousel-item-product3 my-auto" key={i}>
@@ -24,7 +24,11 @@ function Product3({ name, logo, description, videos }) {
             ))}
           </Carousel>
         </Col>
-        <Col xs={6} className="about-col-product3 d-flex flex-column py-3">
+        <Col
+          xs={12}
+          lg={6}
+          className="about-col-product3 d-flex flex-column py-3"
+        >
           <h2 className="about-intro-title-product3 w-50">
             <img
               src={logo}
@@ -36,7 +40,7 @@ function Product3({ name, logo, description, videos }) {
           <p className="about-intro-text-product3">{description}</p>
 
           <div>
-            <button>View collections</button>
+            <button className="btn">View collections</button>
           </div>
         </Col>
       </Row>

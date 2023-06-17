@@ -16,10 +16,10 @@
 }
 
 .about-col-product3 {
-  padding: 0;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+  padding: 0 0 3rem 0;
 }
 
 .about-row-product3 {
@@ -30,7 +30,7 @@
 
 .about-intro-text-product3 {
   text-align: center;
-  padding: 1rem 3rem 0 3rem;
+  padding: 1rem 20% 0 20%;
   font-family: Quicksand;
 }
 
@@ -68,4 +68,54 @@
   min-width: 100vw;
   min-height: 100vh;
   background-color: var(--color-main);
+}
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  border-bottom: 1px solid white;
+  border-radius: 0 !important;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #000000;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffffff;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
 }

@@ -67,9 +67,32 @@ a {
   padding: 1.5rem;
   position: absolute;
   right: 1.5rem;
+  display: flex;
+  gap: 20px;
 }
 .left-container {
   padding: 1.5rem;
   position: absolute;
   left: 4.5rem;
+}
+
+.nav-general-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.nav-brands-right {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.nav-brands-left {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+.nav-brand {
+  min-width: 300px;
+  text-align: center;
 }
