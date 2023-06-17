@@ -1,12 +1,12 @@
 #product2-logo {
   height: 80%;
   padding-bottom: 1rem;
-  margin-left: 1rem;
 }
 
 #about-intro-container-product2 {
   min-height: 100%;
   min-width: 100vw;
+  padding: 0;
 }
 
 .about-intro-img-product2 {
@@ -18,8 +18,9 @@
 }
 
 .about-col-product2 {
-  padding: 0;
+  padding: 0 0 3rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color-main);
@@ -32,7 +33,7 @@
 }
 .about-intro-text-product2 {
   text-align: center;
-  padding: 1rem 3rem 0 3rem;
+  padding: 1rem 20% 0 20%;
   font-family: Quicksand;
 }
 .about-intro-title-product2 {

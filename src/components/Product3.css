@@ -16,10 +16,10 @@
 }
 
 .about-col-product3 {
-  padding: 0;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+  padding: 0 0 3rem 0;
 }
 
 .about-row-product3 {
@@ -30,7 +30,7 @@
 
 .about-intro-text-product3 {
   text-align: center;
-  padding: 1rem 3rem 0 3rem;
+  padding: 1rem 20% 0 20%;
   font-family: Quicksand;
 }
 
