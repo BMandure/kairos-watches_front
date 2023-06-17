@@ -18,21 +18,52 @@
   background-color: var(--color-main);
   color: whitesmoke;
 }
-.about-row {
-  max-width: 100%;
+.about-tech-row {
+  width: 80%;
   min-height: 90%;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 .about-intro-text {
   text-align: left;
   padding: 1rem 3rem 0 3rem;
   font-family: Quicksand;
 }
-.about-intro-title {
+.about-tech-title {
   padding: 0 2rem 1rem 2rem;
   width: 65%;
   border-bottom: 1px solid var(--color-white);
   font-family: Pinyon;
   color: var(--color-white);
-  font-size: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tech-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.tech-img {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+.technology-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Quicksand;
+  text-align: center;
+}
+.about-tech-col {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main);
+  color: whitesmoke;
 }
