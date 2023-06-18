@@ -5,7 +5,6 @@
   display: flex;
 }
 .brandLeft-row {
-  width: 100%;
   min-height: 100vh;
   background-color: var(--color-main);
 }
