@@ -35,3 +35,9 @@
 .team-row {
   margin: auto;
 }
+
+.about-team-banner {
+  min-height: 80%;
+  min-width: 100vw;
+  margin: 6rem 0 6rem 0;
+}

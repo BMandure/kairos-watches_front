@@ -22,23 +22,22 @@
   overflow: hidden;
 }
 .card-img {
-  max-width: 100px;
+  width: 90%;
+  padding: 15px 15px 0 15px;
   height: auto;
 }
 
 /*Card footer*/
 .card-social {
   display: flex;
-  width: 100%;
+  width: 50%;
   justify-content: space-around;
 }
 .card-link {
-  margin-top: 0.5rem;
-  padding: 0.2rem;
+  margin-bottom: 1rem;
   border-radius: 40px;
-  border: 1px solid black;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
 }
 .card-social__item {
   list-style: none;
