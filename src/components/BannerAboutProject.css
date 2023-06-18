@@ -1,0 +1,12 @@
+.container-banner-project {
+  background-image: url("src/assets/banner.png");
+  min-height: 50vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+.about-project-brightness {
+  color: white;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -6,6 +6,9 @@
   right: 25px;
   padding: 15px;
 }
+.cart-btn:hover {
+  cursor: pointer;
+}
 
 .offcanvas-header {
   border-bottom: 1px solid black;

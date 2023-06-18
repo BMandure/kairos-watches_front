@@ -1,0 +1,48 @@
+.brandLeft-carousel-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+}
+.brandLeft-row {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-main);
+}
+.brandLeft-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  padding: 2rem 0 2rem 0;
+}
+.brandLeft-container,
+.brandLeft-info {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.brandLeft-logo {
+  padding: 0 2rem 1rem 2rem;
+  width: 65%;
+  border-bottom: 1px solid var(--color-white);
+  font-family: Pinyon;
+  color: var(--color-white);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.brandLeft-info {
+  flex-direction: column;
+  justify-content: center;
+}
+.brandLeft-description {
+  text-align: center;
+  padding: 1rem 20% 0 20%;
+  font-family: Quicksand;
+  color: var(--color-white);
+}

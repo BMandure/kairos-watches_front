@@ -16,7 +16,6 @@
 #footer {
   background-color: var(--color-black);
   color: var(--color-white);
-  width: 100vw;
   margin: 0 auto 0 auto;
 }
 .footer-text {

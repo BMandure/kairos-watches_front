@@ -23,16 +23,10 @@ function NavbarSite() {
       <Container className="d-flex justify-content-center">
         <div className="nav-general-cont">
           <div className="nav-brands-left">
-            <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
-              to="#action1"
-            >
+            <Link className="mx-3   d-none d-lg-inline-block btn" to="#action1">
               Rolex
             </Link>
-            <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
-              to="#action1"
-            >
+            <Link className="mx-3   d-none d-lg-inline-block btn" to="#action1">
               Victorinox
             </Link>
           </div>
@@ -44,22 +38,16 @@ function NavbarSite() {
             </Navbar.Brand>
           </div>
           <div className="nav-brands-right">
-            <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
-              to="#action1"
-            >
+            <Link className="mx-3   d-none d-lg-inline-block btn" to="#action1">
               Omega
             </Link>
-            <Link
-              className="mx-3 text-navbar-links  d-none d-lg-inline-block btn"
-              to="#action1"
-            >
+            <Link className="mx-3   d-none d-lg-inline-block btn" to="#action1">
               Patek Philippe
             </Link>
           </div>
         </div>
         <div className="login-container">
-          <Link to={"/login"} className="text-navbar-links">
+          <Link to={"/login"} className="">
             Login
           </Link>
         </div>
@@ -74,111 +62,159 @@ function NavbarSite() {
             Kairos
           </Navbar.Brand>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-auto offcanvas-project p-0">
-            <Nav className="bg-transparent text-primary">
-              <Link className="m-4 text-navbar-links fw-bold" to="/about">
+            <Nav className="text-primary">
+              <Link className="m-4 fw-bold btn" to="/about">
                 ABOUT THE PROJECT
               </Link>
-              <Link className="mx-4 text-navbar-links fw-bold" to="#action1">
+              <Link className="mx-4 fw-bold btn" to="#action1">
                 Rolex
               </Link>
-              <ul className="mt-1 ">
+              <ul className="mt-1 px-5 pb-5">
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Submariner
                   </Link>
                 </li>
 
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Daytona
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Oyster
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     GMT-Master II
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Day-Date
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Pearlmaster
                   </Link>
                 </li>
               </ul>
 
-              <Link className="mx-4 text-navbar-links fw-bold" to="#action1">
+              <Link className="mx-4 btn fw-bold" to="#action1">
                 Victorinox Swiss Army
               </Link>
-              <ul className="mt-1 ">
+              <ul className="mt-1 px-5 pb-5">
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Officer's
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Maverick Large
                   </Link>
                 </li>
 
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     INOX
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Alliance
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Alliance XS
                   </Link>
                 </li>
               </ul>
 
-              <Link className="mx-4 text-navbar-links fw-bold" to="#action1">
+              <Link className="mx-4 btn fw-bold" to="#action1">
                 Omega
               </Link>
-              <ul className="mt-1 ">
+              <ul className="mt-1 px-5 pb-5">
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Speedmaster
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Constellation
                   </Link>
                 </li>
               </ul>
 
-              <Link className="mx-4 text-navbar-links fw-bold" to="#action1">
+              <Link className="mx-4 btn fw-bold" to="#action1">
                 Patek Philippe
               </Link>
-              <ul className="mt-1 d-block ">
+              <ul className="mt-1 px-5 pb-5">
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Calatrava
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary ">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Nautilus
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
-                  <Link className="mx-2 text-navbar-links " to="#action1">
+                  <Link
+                    className="mx-2 btn d-flex justify-content-center"
+                    to="#action1"
+                  >
                     Aquanaut
                   </Link>
                 </li>

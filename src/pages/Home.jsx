@@ -1,6 +1,6 @@
 import React from "react";
-import Product3 from "../components/Product3";
-import Product2 from "../components/Product2";
+import BrandLeft from "../components/BrandLeft";
+import BrandRight from "../components/BrandRight";
 import Banner from "../components/Banner";
 
 import rolex1 from "../assets/Datejust-everose.png";
@@ -50,25 +50,25 @@ function Home() {
   return (
     <div>
       <Banner />
-      <Product2
+      <BrandRight
         name="Rolex"
         description={descRolex}
         imgs={imgRolex}
         logo={rolexLogo}
       />
-      <Product3
+      <BrandLeft
         name="Victorinox"
         description={descVictorinox}
         logo={victorinoxLogo}
         videos={victorinoxVideos}
       />
-      <Product2
+      <BrandRight
         name="Omega"
         description={descOmega}
         imgs={imgOmega}
         logo={omegaLogo}
       />
-      <Product3
+      <BrandLeft
         name="Patek Philippe"
         description={descPatek}
         logo={patekLogo}
