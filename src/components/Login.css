@@ -5,15 +5,16 @@
 .contenedor-login {
   margin-top: 20px;
   position: relative;
-  top: 30px;
+  top: 120px;
 }
 
 .form-container {
-  width: 400px;
+  width: 360px;
   border-radius: 0.75rem;
   background-color: var(--color-main);
   padding: 2rem;
   color: var(--color-white);
+  border: 1px solid white;
 }
 
 .title {
