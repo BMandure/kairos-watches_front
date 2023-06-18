@@ -47,7 +47,7 @@ function NavbarSite() {
           </div>
         </div>
         <div className="login-container">
-          <Link to={"/login"} className="">
+          <Link to={"/login"} className="btn">
             Login
           </Link>
         </div>
