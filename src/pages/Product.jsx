@@ -3,21 +3,21 @@ import "./Product.css";
 
 function Product() {
   return (
-    <div className="container ">
-      <div className="row d-flex justify-content-center align-items-center p-4 mx-4">
-        <div className="col-12 col-lg-6 mt-4">
+    <div className="container m-4">
+      <div className="row d-flex justify-content-center align-items-center mt-4 p-4">
+        <div className="col-12 col-lg-6 p-4">
           <div>
             <img className="w-100" src="../src/assets/pngegg.png" alt="..." />
           </div>
         </div>
-        <div className="col-12 col-lg-6 mt-4">
+        <div className="col-12 col-lg-6 p-4">
           <div className="bg-transparent text-light d-flex flex-column">
             <div className="d-flex justify-content-between ">
               <div>← Previous product</div>
               <div>Next product →</div>
             </div>
             <h2 className="mt-2">Rolex - Oyster Perpetual - Man</h2>
-            <div className="list-group-flush col-5 product-list-group mt-4">
+            <div className="list-group-flush col-5 product-list-group mt-2">
               <h2>
                 <em>USD 1300</em>
               </h2>
@@ -25,7 +25,7 @@ function Product() {
             <div>
               <div className="row mt-4">
                 <h4 className="">Select your upgrades</h4>
-                <div className="col-sm-12 col-md-3 col-lg-12 border rounded my-2 mx-2">
+                <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2">
                   <div className="form-check mt-2 mb-2">
                     <label className="form-check-label" for="flexRadioDefault1">
                       <h4>Black Tropic Strap</h4>
@@ -76,7 +76,7 @@ function Product() {
               </div>
             </div>
           </div>
-          <div className="w-100 d-flex justify-content-between mt-4 align-items-center">
+          <div className="w-100 d-flex justify-content-between mt-2 align-items-center">
             <button
               expand="true"
               className="btn-preorder p-4 text-center w-100"
