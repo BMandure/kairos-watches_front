@@ -16,7 +16,8 @@
 #footer {
   background-color: var(--color-black);
   color: var(--color-white);
-  margin: 0 auto 0 auto;
+  margin-top: auto;
+  position: sticky;
 }
 .footer-text {
   font-family: Quicksand;

@@ -1,7 +1,8 @@
 .banner-video {
-  max-width: 100%;
-  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   object-fit: cover;
+  object-position: 50% 50%;
   display: flex;
   padding: 0;
 }

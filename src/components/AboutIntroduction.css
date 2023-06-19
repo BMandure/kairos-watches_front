@@ -53,10 +53,14 @@
   width: 100%;
 }
 
-.about-intro-btn,
 .about-intro-title {
   margin: 0 auto 3rem auto;
   padding: 0 2rem 1rem 2rem;
   width: 65%;
   text-align: center;
+}
+
+.buttonMER {
+  width: 20%;
+  margin: auto;
 }

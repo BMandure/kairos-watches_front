@@ -1,13 +1,15 @@
-import "./Login.css";
+import { Tooltip } from "antd";
+import "./Forms.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="w-100 contenedor-login">
-      <div className="form-container m-auto">
-        <p className="title">Login</p>
+    <div className="w-100 container-form">
+      <div className="form-container">
+        <p className="form-title">Login</p>
         <form className="form">
           <div className="input-group">
-            <label for="username">Username</label>
+            <label htmlFor="username">Username</label>
             <input
               type="text"
               name="username"
@@ -16,7 +18,7 @@ function Login() {
             />
           </div>
           <div className="input-group">
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
@@ -24,9 +26,9 @@ function Login() {
               placeholder="1234"
             />
             <div className="forgot">
-              <a rel="noopener noreferrer" href="#">
-                Forgot Password ?
-              </a>
+              <Tooltip placement="left" title="Out of the scope of the proyect">
+                Forgot Password?
+              </Tooltip>
             </div>
           </div>
           <button className="sign">Sign in</button>
@@ -67,9 +69,9 @@ function Login() {
         </div>
         <p className="signup">
           Don't have an account?
-          <a rel="noopener noreferrer" href="#" className="ms-2">
+          <Link to="/register" rel="noopener noreferrer" className="ms-2">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

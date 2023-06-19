@@ -37,8 +37,8 @@ function AboutIntroduction() {
             back-end con llamadas AJAX gracias a la libreria Axios. ....
           </p>
         </Col>
-        <div className="about-intro-btn">
-          <button className="btn">View MER</button>
+        <div className="btn buttonMER">
+          <div className="btn-content">View MER</div>
         </div>
       </Row>
     </Container>

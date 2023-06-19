@@ -27,6 +27,7 @@ import patek1 from "../assets/patek1.mp4";
 import patek2 from "../assets/patek2.mp4";
 
 import Cart from "../components/Cart";
+import BannerAboutProject from "../components/BannerAboutProject";
 
 function Home() {
   const imgRolex = [rolex1, rolex2, rolex3, rolex5, rolex6];
@@ -50,6 +51,7 @@ function Home() {
   return (
     <div>
       <Banner />
+      <BannerAboutProject />
       <BrandRight
         name="Rolex"
         description={descRolex}

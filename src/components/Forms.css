@@ -1,22 +1,24 @@
-.contenedor-register {
-  margin-top: 20px;
-  position: relative;
-  top: 30px;
+.container-form {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Quicksand;
 }
 
-.form-container-register {
-  width: 400px;
-  border-radius: 0.75rem;
+.form-container {
+  width: 360px;
   background-color: var(--color-main);
   padding: 2rem;
   color: var(--color-white);
+  border: 1px solid white;
 }
 
-.title {
+.form-title {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-family: Quicksand;
 }
 
@@ -24,8 +26,8 @@
   margin-top: 1.5rem;
 }
 
-.input-group-register {
-  margin-top: 0.25rem;
+.input-group {
+  margin-top: 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
@@ -36,17 +38,17 @@
   margin-bottom: 4px;
 }
 
-.input-group-register input {
+.input-group input {
   width: 100%;
-  border-radius: 0.375rem !important;
   border: 1px solid var(--color-main);
   outline: 0;
-  background-color: var(--color-black) !important;
+  background-color: var(--color-black);
   padding: 0.75rem 1rem;
   color: var(--color-white);
+  border-bottom: 1px solid var(--color-white);
 }
 
-.input-group-register input:focus {
+.input-group input:focus {
   border-color: var(--color-main);
 }
 
@@ -79,7 +81,6 @@
   text-align: center;
   color: var(--color-black);
   border: none;
-  border-radius: 0.375rem;
   font-weight: 600;
 }
 
@@ -127,11 +128,4 @@
   font-size: 0.75rem;
   line-height: 1rem;
   color: var(--color-white);
-}
-
-input:-internal-autofill-selected {
-  appearance: unset;
-  background-image: none !important;
-  background-color: var(--color-black) !important;
-  color: var(--color-white) !important;
 }

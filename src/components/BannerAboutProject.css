@@ -4,9 +4,32 @@
   width: 100%;
   overflow: hidden;
   padding: 0;
+  position: relative;
 }
 .about-project-brightness {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.about-project-content {
   color: white;
-  min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.about-project-title {
+  font-family: Pinyon;
+  letter-spacing: 3px;
+  font-size: 4rem;
 }

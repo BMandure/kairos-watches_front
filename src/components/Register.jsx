@@ -1,15 +1,15 @@
 import React from "react";
-import "./Register.css";
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
     <>
-      <div className="w-100 contenedor-register">
-        <div className="form-container-register m-auto">
-          <p className="title">Register</p>
+      <div className="w-100 container-form">
+        <div className="form-container m-auto">
+          <p className="form-title">Register</p>
           <form className="form">
             <div className="input-group">
-              <label for="firstname">Firstname</label>
+              <label htmlFor="firstname">Firstname</label>
               <input
                 type="text"
                 name="firstname"
@@ -18,7 +18,7 @@ function Register() {
               />
             </div>
             <div className="input-group">
-              <label for="lastname">Lastname</label>
+              <label htmlFor="lastname">Lastname</label>
               <input
                 type="text"
                 name="lastname"
@@ -26,8 +26,8 @@ function Register() {
                 placeholder="Organa"
               />
             </div>
-            <div className="input-group-register">
-              <label for="email">email</label>
+            <div className="input-group">
+              <label htmlFor="email">Email</label>
               <input
                 type="text"
                 name="email"
@@ -35,8 +35,8 @@ function Register() {
                 placeholder="leia@starwars.com"
               />
             </div>
-            <div className="input-group-register">
-              <label for="address">address</label>
+            <div className="input-group">
+              <label htmlFor="address">Address</label>
               <input
                 type="text"
                 name="address"
@@ -44,12 +44,12 @@ function Register() {
                 placeholder="Avenida Alderaan 2356"
               />
             </div>
-            <div className="input-group-register">
-              <label for="phone">phone</label>
+            <div className="input-group">
+              <label htmlFor="phone">Phone</label>
               <input type="text" name="phone" id="phone" placeholder="+598.." />
             </div>
-            <div className="input-group-register">
-              <label for="password">Password</label>
+            <div className="input-group">
+              <label htmlFor="password">Password</label>
               <input
                 type="password"
                 name="password"
@@ -58,7 +58,7 @@ function Register() {
               />
               <div className="forgot">
                 <a rel="noopener noreferrer" href="#">
-                  Forgot Password ?
+                  Forgot Password?
                 </a>
               </div>
             </div>
@@ -100,9 +100,9 @@ function Register() {
           </div>
           <p className="signup">
             Don't have an account?
-            <a rel="noopener noreferrer" href="#" className="ms-2">
-              Sign up
-            </a>
+            <Link to="/login" rel="noopener noreferrer" className="ms-2">
+              Sign in
+            </Link>
           </p>
         </div>
       </div>
