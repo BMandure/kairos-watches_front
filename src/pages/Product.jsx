@@ -4,7 +4,7 @@ import "./Product.css";
 function Product() {
   return (
     <div className="container ">
-      <div className="row p-4 m-5 vh-80 d-flex justify-content-center align-items-center">
+      <div className="row d-flex justify-content-center align-items-center p-4 mx-4">
         <div className="col-12 col-lg-6 mt-4">
           <div>
             <img className="w-100" src="../src/assets/pngegg.png" alt="..." />

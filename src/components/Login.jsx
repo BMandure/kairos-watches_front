@@ -1,20 +1,52 @@
 import { Tooltip } from "antd";
-import "./Forms.css";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setUser } from "../redux/userSlice";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    try {
+      const response = await axios({
+        method: "POST",
+        url: `${import.meta.env.VITE_APP_DOMAIN}/login`,
+        data: {
+          email,
+          password,
+        },
+      });
+      console.log(response.data);
+      dispatch(setUser(response.data));
+      navigate("/");
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="w-100 container-form">
       <div className="form-container">
         <p className="form-title">Login</p>
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit} autoComplete="off">
           <div className="input-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">Email</label>
             <input
-              type="text"
-              name="username"
-              id="username"
+              type="email"
+              name="email"
+              id="email"
               placeholder="Leia Organa"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </div>
           <div className="input-group">
@@ -24,6 +56,8 @@ function Login() {
               name="password"
               id="password"
               placeholder="1234"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
             />
             <div className="forgot">
               <Tooltip placement="left" title="Out of the scope of the proyect">
@@ -31,7 +65,9 @@ function Login() {
               </Tooltip>
             </div>
           </div>
-          <button className="sign">Sign in</button>
+          <button className="sign" type="submit">
+            Sign in
+          </button>
         </form>
         <div className="social-message">
           <div className="line"></div>
@@ -68,10 +104,12 @@ function Login() {
           </button>
         </div>
         <p className="signup">
-          Don't have an account?
-          <Link to="/register" rel="noopener noreferrer" className="ms-2">
-            Sign up
-          </Link>
+          Don't have an account?{" "}
+          <strong className="text-decoration-underline ms-1 pb-1">
+            <Link to="/register" rel="noopener noreferrer" className="">
+              Sign up
+            </Link>
+          </strong>
         </p>
       </div>
     </div>
