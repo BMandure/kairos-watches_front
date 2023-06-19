@@ -1,3 +1,4 @@
-.item-cart {
-  border-bottom: 1px solid var(--color-black);
+.btn-quantity {
+  margin: auto 0 auto 0;
+  color: #353535;
 }

@@ -1,10 +1,12 @@
 import "./itemCart.css";
 import deleteProduct from "../assets/delete.svg";
+import add from "../assets/add.svg";
+import rest from "../assets/rest.svg";
 
 function ItemCart() {
   return (
     <div className="position-relative">
-      <div className="d-flex justify-content-between item-cart p-3">
+      <div className="d-flex justify-content-between item-cart px-3 py-1">
         <div className="position-absolute top-0 end-0">
           <img src={deleteProduct} alt="" />
         </div>
@@ -18,13 +20,17 @@ function ItemCart() {
           </div>
         </div>
         <div className="d-flex flex-column my-auto" style={{ width: "60%" }}>
-          <p className="my-1 fs-5">Rolex Gmt II Master</p>
-          <div className="d-flex justify-content-between my-1 border border-black w-75">
-            <span className="px-3 border-end border-black fw-bold">-</span>
-            <span className="px-3">1</span>
-            <span className="px-3 border-start border-black fw-bold">+</span>
+          <p className="my-1 fs-6 text-white">Rolex Gmt II Master</p>
+          <div className="d-flex w-75 text-white m-0">
+            <p className="btn-quantity">
+              <img src={rest} alt="-1 product quantity" />
+            </p>
+            <p className="my-auto ms-3">1</p>
+            <p className="btn-quantity ms-3">
+              <img src={add} alt="+1 product quantity" />
+            </p>
           </div>
-          <span className="my-1 fs-5">USD 500</span>
+          <span className="my-1 fs-5 text-white">USD 500</span>
         </div>
       </div>
     </div>

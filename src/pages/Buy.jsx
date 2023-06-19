@@ -7,9 +7,12 @@ function Cart() {
     <Container style={{ marginTop: "100px" }}>
       <div className="d-flex justify-content-between">
         <div
-          className="d-flex flex-wrap justify-content-around"
-          style={{ width: "60%" }}
+          className="d-flex flex-wrap justify-content-around overflow-auto me-4"
+          style={{ width: "50%", height: "90vh" }}
         >
+          <ItemBuy />
+          <ItemBuy />
+          <ItemBuy />
           <ItemBuy />
           <ItemBuy />
           <ItemBuy />
@@ -18,7 +21,7 @@ function Cart() {
           <ItemBuy />
         </div>
 
-        <div className="mt-4" style={{ width: "40%" }}>
+        <div className="mt-4 mb-5" style={{ width: "50%" }}>
           <div className="total-price-row d-flex justify-content-between mb-3">
             <span>Total:</span>
             <span>USD 1000</span>
@@ -97,9 +100,9 @@ function Cart() {
             <div className="input-group my-3">
               <input type="phone" name="phone" id="phone" placeholder="Phone" />
             </div>
-            <div className="d-flex justify-content-between">
-              <span className="back-btn">Return to the store</span>
+            <div className="d-flex flex-column justify-content-between align-items-end">
               <button className="buy-btn">Continue to shipping</button>
+              <span className="back-btn">← Return to the store</span>
             </div>
           </form>
         </div>
