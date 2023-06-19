@@ -4,7 +4,7 @@ import "./Product.css";
 function Product() {
   return (
     <div className="container ">
-      <div className="row p-4 m-5 vh-100 d-flex justify-content-center align-items-center">
+      <div className="row p-4 m-5 vh-80 d-flex justify-content-center align-items-center">
         <div className="col-12 col-lg-6 mt-4">
           <div>
             <img className="w-100" src="../src/assets/pngegg.png" alt="..." />
@@ -25,7 +25,7 @@ function Product() {
             <div>
               <div className="row mt-4">
                 <h4 className="">Select your upgrades</h4>
-                <div className="g-col-sm-12 g-col-lg-4 border rounded my-2">
+                <div className="col-sm-12 col-md-3 col-lg-12 border rounded my-2 mx-2">
                   <div className="form-check mt-2 mb-2">
                     <label className="form-check-label" for="flexRadioDefault1">
                       <h4>Black Tropic Strap</h4>
@@ -41,7 +41,7 @@ function Product() {
                     </div>
                   </div>
                 </div>
-                <div className="g-col-sm-12 g-col-lg-4 border rounded  my-2">
+                <div className="col-sm-12 col-md-3 col-lg-12 border rounded  my-2 mx-2">
                   <div className="form-check mt-2 mb-2">
                     <label className="form-check-label" for="flexRadioDefault1">
                       <h4>Grey Tropic Strap</h4>
@@ -57,7 +57,7 @@ function Product() {
                     </div>
                   </div>
                 </div>
-                <div className="g-col-sm-12 g-col-lg-4 border rounded  my-2">
+                <div className="col-sm-12 col-md-3 col-lg-12 border rounded  my-2 mx-2">
                   <div className="form-check mt-2 mb-2">
                     <label className="form-check-label" for="flexRadioDefault1">
                       <h4>Black Nato Strap</h4>
