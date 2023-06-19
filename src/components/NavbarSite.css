@@ -1,8 +1,8 @@
 .navbar-project {
   background-color: var(--color-black);
   width: 100vw;
-  position: sticky;
-  top: -1px;
+  position: fixed;
+  top: 0px;
   z-index: 999;
 }
 

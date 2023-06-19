@@ -1,8 +1,7 @@
 .footer-thin {
   display: flex;
   justify-content: center;
-  border-top: 2px solid var(--color-white);
-  padding: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   width: 100%;
   margin: 0;
 }
@@ -10,7 +9,8 @@
   font-size: 1rem;
   background-color: transparent;
   border: transparent;
-  color: var(--color-white);
+  color: var(--color-gray);
+  text-align: center !important;
 }
 
 #footer {
@@ -20,40 +20,35 @@
   position: sticky;
 }
 .footer-text {
+  text-decoration: none;
+  background-color: transparent;
+  border: transparent;
   font-family: Quicksand;
   letter-spacing: 2px;
   font-weight: 400;
-  font-size: 18px;
-  text-align: center;
+  font-size: 0.8rem;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: var(--color-gray);
   width: 100%;
-  margin: 1rem 0rem 1rem 0rem;
 }
-.footer-subtitle {
+.footer-title {
   pointer-events: none;
   letter-spacing: 3px;
   font-family: Quicksand;
-  text-align: center;
+  color: var(--color-gray);
+  text-align: left;
   font-size: 20px;
-  border-bottom: 2px solid var(--color-white);
-  margin: 2rem 0 2rem 0;
   width: 100%;
 }
 .col-footer {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-}
-
-.footer-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
   justify-content: center;
+  flex-direction: column;
   height: 100%;
-  align-items: center;
-  padding: 0 0 2rem 0;
+  margin-bottom: 1rem;
 }
 
 .footer-fat {
@@ -61,23 +56,6 @@
   justify-content: center;
   max-width: 100%;
   margin: auto;
-}
-.footer-icon {
-  width: 40px;
-  height: auto;
-  cursor: pointer;
-}
-.footer-row-contact {
-  padding: 0 70px 0 70px;
-  display: flex;
-  gap: 20px;
-}
-.footer-text-small {
-  font-size: 15px;
-}
-.footer-ubication {
-  width: 350px;
-  padding-bottom: 3rem;
 }
 
 .footer-fat,
