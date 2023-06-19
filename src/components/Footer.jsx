@@ -9,59 +9,31 @@ function Footer() {
       <Row className="footer-fat">
         <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">About Us</p>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">About Us</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Customer Reviews</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Press Reviews</button>
-          </Tooltip>
+          <button className="footer-text">About Us</button>
+          <button className="footer-text">Customer Reviews</button>
+          <button className="footer-text">Press Reviews</button>
         </Col>
         <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">Contact & Support</p>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Support</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Product Manuals</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Pre-order Status Update</button>
-          </Tooltip>
+          <button className="footer-text">Support</button>
+          <button className="footer-text">Product Manuals</button>
+          <button className="footer-text">Pre-order Status Update</button>
         </Col>
         <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">Follow Us</p>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Facebook</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Instagram</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Twitter</button>
-          </Tooltip>
+          <button className="footer-text">Facebook</button>
+          <button className="footer-text">Instagram</button>
+          <button className="footer-text">Twitter</button>
         </Col>{" "}
         <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">More</p>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">Cookies Configuration</button>
-          </Tooltip>
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-text">FAQ</button>
-          </Tooltip>
+          <button className="footer-text">Cookies Configuration</button>
+          <button className="footer-text">FAQ</button>
         </Col>
       </Row>
       <Row className="footer-thin">
         <Col xs={12} lg={3} className="d-flex align-items-center">
-          <Tooltip
-            placement="left"
-            title="Out of the scope of the proyect"
-            className="footer-text"
-          >
-            <button className="footer-option footer-text">Use Terms</button>
-          </Tooltip>
+          <button className="footer-option footer-text">Use Terms</button>
         </Col>
         <Col xs={12} lg={6}>
           <p className="footer-text">
@@ -70,9 +42,7 @@ function Footer() {
           </p>
         </Col>
         <Col xs={12} lg={3} className="d-flex align-items-center">
-          <Tooltip placement="left" title="Out of the scope of the proyect">
-            <button className="footer-option footer-text">Privacy</button>
-          </Tooltip>
+          <button className="footer-option footer-text">Privacy</button>
         </Col>
       </Row>
     </footer>
