@@ -2,10 +2,6 @@ import React from "react";
 import "./Footer.css";
 import { Tooltip } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
-import fb from "../assets/fb.svg";
-import insta from "../assets/instagram.svg";
-import twitter from "../assets/twitter.svg";
-import map from "../assets/map2.png";
 
 function Footer() {
   return (
@@ -42,6 +38,9 @@ function Footer() {
           </Tooltip>
           <Tooltip placement="left" title="Out of the scope of the proyect">
             <button className="footer-text">Instagram</button>
+          </Tooltip>
+          <Tooltip placement="left" title="Out of the scope of the proyect">
+            <button className="footer-text">Twitter</button>
           </Tooltip>
         </Col>{" "}
         <Col xs={2} lg={3} className="col-footer">
