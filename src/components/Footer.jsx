@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer id="footer">
       <Row className="footer-fat">
-        <Col xs={2} lg={3} className="col-footer">
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">About Us</p>
           <Tooltip placement="left" title="Out of the scope of the proyect">
             <button className="footer-text">About Us</button>
@@ -19,7 +19,7 @@ function Footer() {
             <button className="footer-text">Press Reviews</button>
           </Tooltip>
         </Col>
-        <Col xs={2} lg={3} className="col-footer">
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">Contact & Support</p>
           <Tooltip placement="left" title="Out of the scope of the proyect">
             <button className="footer-text">Support</button>
@@ -31,7 +31,7 @@ function Footer() {
             <button className="footer-text">Pre-order Status Update</button>
           </Tooltip>
         </Col>
-        <Col xs={2} lg={3} className="col-footer">
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">Follow Us</p>
           <Tooltip placement="left" title="Out of the scope of the proyect">
             <button className="footer-text">Facebook</button>
@@ -43,7 +43,7 @@ function Footer() {
             <button className="footer-text">Twitter</button>
           </Tooltip>
         </Col>{" "}
-        <Col xs={2} lg={3} className="col-footer">
+        <Col xs={12} lg={3} className="col-footer">
           <p className="footer-title">More</p>
           <Tooltip placement="left" title="Out of the scope of the proyect">
             <button className="footer-text">Cookies Configuration</button>
