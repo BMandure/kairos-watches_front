@@ -5,7 +5,7 @@ import "./AboutIntroduction.css";
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
-      <h2 className="about-intro-title">About The Proyect</h2>
+      <h2 className="about-intro-title">About The Project</h2>
       <Row className="about-row">
         <Col xs={12} lg={6} className="about-col">
           <div className="container-text">
