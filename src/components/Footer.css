@@ -1,6 +1,6 @@
 .footer-thin {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   padding: 0.5rem 0 0.5rem 0;
   width: 100%;
   margin: 0;
@@ -27,9 +27,9 @@
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 0.7rem;
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.6rem;
   color: var(--color-gray);
   width: 100%;
 }
@@ -38,7 +38,7 @@
   letter-spacing: 3px;
   font-family: Quicksand;
   color: var(--color-gray);
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
   width: 100%;
 }
@@ -48,18 +48,29 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  margin-bottom: 1rem;
+  padding: 2rem 2rem 0 2rem;
 }
 
 .footer-fat {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin: auto;
-  margin-top: 30px;
+  margin: 30px auto 30px auto;
 }
 
 .footer-fat,
 .footer-thin {
   backdrop-filter: brightness(80%);
+}
+
+.footer-text-copy,
+.footer-text-copy-names {
+  padding-left: 1.5rem;
+  font-size: 0.6rem;
+  text-align: left;
+  color: var(--color-gray);
+  margin: 0;
+}
+.footer-text-copy-names {
+  text-align: center;
 }

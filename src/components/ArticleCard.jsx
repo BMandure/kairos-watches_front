@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card } from "react-bootstrap";
 import ArticleModal from "./ArticleModal";
+import "./ArticleCard.css";
 
 function ArticleCard({ article }) {
   const [showModal, setShowModal] = useState(false);
@@ -9,14 +10,19 @@ function ArticleCard({ article }) {
     setSelectedArticle(article);
     setShowModal(true);
   };
-
+  const resultContent = article.content.substring(0, 100) + "...";
   return (
-    <Card style={{ width: "20rem" }} className="brand-info-card">
-      <Card.Img variant="top" src={article.cardImg} alt="Article Image" />
+    <Card className="article-card">
+      <Card.Img
+        variant="top"
+        src={article.cardImg}
+        alt="Article Image"
+        className="article-card-image"
+      />
 
-      <Card.Body>
-        <Card.Title>{article.title}</Card.Title>
-        <Card.Text>{article.articleContent}</Card.Text>
+      <Card.Body className="article-body">
+        <Card.Title className="article-card-title">{article.title}</Card.Title>
+        <Card.Text className="article-card-content">{resultContent}</Card.Text>
         <ArticleModal article={article} />
       </Card.Body>
     </Card>

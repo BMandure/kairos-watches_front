@@ -1,0 +1,19 @@
+.article-card-image {
+  height: 200px;
+  border-radius: 0;
+}
+.article-card {
+  width: 350px;
+  border-radius: 0;
+  background-color: var(--color-black-transparent);
+  color: var(--color-white);
+}
+.article-card-title,
+.article-card-content {
+  color: var(--color-white);
+}
+.article-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
