@@ -15,15 +15,15 @@
 }
 .card-info {
   text-align: center;
-  height: 30%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-white);
 }
 
 .product-img {
   width: 100%;
   object-fit: cover;
-  height: 70%;
+  height: 100%;
+  border-radius: 0;
 }
 
 .product-card-button {
@@ -72,4 +72,21 @@
   justify-content: space-between;
   align-items: center;
   font-family: Quicksand;
+  height: 30%;
+}
+.featured-pill {
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  color: var(--color-black);
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: transparent;
+  background-color: var(--color-white);
+  font-weight: semibold;
+}
+.container-img-featured {
+  position: relative;
+  height: 70%;
+  display: flex;
+  justify-content: right;
 }

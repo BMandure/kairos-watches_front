@@ -1,10 +1,10 @@
 .container-banner-project {
-  background-image: url("src/assets/banner.png");
   min-height: 50vh;
   width: 100%;
   overflow: hidden;
   padding: 0;
   position: relative;
+  margin: 1px 0 1px 0;
 }
 .about-project-brightness {
   position: absolute;

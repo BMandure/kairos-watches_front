@@ -32,6 +32,12 @@ function Home() {
         buttonText="SEE MORE"
         link="/about"
       />
+      <SubBanner
+        title="ALL WATCHES"
+        buttonText="SEE CATALOGUE"
+        link="/shop"
+        img="src/assets/banner.png"
+      />
       <BrandRight
         name="Rolex"
         description={descRolex}

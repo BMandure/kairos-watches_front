@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import "./SubBanner.css";
 
-function SubBanner({ title, buttonText, link }) {
+function SubBanner({ title, buttonText, link, img }) {
   return (
-    <div className="container-banner-project">
+    <div
+      className="container-banner-project"
+      style={{
+        backgroundImage: `url(${img})`,
+      }}
+    >
       <div className="about-project-brightness">
         <div className="about-project-content">
           <h2 className="about-project-title">{title}</h2>

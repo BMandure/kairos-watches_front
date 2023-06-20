@@ -93,7 +93,7 @@ function NavbarSite() {
               <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Submariner</div>
@@ -102,7 +102,7 @@ function NavbarSite() {
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Daytona</div>
@@ -110,7 +110,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Oyster</div>
@@ -118,7 +118,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">GMT-Master II</div>
@@ -126,7 +126,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Day-Date</div>
@@ -134,7 +134,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Pearlmaster</div>
@@ -151,7 +151,7 @@ function NavbarSite() {
               <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Officer's</div>
@@ -159,7 +159,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Maverick Large</div>
@@ -168,7 +168,7 @@ function NavbarSite() {
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">INOX</div>
@@ -176,7 +176,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Alliance</div>
@@ -184,7 +184,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Alliance XS</div>
@@ -201,7 +201,7 @@ function NavbarSite() {
               <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Speedmaster</div>
@@ -209,7 +209,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Constellation</div>
@@ -226,7 +226,7 @@ function NavbarSite() {
               <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Calatrava</div>
@@ -234,7 +234,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary ">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Nautilus</div>
@@ -242,7 +242,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-2"
+                    className="border-0 mx-2 d-flex justify-content-start py-1"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Aquanaut</div>

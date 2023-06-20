@@ -20,7 +20,8 @@ function Shop() {
 
   return (
     <>
-      <Container>
+      <Container class="shop-container">
+        FILTER
         <Row>
           {products.map((product) => (
             <Col xs={3} key={product.id}>
