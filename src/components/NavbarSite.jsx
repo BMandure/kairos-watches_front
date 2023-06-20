@@ -51,6 +51,7 @@ function NavbarSite() {
             <div className="btn-content">Login</div>
           </Link>
         </div>
+
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -63,161 +64,176 @@ function NavbarSite() {
               Kairos
             </Link>
           </Navbar.Brand>
-          <Offcanvas.Body className="d-flex flex-column align-items-start mx-auto offcanvas-project p-0">
+          <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
-              <Link className="btn m-4 fw-bold" to="/about">
-                <div className="btn-content">ABOUT THE PROJECT</div>
+              <Link
+                className="justify-content-start pe-5 m-4 fw-bold"
+                to="/about"
+              >
+                <div className="btn-content btn-nav">ABOUT THE PROJECT</div>
               </Link>
-              <Link className="btn mx-4 fw-bold" to="#action1">
-                <div className="btn-content">Rolex</div>
+              <Link
+                className="justify-content-start mx-4 fw-bold"
+                to="#action1"
+              >
+                <div className="btn-content btn-nav">Rolex</div>
               </Link>
-              <ul className="mt-1 px-5 pb-5">
+              <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Submariner</div>
+                    <div className="btn-content btn-nav">Submariner</div>
                   </Link>
                 </li>
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Daytona</div>
+                    <div className="btn-content btn-nav">Daytona</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Oyster</div>
+                    <div className="btn-content btn-nav">Oyster</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">GMT-Master II</div>
+                    <div className="btn-content btn-nav">GMT-Master II</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Day-Date</div>
+                    <div className="btn-content btn-nav">Day-Date</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Pearlmaster</div>
+                    <div className="btn-content btn-nav">Pearlmaster</div>
                   </Link>
                 </li>
               </ul>
 
-              <Link className="btn mx-4 fw-bold" to="#action1">
-                <div className="btn-content">Victorinox Swiss Army</div>
+              <Link
+                className="justify-content-start mx-4 fw-bold"
+                to="#action1"
+              >
+                <div className="btn-content btn-nav">Victorinox Swiss Army</div>
               </Link>
-              <ul className="mt-1 px-5 pb-5">
+              <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Officer's</div>
+                    <div className="btn-content btn-nav">Officer's</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Maverick Large</div>
+                    <div className="btn-content btn-nav">Maverick Large</div>
                   </Link>
                 </li>
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">INOX</div>
+                    <div className="btn-content btn-nav">INOX</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Alliance</div>
+                    <div className="btn-content btn-nav">Alliance</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Alliance XS</div>
+                    <div className="btn-content btn-nav">Alliance XS</div>
                   </Link>
                 </li>
               </ul>
 
-              <Link className="btn mx-4 fw-bold" to="#action1">
-                <div className="btn-content">Omega</div>
+              <Link
+                className="justify-content-start mx-4 fw-bold"
+                to="#action1"
+              >
+                <div className="btn-content btn-nav">Omega</div>
               </Link>
-              <ul className="mt-1 px-5 pb-5">
+              <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Speedmaster</div>
+                    <div className="btn-content btn-nav">Speedmaster</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Constellation</div>
+                    <div className="btn-content btn-nav">Constellation</div>
                   </Link>
                 </li>
               </ul>
 
-              <Link className="btn mx-4 fw-bold" to="#action1">
-                <div className="btn-content">Patek Philippe</div>
+              <Link
+                className="justify-content-start mx-4 fw-bold"
+                to="#action1"
+              >
+                <div className="btn-content btn-nav">Patek Philippe</div>
               </Link>
-              <ul className="mt-1 px-5 pb-5">
+              <ul className="mt-1 px-4 pb-2">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Calatrava</div>
+                    <div className="btn-content btn-nav">Calatrava</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary ">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Nautilus</div>
+                    <div className="btn-content btn-nav">Nautilus</div>
                   </Link>
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="btn mx-2 d-flex justify-content-center"
+                    className="border-0 mx-2 d-flex justify-content-start py-2"
                     to="#action1"
                   >
-                    <div className="btn-content">Aquanaut</div>
+                    <div className="btn-content btn-nav">Aquanaut</div>
                   </Link>
                 </li>
               </ul>

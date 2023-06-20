@@ -102,3 +102,11 @@ a {
   min-width: 400px;
   text-align: center;
 }
+
+.navbar-align-left {
+  display: flex;
+  justify-content: start;
+}
+.btn-nav:hover {
+  border-bottom: 1px solid white;
+}
