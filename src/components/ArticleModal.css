@@ -1,0 +1,18 @@
+.modal-content-style {
+  font-family: Quicksand;
+  color: white;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-content {
+  border-radius: 0px;
+  background-color: black;
+}
+
+.about-project-title-brand-modal {
+  height: 4rem;
+}

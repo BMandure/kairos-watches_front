@@ -102,7 +102,7 @@ function Cart() {
             </div>
             <div className="d-flex flex-column justify-content-between align-items-end">
               <button className="buy-btn">Continue to shipping</button>
-              <span className="back-btn">← Return to the store</span>
+              <span className="back-btn">← Return to store</span>
             </div>
           </form>
         </div>

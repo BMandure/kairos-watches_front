@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./ArticleModal.css";
 
 function ArticleModal({ article }) {
   const [showModal, setShowModal] = useState(false);
@@ -26,14 +27,12 @@ function ArticleModal({ article }) {
         onHide={handleCloseModal}
         className="modal-content-style"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>
-            <img
-              className="about-project-title-brand-modal"
-              src={article.modalPic}
-              alt="brand-logo"
-            />
-          </Modal.Title>
+        <Modal.Header closeButton closeVariant="white">
+          <img
+            className="about-project-title-brand-modal"
+            src={article.modalPic}
+            alt="brand-logo"
+          />
         </Modal.Header>
         <Modal.Body>
           <video controls width="100%" height="auto">

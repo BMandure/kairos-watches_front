@@ -93,10 +93,16 @@ function BrandInfo() {
 
   return (
     <div className="brand-info-container">
-      <div className="brand-info-logo-container">
-        <img className="brand-info-logo" src={info.logo} alt="brand-logo"></img>
+      <div className="background-logo-collections">
+        <div className="brand-info-logo-container">
+          <img
+            className="brand-info-logo"
+            src={info.logo}
+            alt="brand-logo"
+          ></img>
+        </div>
+        <h2 className="brand-info-subtitle">COLLECTIONS</h2>
       </div>
-      <h2 className="brand-info-subtitle">COLLECTIONS</h2>
       <div className="collection-container-gap d-flex flex-column">
         {info.collections.map((collection, i) => (
           <CollectionCard
