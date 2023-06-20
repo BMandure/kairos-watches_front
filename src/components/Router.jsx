@@ -7,6 +7,7 @@ import Buy from "../pages/Buy";
 import Product from "../pages/Product";
 import Register from "./Register";
 import Login from "./Login";
+import BrandInfo from "../pages/BrandInfo";
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/product/:slug" element={<Product />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/brandInfo" element={<BrandInfo />} />
     </Routes>
   );
 }
