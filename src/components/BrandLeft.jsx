@@ -6,7 +6,11 @@ function BrandLeft({ name, logo, description, videos }) {
   return (
     <Container className="brandLeft-container">
       <Row className="brandLeft-row">
-        <Col xs={12} lg={6} className="brandLeft-col">
+        <Col
+          xs={{ span: 12, order: 2 }}
+          lg={{ span: 6, order: 1 }}
+          className="brandLeft-col"
+        >
           <Carousel fade controls={false} indicators={false}>
             {videos.map((video, i) => (
               <Carousel.Item key={i}>
@@ -27,7 +31,7 @@ function BrandLeft({ name, logo, description, videos }) {
             ))}
           </Carousel>
         </Col>
-        <Col xs={12} lg={6}>
+        <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
           <div className="brandLeft-info">
             <img
               src={`${import.meta.env.VITE_APP_DOMAIN}${logo}`}
