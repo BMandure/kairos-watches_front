@@ -29,7 +29,12 @@ function Home() {
         buttonText="SEE MORE"
         link="/about"
       />
-      ,
+      <SubBanner
+        title="VIEW ALL WATCHES"
+        buttonText="MORE"
+        link="/shop"
+        img="src/assets/banner.png"
+      />
       {brands && (
         <>
           <BrandRight
