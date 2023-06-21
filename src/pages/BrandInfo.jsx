@@ -25,6 +25,19 @@ function BrandInfo() {
     getLines();
   }, []);
 
+  const [products, setProducts] = useState([]);
+  const filter = "";
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_APP_DOMAIN}/products?filter=${filter}`,
+      });
+      setProducts(response.data);
+    };
+    getProducts();
+  }, []);
+
   return (
     lines && (
       <>
