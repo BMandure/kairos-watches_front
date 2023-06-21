@@ -35,7 +35,7 @@ function Home() {
           <BrandRight
             name={brands[0].name}
             description={brands[0].description}
-            imgs={brands[0].img}
+            imgs={brands[0].image}
             logo={brands[0].logo}
             link="/collections/rolex"
           />
@@ -51,7 +51,7 @@ function Home() {
           <BrandRight
             name={brands[3].name}
             description={brands[3].description}
-            imgs={brands[3].img}
+            imgs={brands[3].image}
             logo={brands[3].logo}
             link="/collections/omega"
           />
