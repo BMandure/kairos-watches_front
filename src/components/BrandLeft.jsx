@@ -21,7 +21,10 @@ function BrandLeft({ name, logo, description, videos }) {
                     muted
                     className="brandLeft-carousel-video"
                   >
-                    <source src={video} type="video/mp4" />
+                    <source
+                      src={`${import.meta.env.VITE_APP_DOMAIN}${video}`}
+                      type="video/mp4"
+                    />
                   </video>
                 </div>
               </Carousel.Item>
@@ -31,7 +34,7 @@ function BrandLeft({ name, logo, description, videos }) {
         <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
           <div className="brandLeft-info">
             <img
-              src={logo}
+              src={`${import.meta.env.VITE_APP_DOMAIN}${logo}`}
               alt={`${name} logo`}
               id="brandLeft-logo"
               className="img-fluid brandLeft-logo"
