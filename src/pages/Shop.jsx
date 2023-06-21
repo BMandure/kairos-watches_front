@@ -20,12 +20,13 @@ function Shop() {
 
   return (
     <>
-      <Container class="shop-container">
+      <Container className="shop-container">
         FILTER
         <Row>
           {products.map((product) => (
-            <Col xs={3} key={product.id}>
-              <ProductCard product={product} />
+            <Col xs={3}>
+              {console.log(product)}
+              <ProductCard key={product.id} product={product} />
             </Col>
           ))}
         </Row>
