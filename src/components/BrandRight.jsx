@@ -9,7 +9,7 @@ function BrandRight({ name, logo, description, imgs, link }) {
         <Col xs={12} lg={6}>
           <div className="brandRight-info">
             <img
-              src={logo}
+              src={`${import.meta.env.VITE_APP_DOMAIN}${logo}`}
               alt={`${name} logo`}
               id="product3-logo"
               className="img-fluid brandRight-logo"
@@ -33,7 +33,7 @@ function BrandRight({ name, logo, description, imgs, link }) {
                 <div>
                   <img
                     className="brandRight-carousel-image img-fluid"
-                    src={img}
+                    src={`${import.meta.env.VITE_APP_DOMAIN}${img}`}
                     alt=""
                   />
                 </div>
