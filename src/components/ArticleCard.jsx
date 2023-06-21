@@ -15,7 +15,7 @@ function ArticleCard({ article }) {
     <Card className="article-card">
       <Card.Img
         variant="top"
-        src={article.cardImg}
+        src={`${import.meta.env.VITE_APP_DOMAIN}${article.cardImg}`}
         alt="Article Image"
         className="article-card-image"
       />

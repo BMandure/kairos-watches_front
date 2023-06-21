@@ -36,7 +36,10 @@ function ArticleModal({ article }) {
         </Modal.Header>
         <Modal.Body>
           <video controls width="100%" height="auto">
-            <source src={article.video} type="video/mp4" />
+            <source
+              src={`${import.meta.env.VITE_APP_DOMAIN}${article.video}`}
+              type="video/mp4"
+            />
           </video>
           <h3>{article.modalTitle}</h3>
           {article.content}

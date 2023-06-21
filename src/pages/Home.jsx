@@ -7,24 +7,6 @@ import SubBanner from "../components/SubBanner";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-//Data
-import {
-  descOmega,
-  descPatek,
-  descRolex,
-  descVictorinox,
-  imgOmega,
-  imgRolex,
-  videosPatek,
-  videosVictorinox,
-} from "../db";
-
-//Logos
-import victorinoxLogo from "../assets/Victorinox_Logo.svg";
-import rolexLogo from "../assets/Rolex.svg";
-import omegaLogo from "../assets/Omega_Logo.svg";
-import patekLogo from "../assets/patek-philippe-sa-logo.svg";
-
 function Home() {
   const [brands, setBrands] = useState(null);
 

@@ -5,7 +5,9 @@ function CollectionCard({ name, img, description }) {
   return (
     <Link
       className="collection-thumbnail-img"
-      style={{ backgroundImage: `url(${img})` }}
+      style={{
+        backgroundImage: `url(${import.meta.env.VITE_APP_DOMAIN}${img})`,
+      }}
     >
       <div className="collection-background">
         <div className="collection-container">
