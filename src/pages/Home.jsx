@@ -42,7 +42,7 @@ function Home() {
             description={brands[0].description}
             imgs={brands[0].image}
             logo={brands[0].logo}
-            link="/collections/rolex"
+            link="/rolex/lines"
           />
 
           <BrandLeft
@@ -50,7 +50,7 @@ function Home() {
             description={brands[1].description}
             logo={brands[1].logo}
             videos={brands[1].video}
-            link="/collections/victorinox"
+            link="/victorinox/lines"
           />
 
           <BrandRight
@@ -58,7 +58,7 @@ function Home() {
             description={brands[3].description}
             imgs={brands[3].image}
             logo={brands[3].logo}
-            link="/collections/omega"
+            link="/omega/lines"
           />
 
           <BrandLeft
@@ -66,7 +66,7 @@ function Home() {
             description={brands[2].description}
             logo={brands[2].logo}
             videos={brands[2].video}
-            link="/collections/patek-philippe"
+            link="/patek-philippe/lines"
           />
         </>
       )}
