@@ -2,7 +2,7 @@ import { Container, Row, Col, Carousel } from "react-bootstrap";
 import "./BrandLeft.css";
 import { Link } from "react-router-dom";
 
-function BrandLeft({ name, logo, description, videos }) {
+function BrandLeft({ name, logo, description, videos, link }) {
   return (
     <Container className="brandLeft-container">
       <Row className="brandLeft-row">
@@ -41,7 +41,7 @@ function BrandLeft({ name, logo, description, videos }) {
             />
             <p className="brandLeft-description">{description}</p>
 
-            <Link className="btn">
+            <Link className="btn" to={link}>
               <div className="btn-content">View Collection</div>
             </Link>
           </div>

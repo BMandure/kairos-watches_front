@@ -50,7 +50,7 @@ function Home() {
             description={brands[1].description}
             logo={brands[1].logo}
             videos={brands[1].video}
-            link="/victorinox/lines"
+            link="/victorinox-swiss-army/lines"
           />
 
           <BrandRight
