@@ -4,3 +4,11 @@
 .shop-container {
   padding-top: 5rem;
 }
+.shop-filter-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
