@@ -24,8 +24,11 @@ function Shop() {
         FILTER
         <Row>
           {products.map((product) => (
-            <Col xs={3}>
-              {console.log(product)}
+            <Col
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 6, offset: 0 }}
+              lg={{ span: 3, offset: 0 }}
+            >
               <ProductCard key={product.id} product={product} />
             </Col>
           ))}

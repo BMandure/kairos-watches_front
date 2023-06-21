@@ -23,8 +23,8 @@ function ProductCard({ product }) {
         </div>
         <Card.Body className="product-card-body">
           <Card.Title className="card-info">{`${product.brand.name} - ${product.line.name} ${product.name}`}</Card.Title>
-          <Link to={`product/1`} className="product-card-button">
-            VIEW DETAILS
+          <Link className="btn" to={`/product/${product.slug}`}>
+            <div className="btn-content">VIEW DETAIL</div>
           </Link>
         </Card.Body>
       </Card>
