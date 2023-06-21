@@ -26,18 +26,18 @@ function BrandInfo() {
   }, []);
 
   const [products, setProducts] = useState([]);
-  const filter = "";
+  /*
   useEffect(() => {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/products?filter=${filter}`,
+        url: `${import.meta.env.VITE_APP_DOMAIN}/products?filter=${filterLine}`,
       });
       setProducts(response.data);
     };
     getProducts();
   }, []);
-
+*/
   return (
     lines && (
       <>
@@ -63,6 +63,22 @@ function BrandInfo() {
             ))}
           </div>
 
+          {/* <div className="collection-container-gap d-flex flex-column">
+            <Container className="shop-container">
+              FILTER
+              <Row>
+                {products.map((product) => (
+                  <Col
+                    xs={{ span: 10, offset: 1 }}
+                    md={{ span: 6, offset: 0 }}
+                    lg={{ span: 3, offset: 0 }}
+                  >
+                    <ProductCard key={product.id} product={product} />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </div>*/}
           <div>
             <h2 className="brand-info-subtitle">NEWS</h2>
             <div className="brand-info-cards d-flex">
