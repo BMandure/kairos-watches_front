@@ -85,6 +85,19 @@ body {
   position: relative;
   z-index: 500;
 }
+
+.btn-gray {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.btn-gray:hover {
+  background-color: grey;
+  border: 1px solid white;
+  color: white;
+}
+
 /*Scroll bar*/
 ::-webkit-scrollbar {
   width: 10px;

@@ -3,11 +3,14 @@ import "./Product.css";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { Carousel } from "react-bootstrap";
+import { Tooltip } from "antd";
 
 function Product() {
   const params = useParams();
   const [product, setProduct] = useState();
   const [brand, setBrand] = useState(null);
+  const [hoverFav, setHoverFav] = useState(false);
+  const text = "Out of the project's scope";
 
   useEffect(() => {
     const getProduct = async () => {
@@ -19,7 +22,6 @@ function Product() {
     };
     getProduct();
   }, []);
-  const [hoverFav, setHoverFav] = useState(false);
 
   return (
     <>
@@ -64,62 +66,68 @@ function Product() {
                 <div>
                   <div className="row mt-4">
                     <h4 className="">Select your upgrades</h4>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2">
-                      <div className="form-check mt-2 mb-2">
-                        <label
-                          className="form-check-label"
-                          htmlFor="flexRadioDefault1"
-                        >
-                          <h4>Black Tropic Strap</h4>
-                        </label>
-                        <input
-                          className="form-check-input "
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault1"
-                        />
-                        <div>
-                          <h5>USD 39.20</h5>
+                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2 pe-auto">
+                      <Tooltip placement="top" title={text}>
+                        <div className="form-check mt-2 mb-2">
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            <h4>Black Tropic Strap</h4>
+                          </label>
+                          <input
+                            className="form-check-input "
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <div>
+                            <h5>USD 39.20</h5>
+                          </div>
                         </div>
-                      </div>
+                      </Tooltip>
                     </div>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  my-2 mx-2">
-                      <div className="form-check mt-2 mb-2">
-                        <label
-                          className="form-check-label"
-                          htmlFor="flexRadioDefault1"
-                        >
-                          <h4>Grey Tropic Strap</h4>
-                        </label>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault1"
-                        />
-                        <div>
-                          <h5>USD 39.20</h5>
+                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
+                      <Tooltip placement="top" title={text}>
+                        <div className="form-check mt-2 mb-2">
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            <h4>Grey Tropic Strap</h4>
+                          </label>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <div>
+                            <h5>USD 39.20</h5>
+                          </div>
                         </div>
-                      </div>
+                      </Tooltip>
                     </div>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  my-2 mx-2">
-                      <div className="form-check mt-2 mb-2">
-                        <label
-                          className="form-check-label"
-                          htmlFor="flexRadioDefault1"
-                        >
-                          <h4>Black Nato Strap</h4>
-                        </label>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name="flexRadioDefault"
-                          id="flexRadioDefault1"
-                        />
-                        <div>
-                          <h5>USD 23.20</h5>
+                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
+                      <Tooltip placement="top" title={text}>
+                        <div className="form-check mt-2 mb-2">
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            <h4>Black Nato Strap</h4>
+                          </label>
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <div>
+                            <h5>USD 23.20</h5>
+                          </div>
                         </div>
-                      </div>
+                      </Tooltip>
                     </div>
                   </div>
                 </div>
@@ -127,7 +135,7 @@ function Product() {
               <div className="w-100 d-flex justify-content-between mt-2 align-items-center">
                 <button
                   expand="true"
-                  className="btn-preorder p-4 text-center w-100"
+                  className="btn-gray p-4 text-center w-100"
                 >
                   <i className="bi bi-cart3 me-2"></i>Pre-order now
                 </button>

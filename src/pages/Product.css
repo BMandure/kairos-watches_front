@@ -12,20 +12,6 @@ h5 {
   font-size: 0.7rem;
 }
 
-.btn-preorder {
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid black;
-  color: black;
-}
-
-.btn-preorder:hover {
-  background-color: grey;
-  border: 1px solid white;
-  border-radius: 5px;
-  color: white;
-}
-
 .bi-heart {
   font-size: 1.2rem;
 }

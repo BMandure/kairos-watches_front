@@ -49,11 +49,11 @@ function Cart() {
             style={{ height: "30%" }}
           >
             <Link to={"/buy"} className="text-black mx-auto w-75">
-              <div className="w-100 bg-white p-3 d-flex justify-content-center fw-bold fs-5">
-                <img src={cart} alt="" className="px-2" />
+              <button expand="true" className="btn-gray p-4 text-center w-100">
+                <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
                 <span className="px-2">USD 1000</span>
-              </div>
+              </button>
             </Link>
             <div className="info-cart-container">
               <div className="info-cart">

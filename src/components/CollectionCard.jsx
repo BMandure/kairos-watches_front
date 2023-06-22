@@ -12,7 +12,7 @@ function CollectionCard({ name, img, description, slug }) {
       <div className="collection-background">
         <div className="collection-container">
           <Link
-            className="btn d-none d-lg-inline-block"
+            className="d-none d-lg-inline-block"
             to={`/${slug}/lines/${name}`}
           >
             <div className="btn-content collection-name">{name}</div>
