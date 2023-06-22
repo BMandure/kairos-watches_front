@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./CollectionCard.css";
 
-function CollectionCard({ name, img, description, slug }) {
+function CollectionCard({ name, img, description, slug, lineSlug }) {
   return (
     <Link
       className="collection-thumbnail-img"
@@ -13,7 +13,7 @@ function CollectionCard({ name, img, description, slug }) {
         <div className="collection-container">
           <Link
             className="btn d-none d-lg-inline-block"
-            to={`/${slug}/lines/${name}`}
+            to={`/${slug}/lines/${lineSlug}`}
           >
             <div className="btn-content collection-name">{name}</div>
           </Link>

@@ -47,6 +47,7 @@ function BrandInfo() {
                 img={line.image}
                 description={line.description}
                 slug={slug}
+                lineSlug={line.slug}
               />
             ))}
           </div>
