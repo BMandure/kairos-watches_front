@@ -10,3 +10,6 @@
   font-size: 2rem;
   text-align: center;
 }
+.team-container {
+  max-width: 65vw;
+}

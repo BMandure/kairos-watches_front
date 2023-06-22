@@ -5,11 +5,11 @@ import AboutTeam from "../components/AboutTeam";
 
 function About() {
   return (
-    <>
+    <div className="about-page">
       <AboutIntroduction />
       <AboutTechnologies />
       <AboutTeam />
-    </>
+    </div>
   );
 }
 
