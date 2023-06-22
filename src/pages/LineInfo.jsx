@@ -45,8 +45,12 @@ function LineInfo() {
     line && (
       <>
         <div className="brand-info-container">
-          <div className="d-flex flex-column">
-            <CollectionCard name={line[0].name} img={line[0].image} />
+          <div className="d-flex flex-column mt-2">
+            <CollectionCard
+              name={line[0].name}
+              img={line[0].image}
+              imgLogo={line[0].brand.logo}
+            />
           </div>
           <div className="d-flex flex-column">
             <Container className="shop-container">
