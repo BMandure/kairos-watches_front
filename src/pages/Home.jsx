@@ -2,7 +2,6 @@
 import BrandLeft from "../components/BrandLeft";
 import BrandRight from "../components/BrandRight";
 import Banner from "../components/Banner";
-import Cart from "../components/Cart";
 import SubBanner from "../components/SubBanner";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -69,7 +68,6 @@ function Home() {
           />
         </>
       )}
-      <Cart />
     </div>
   );
 }

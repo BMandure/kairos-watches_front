@@ -12,20 +12,6 @@ h5 {
   font-size: 0.7rem;
 }
 
-.btn-preorder {
-  background-color: white;
-  border-radius: 5px;
-  border: 1px solid black;
-  color: black;
-}
-
-.btn-preorder:hover {
-  background-color: grey;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
-}
-
 .bi-heart {
   font-size: 1.2rem;
 }
@@ -39,4 +25,18 @@ h5 {
   align-items: center;
   border: 1px solid white;
   color: white;
+}
+.heart:hover {
+  cursor: pointer;
+}
+
+.product-container {
+  margin-top: 5rem;
+}
+.change-product {
+  border-bottom: 1px solid transparent;
+  margin: 1rem;
+}
+.change-product:hover {
+  border-bottom: 1px solid var(--color-white);
 }
