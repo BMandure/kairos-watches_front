@@ -1,9 +1,8 @@
-import "./BrandInfo.css";
+import "./LineInfo.css";
 import { useParams } from "react-router-dom";
-import ArticleCard from "../components/ArticleCard";
 import ProductCard from "../components/ProductCard";
 import CollectionCard from "../components/CollectionCard";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -19,7 +18,7 @@ function LineInfo() {
     const getLine = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/line/${lineSlug}`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/line/${lineSlug}`,
       });
       setLine(response.data);
     };
@@ -33,7 +32,7 @@ function LineInfo() {
         const response = await axios({
           method: "GET",
           url: `${
-            import.meta.env.VITE_APP_DOMAIN
+            import.meta.env.VITE_API_DOMAIN
           }/products?filterLine=${lineId}`,
         });
         setProducts(response.data);
@@ -46,28 +45,11 @@ function LineInfo() {
     line && (
       <>
         <div className="brand-info-container">
-          <div className="background-logo-collections">
-            <div className="brand-info-logo-container">
-              <img
-                className="brand-info-logo"
-                src={`${import.meta.env.VITE_APP_DOMAIN}${line[0].brand.logo}`}
-                alt="brand-logo"
-              />
-            </div>
-            <h2 className="brand-info-subtitle">COLLECTIONS</h2>
+          <div className="d-flex flex-column">
+            <CollectionCard name={line[0].name} img={line[0].image} />
           </div>
-          <div className="collection-container-gap d-flex flex-column">
-            <CollectionCard
-              key={line._id}
-              name={line.name}
-              img={line.image}
-              description={line.description}
-            />
-          </div>
-
-          <div className="collection-container-gap d-flex flex-column">
+          <div className="d-flex flex-column">
             <Container className="shop-container">
-              FILTER
               <Row>
                 {products.map((product) => (
                   <Col
