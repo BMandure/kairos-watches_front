@@ -41,7 +41,7 @@ function NavbarSite() {
             </Link>
             <Link
               className="btn d-none d-lg-inline-block "
-              to={"/victorinox/lines"}
+              to={"/victorinox-swiss-army/lines"}
             >
               <div className="btn-content">Victorinox</div>
             </Link>
