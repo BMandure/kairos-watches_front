@@ -4,11 +4,10 @@ import add from "../assets/add.svg";
 import rest from "../assets/rest.svg";
 
 function ItemCart({ product }) {
-  console.log(product.image[0]);
   return (
     <div className="position-relative">
       <div className="d-flex justify-content-between item-cart px-3 py-1">
-        <div className="position-absolute top-0 end-0">
+        <div className="position-absolute top-0 end-0 pe-2 pt-2">
           <img src={deleteProduct} alt="" />
         </div>
         <div className="d-flex my-auto" style={{ width: "40%" }}>
