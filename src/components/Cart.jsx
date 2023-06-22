@@ -38,7 +38,17 @@ function Cart() {
         <Offcanvas.Body className="p-0">
           <div className="overflow-auto bg-black" style={{ height: "70%" }}>
             {cartState.map((item, i) => (
-              <ItemCart key={i} product={item} />
+              <>
+                <ItemCart key={i} product={item} />
+                <hr
+                  style={{
+                    height: "2px",
+                    backgroundColor: "#454545",
+                    border: "none",
+                    margin: "0 40px",
+                  }}
+                />
+              </>
             ))}
           </div>
           <div
