@@ -39,8 +39,6 @@ function LineInfo() {
         setProducts(response.data);
       };
       getProducts();
-    } else {
-      console.log("No hay line");
     }
   }, [line]);
 

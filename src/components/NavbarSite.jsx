@@ -24,7 +24,9 @@ function NavbarSite() {
         onClick={handleToggleOffcanvas}
       >
         <img
-          src="../src/assets/list_hamburger_icon.svg"
+          src={`${
+            import.meta.env.VITE_REACT_APP_DOMAIN
+          }/list_hamburger_icon.svg`}
           alt="navbar-icon"
           className="navbar-icon"
         />
