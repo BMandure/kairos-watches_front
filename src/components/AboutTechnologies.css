@@ -1,5 +1,5 @@
 .about-intro-container {
-  min-width: 100vw;
+  max-width: 65vw;
   margin-top: 3rem;
   padding: 0;
 }
@@ -12,6 +12,8 @@
 }
 .about-tech-row {
   text-align: center;
+  width: 65vw;
+  margin: 0 auto 0 auto;
 }
 .about-tech-title {
   font-family: Pinyon;

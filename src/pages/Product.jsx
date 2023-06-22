@@ -70,7 +70,7 @@ function Product() {
                   </h2>
                 </div>
                 <div>
-                  <div className="row mt-4">
+                  <div className="row">
                     <h4 className="">Select your upgrades</h4>
                     <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2 pe-auto">
                       <Tooltip placement="top" title={text}>

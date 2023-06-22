@@ -7,7 +7,7 @@ function AboutIntroduction() {
     <Container className="about-intro-banner">
       <h2 className="about-intro-title p-0 px-4 mx-2">About The Project</h2>
       <Row className="mx-2 mt-4 text-center">
-        <Col xs={12} lg={6} className="about-col px-4">
+        <Col xs={12} className="about-col px-4">
           <div className="container-text">
             <p className="about-intro-text">
               <strong>Kairos</strong> es un e-commerce de relojes de alta gama,
@@ -25,7 +25,7 @@ function AboutIntroduction() {
             </p>
           </div>
         </Col>
-        <Col xs={12} lg={6} className="about-col px-4">
+        <Col xs={12} className="about-col px-4">
           <p className="about-intro-text">
             La pagina que tomamos como inspiracion es la de Omega, nos parecio
             que abarcaba muchas de las cosas que nos gustan y buscabamos en
