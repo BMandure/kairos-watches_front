@@ -8,11 +8,17 @@ const cartSlice = createSlice({
       state.push(action.payload);
     },
     deleteItem(state, action) {
-      state.splice(action.payload);
+      const productIndex = state.findIndex(
+        (p) => p._id === action.payload.productId
+      );
+
+      if (!productIndex) {
+        state.splice(productIndex, 1);
+      }
     },
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { addItem } = actions;
+export const { addItem, deleteItem } = actions;
 export default reducer;
