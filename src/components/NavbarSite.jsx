@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
+import { CloseButton } from "react-bootstrap";
 
 function NavbarSite() {
   const expand = false;
@@ -71,188 +72,152 @@ function NavbarSite() {
           placement="start"
           className="offcanvas-project"
         >
-          <Offcanvas.Header closeButton closeVariant="white"></Offcanvas.Header>
-          <Navbar.Brand className="px-4 text-nabvar-brand ms-4">
-            <Link to="/" className="text-nabvar-brand"></Link>
-          </Navbar.Brand>
+          <Offcanvas.Header
+            closeButton
+            closeVariant="white"
+            className="justify-content-end"
+          ></Offcanvas.Header>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
-              <Link
-                className="justify-content-start pe-5 fw-bold mt-4"
-                to="/about"
+              <Nav.Link
+                className="justify-content-start p-0 fw-bold mt-3 btn-content btn-nav"
+                href="/about"
               >
-                <div className="btn-content btn-nav">ABOUT THE PROJECT</div>
-              </Link>
-              <Link
-                className="justify-content-start pe-5 ms-2 fw-bold mt-3"
-                to="/about"
+                ABOUT THE PROJECT
+              </Nav.Link>
+              <Nav.Link
+                className="justify-content-start p-0 fw-bold mt-3 btn-content btn-nav"
+                href="/shop"
               >
-                <div className="btn-content btn-nav ">VIEW ALL WATCHES</div>
-              </Link>
+                VIEW ALL WATCHES
+              </Nav.Link>
               <Link
-                className="justify-content-start mx-4 fw-bold"
+                className="justify-content-start mt-3 fw-bold"
                 to="/rolex/lines"
               >
-                <div className="btn-content btn-nav mt-3">Rolex</div>
+                <div className="btn-content btn-nav">Rolex</div>
               </Link>
-              <ul className="px-4">
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Submariner</div>
-                  </Link>
-                </li>
-
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Daytona</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Oyster</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">GMT-Master II</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Day-Date</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Pearlmaster</div>
-                  </Link>
-                </li>
+              <ul className="list-unstyled m-0 ms-1">
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Submariner</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Daytona</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Oyster</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">GMT-Master II</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Day-Date</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Pearlmaster</li>
+                </Link>
               </ul>
-
               <Link
-                className="justify-content-start mx-4 fw-bold"
+                className="justify-content-start mt-3 fw-bold"
                 to="/victorinox-swiss-army/lines"
               >
                 <div className="btn-content btn-nav">Victorinox Swiss Army</div>
               </Link>
-              <ul className="mt-1 px-4">
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Officer's</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Maverick Large</div>
-                  </Link>
-                </li>
-
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">INOX</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Alliance</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Alliance XS</div>
-                  </Link>
-                </li>
+              <ul className="list-unstyled m-0 ms-1">
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Officer's</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start"
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Maverick Large</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">INOX</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Alliance</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Alliance XS</li>
+                </Link>
               </ul>
-
               <Link
-                className="justify-content-start mx-4 fw-bold"
+                className="justify-content-start mt-3 fw-bold"
                 to="/omega/lines"
               >
                 <div className="btn-content btn-nav">Omega</div>
               </Link>
-              <ul className="mt-1 px-4">
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Speedmaster</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Constellation</div>
-                  </Link>
-                </li>
+              <ul className="list-unstyled m-0 ms-1">
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Speedmaster</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Constellation</li>
+                </Link>
               </ul>
-
               <Link
-                className="justify-content-start mx-4 fw-bold"
+                className="justify-content-start mt-3 fw-bold"
                 to="/patek-philippe/lines"
               >
                 <div className="btn-content btn-nav">Patek Philippe</div>
               </Link>
-              <ul className="mt-1 px-4">
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Calatrava</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary ">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Nautilus</div>
-                  </Link>
-                </li>
-                <li className="list-group-item bg-transparent text-primary">
-                  <Link
-                    className="border-0 mx-2 d-flex justify-content-start "
-                    to="#action1"
-                  >
-                    <div className="btn-content btn-nav">Aquanaut</div>
-                  </Link>
-                </li>
+              <ul className="list-unstyled m-0 ms-1">
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Calatrava</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Nautilus</li>
+                </Link>
+                <Link
+                  className="border-0 mx-2 d-flex justify-content-start "
+                  to="#action1"
+                >
+                  <li className="btn-content btn-nav">Aquanaut</li>
+                </Link>
               </ul>
             </Nav>
           </Offcanvas.Body>
