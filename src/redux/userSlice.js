@@ -9,7 +9,6 @@ const userSlice = createSlice({
     },
     logoutUser(state) {
       return state;
-      //   return null;
     },
   },
 });

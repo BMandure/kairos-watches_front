@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useDispatch, useSelector } from "react-redux";
 
 import { Link } from "react-router-dom";
 
@@ -16,8 +17,10 @@ import "./Cart.css";
 function Cart() {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
-
   const handleClose = () => setShow(false);
+
+  const cartState = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -34,15 +37,9 @@ function Cart() {
         </Offcanvas.Header>
         <Offcanvas.Body className="p-0">
           <div className="overflow-auto bg-black" style={{ height: "70%" }}>
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
-            <ItemCart />
+            {cartState.map((item, i) => (
+              <ItemCart key={i} product={item} />
+            ))}
           </div>
           <div
             className="bg-black d-flex flex-column justify-content-around align-items-center py-3"
