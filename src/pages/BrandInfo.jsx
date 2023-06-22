@@ -23,7 +23,7 @@ function BrandInfo() {
       setLines(response.data);
     };
     getLines();
-  }, []);
+  }, [lines]);
 
   const [products, setProducts] = useState([]);
   /*
