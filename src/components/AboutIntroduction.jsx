@@ -1,13 +1,13 @@
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import "./AboutIntroduction.css";
 
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
-      <h2 className="about-intro-title">About The Project</h2>
-      <Row className="about-row">
-        <Col xs={12} lg={6} className="about-col">
+      <h2 className="about-intro-title p-0 px-4 mx-2">About The Project</h2>
+      <Row className="mx-2 mt-4 text-center">
+        <Col xs={12} lg={6} className="about-col px-4">
           <div className="container-text">
             <p className="about-intro-text">
               <strong>Kairos</strong> es un e-commerce de relojes de alta gama,
@@ -25,7 +25,7 @@ function AboutIntroduction() {
             </p>
           </div>
         </Col>
-        <Col xs={12} lg={6} className="about-col">
+        <Col xs={12} lg={6} className="about-col px-4">
           <p className="about-intro-text">
             La pagina que tomamos como inspiracion es la de Omega, nos parecio
             que abarcaba muchas de las cosas que nos gustan y buscabamos en
@@ -37,10 +37,12 @@ function AboutIntroduction() {
             back-end con llamadas AJAX gracias a la libreria Axios. ....
           </p>
         </Col>
-        <div className="btn buttonMER">
+      </Row>
+      <div className="w-100vw text-center">
+        <div className="btn">
           <div className="btn-content">View MER</div>
         </div>
-      </Row>
+      </div>
     </Container>
   );
 }

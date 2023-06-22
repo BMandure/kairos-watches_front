@@ -1,12 +1,7 @@
-.about-intro-container {
-  min-height: 80%;
-  min-width: 60vw;
-  padding: 50px;
-}
 .about-intro-banner {
-  min-height: 80%;
   min-width: 100vw;
-  margin: 6rem 0 0 0;
+  margin-top: 7rem;
+  padding: 0;
 }
 .about-intro-item {
   max-height: 100%;
@@ -21,11 +16,10 @@
 }
 
 .about-col {
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  padding: 0;
   background-color: var(--color-main);
   color: whitesmoke;
 }
@@ -36,16 +30,14 @@
 }
 .about-intro-text {
   text-align: left;
-  padding: 0 3rem 0 3rem;
   font-family: Quicksand;
 }
 .about-intro-title {
-  border-bottom: 1px solid var(--color-white);
   font-family: Pinyon;
   color: var(--color-white);
   font-size: 2rem;
-  text-align: center;
 }
+
 .about-carousel {
   min-height: inherit;
 }
@@ -54,13 +46,15 @@
 }
 
 .about-intro-title {
-  margin: 0 auto 3rem auto;
   padding: 0 2rem 1rem 2rem;
   width: 65%;
-  text-align: center;
 }
 
 .buttonMER {
-  width: 20%;
+  width: 30%;
   margin: auto;
+}
+
+h2 {
+  margin: 0px;
 }

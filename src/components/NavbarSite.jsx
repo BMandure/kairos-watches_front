@@ -6,6 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
+
 function NavbarSite() {
   const expand = false;
   return (
@@ -71,29 +72,33 @@ function NavbarSite() {
           className="offcanvas-project"
         >
           <Offcanvas.Header closeButton closeVariant="white"></Offcanvas.Header>
-          <Navbar.Brand className="px-4 text-nabvar-brand m-auto">
-            <Link to="/" className="text-nabvar-brand">
-              Kairos
-            </Link>
+          <Navbar.Brand className="px-4 text-nabvar-brand ms-4">
+            <Link to="/" className="text-nabvar-brand"></Link>
           </Navbar.Brand>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
               <Link
-                className="justify-content-start pe-5 m-4 fw-bold"
+                className="justify-content-start pe-5 fw-bold mt-4"
                 to="/about"
               >
                 <div className="btn-content btn-nav">ABOUT THE PROJECT</div>
               </Link>
               <Link
-                className="justify-content-start mx-4 fw-bold"
-                to="#action1"
+                className="justify-content-start pe-5 ms-2 fw-bold mt-3"
+                to="/about"
               >
-                <div className="btn-content btn-nav">Rolex</div>
+                <div className="btn-content btn-nav ">VIEW ALL WATCHES</div>
               </Link>
-              <ul className="mt-1 px-4 pb-2">
+              <Link
+                className="justify-content-start mx-4 fw-bold"
+                to="/rolex/lines"
+              >
+                <div className="btn-content btn-nav mt-3">Rolex</div>
+              </Link>
+              <ul className="px-4">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Submariner</div>
@@ -102,7 +107,7 @@ function NavbarSite() {
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Daytona</div>
@@ -110,7 +115,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Oyster</div>
@@ -118,7 +123,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">GMT-Master II</div>
@@ -126,7 +131,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Day-Date</div>
@@ -134,7 +139,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Pearlmaster</div>
@@ -144,14 +149,14 @@ function NavbarSite() {
 
               <Link
                 className="justify-content-start mx-4 fw-bold"
-                to="#action1"
+                to="/victorinox-swiss-army/lines"
               >
                 <div className="btn-content btn-nav">Victorinox Swiss Army</div>
               </Link>
-              <ul className="mt-1 px-4 pb-2">
+              <ul className="mt-1 px-4">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start"
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Officer's</div>
@@ -168,7 +173,7 @@ function NavbarSite() {
 
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">INOX</div>
@@ -176,7 +181,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Alliance</div>
@@ -184,7 +189,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Alliance XS</div>
@@ -194,14 +199,14 @@ function NavbarSite() {
 
               <Link
                 className="justify-content-start mx-4 fw-bold"
-                to="#action1"
+                to="/omega/lines"
               >
                 <div className="btn-content btn-nav">Omega</div>
               </Link>
-              <ul className="mt-1 px-4 pb-2">
+              <ul className="mt-1 px-4">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Speedmaster</div>
@@ -209,7 +214,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Constellation</div>
@@ -219,14 +224,14 @@ function NavbarSite() {
 
               <Link
                 className="justify-content-start mx-4 fw-bold"
-                to="#action1"
+                to="/patek-philippe/lines"
               >
                 <div className="btn-content btn-nav">Patek Philippe</div>
               </Link>
-              <ul className="mt-1 px-4 pb-2">
+              <ul className="mt-1 px-4">
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Calatrava</div>
@@ -234,7 +239,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary ">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Nautilus</div>
@@ -242,7 +247,7 @@ function NavbarSite() {
                 </li>
                 <li className="list-group-item bg-transparent text-primary">
                   <Link
-                    className="border-0 mx-2 d-flex justify-content-start py-1"
+                    className="border-0 mx-2 d-flex justify-content-start "
                     to="#action1"
                   >
                     <div className="btn-content btn-nav">Aquanaut</div>

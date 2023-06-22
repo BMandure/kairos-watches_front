@@ -11,10 +11,12 @@ function SubBanner({ title, buttonText, link, img }) {
     >
       <div className="about-project-brightness">
         <div className="about-project-content">
-          <h2 className="about-project-title">{title}</h2>
-          <Link className="btn" to={link}>
-            <div className="btn-content">{buttonText}</div>
-          </Link>
+          <div>
+            <h2 className="about-project-title">{title}</h2>
+            <Link className="btn" to={link}>
+              <div className="btn-content">{buttonText}</div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

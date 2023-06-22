@@ -26,12 +26,11 @@ function Home() {
       <Banner />
       <SubBanner
         title="ABOUT THE PROJECT"
-        buttonText="SEE MORE"
+        buttonText="DISCOVER MORE"
         link="/about"
       />
       <SubBanner
-        title="VIEW ALL WATCHES"
-        buttonText="MORE"
+        buttonText="VIEW ALL WATCHES"
         link="/shop"
         img="src/assets/banner.png"
       />

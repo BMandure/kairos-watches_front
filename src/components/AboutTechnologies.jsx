@@ -13,12 +13,12 @@ import vercel from "../assets/vercel.svg";
 
 function AboutTechnologies() {
   return (
-    <Container className="about-intro-banner">
+    <Container className="about-intro-container">
       <div>
         <div className="about-tech-col">
-          <h2 className="about-tech-title">Technologies</h2>
-          <Row className="about-tech-row">
-            <Col xs={4} lg={3} className="tech-container">
+          <h2 className="about-tech-title p-0 px-4 mx-2">Technologies</h2>
+          <Row className="about-tech-row mt-4 vw-55 mx-auto">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img
                   className="tech-img"
@@ -28,19 +28,19 @@ function AboutTechnologies() {
                 Bootstrap
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={github} alt="tech-github-icon" />
                 GitHub
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={js} alt="tech-js-icon" />
                 JavaScript
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img
                   className="tech-img"
@@ -50,25 +50,25 @@ function AboutTechnologies() {
                 MongoDB
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={node} alt="tech-node-icon" />
                 Node
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={react} alt="tech-react-icon" />
                 React
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={redux} alt="tech-redux-icon" />
                 Redux
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img
                   className="tech-img"
@@ -78,7 +78,7 @@ function AboutTechnologies() {
                 Supabase
               </div>
             </Col>
-            <Col xs={4} lg={3} className="tech-container">
+            <Col xs={4} md={4} lg={4} className="tech-container">
               <div className="technology-card">
                 <img className="tech-img" src={vercel} alt="tech-vercel-icon" />
                 Vercel

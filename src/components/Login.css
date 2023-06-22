@@ -1,5 +1,5 @@
 .container-form {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .container-form {
@@ -11,11 +11,12 @@
 }
 
 .form-container {
-  width: 360px;
+  width: 375px;
   background-color: var(--color-main);
   padding: 2rem;
   color: var(--color-white);
   border: 1px solid white;
+  margin: 1rem;
 }
 
 .form-title {
