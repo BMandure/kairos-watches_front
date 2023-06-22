@@ -2,13 +2,21 @@ import "./itemCart.css";
 import deleteProduct from "../assets/delete.svg";
 import add from "../assets/add.svg";
 import rest from "../assets/rest.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteItem } from "../redux/cartSlice";
 
 function ItemCart({ product }) {
+  const dispatch = useDispatch();
+
+  const handleDeleteProduct = () => {
+    dispatch(deleteItem({ productId: product._id }));
+  };
+
   return (
     <div className="position-relative">
       <div className="d-flex justify-content-between item-cart px-3 py-1">
         <div className="position-absolute top-0 end-0 pe-2 pt-2">
-          <img src={deleteProduct} alt="" />
+          <img src={deleteProduct} alt="" onClick={handleDeleteProduct} />
         </div>
         <div className="d-flex my-auto" style={{ width: "40%" }}>
           <div style={{ width: "100%" }} className="my-auto">
