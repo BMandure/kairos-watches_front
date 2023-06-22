@@ -7,15 +7,19 @@
 }
 
 .offcanvas-project {
-  background-color: var(--color-black);
   overflow-y: auto;
   margin-top: 0;
+  background-color: #000000d8 !important;
+}
+
+.offcanvas-header {
+  background-color: #00000000 !important;
 }
 
 .offcanvas-brand {
   color: var(--color-white);
   font-family: Pinyon;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .text-navbar-links {
