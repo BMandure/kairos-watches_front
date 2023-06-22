@@ -1,28 +1,40 @@
 import "./BrandInfo.css";
-{
-  /*Link in react-router-dom*/
-}
 import { useParams } from "react-router-dom";
 import ArticleCard from "../components/ArticleCard";
 import CollectionCard from "../components/CollectionCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function BrandInfo() {
+function LineInfo() {
   const params = useParams();
-  const [lines, setLines] = useState(null);
+  const [line, setLine] = useState(null);
 
-  const slug = params.brand;
+  const brandSlug = params.brand;
+  const lineSlug = params.line;
 
   useEffect(() => {
-    const getLines = async () => {
+    const getLine = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/${slug}/lines`,
+        url: `${import.meta.env.VITE_APP_DOMAIN}/${brandSlug}/lines`,
       });
-      setLines(response.data);
+      setLine(response.data);
+      console.log(response.data);
     };
-    getLines();
+    getLine();
+  }, []);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_APP_DOMAIN}/products?filter=${filterLine}`,
+      });
+      setProducts(response.data);
+    };
+    getProducts();
   }, []);
 
   return (
@@ -46,18 +58,25 @@ function BrandInfo() {
                 name={line.name}
                 img={line.image}
                 description={line.description}
-                slug={slug}
               />
             ))}
           </div>
 
-          <div>
-            <h2 className="brand-info-subtitle">NEWS</h2>
-            <div className="brand-info-cards d-flex">
-              {lines[0].brand.articles.map((article) => (
-                <ArticleCard key={article.id} article={article} />
-              ))}
-            </div>
+          <div className="collection-container-gap d-flex flex-column">
+            <Container className="shop-container">
+              FILTER
+              <Row>
+                {products.map((product) => (
+                  <Col
+                    xs={{ span: 10, offset: 1 }}
+                    md={{ span: 6, offset: 0 }}
+                    lg={{ span: 3, offset: 0 }}
+                  >
+                    <ProductCard key={product.id} product={product} />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
           </div>
         </div>
       </>
@@ -65,4 +84,4 @@ function BrandInfo() {
   );
 }
 
-export default BrandInfo;
+export default LineInfo;
