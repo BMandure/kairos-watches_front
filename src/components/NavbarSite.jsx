@@ -6,32 +6,27 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
+import { CloseButton } from "react-bootstrap";
 import { useState } from "react";
-import CloseButton from "react-bootstrap/CloseButton";
 
 function NavbarSite() {
-  const [showOffCanvas, setShowOffCanvas] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
-  const handleCloseCanvas = () => {
-    setShowOffCanvas(false);
+  const handleToggleOffcanvas = () => {
+    setShowOffcanvas(!showOffcanvas);
   };
 
-  const handleShowCanvas = () => {
-    setShowOffCanvas(true);
-  };
-
-  const expand = false;
   return (
     <Navbar expand="false" className="navbar-project">
       <NavbarToggle
         aria-controls="basic-navbar-nav"
         className="border border-0 p-0 position-absolute ms-4"
+        onClick={handleToggleOffcanvas}
       >
         <img
           src="../src/assets/list_hamburger_icon.svg"
           alt="navbar-icon"
           className="navbar-icon"
-          onClick={handleShowCanvas}
         />
       </NavbarToggle>
       <Container className="d-flex justify-content-center">
@@ -79,74 +74,83 @@ function NavbarSite() {
         </div>
 
         <Navbar.Offcanvas
-          id={`offcanvasNavbar-expand-${expand}`}
-          aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+          show={showOffcanvas}
+          onHide={handleToggleOffcanvas}
+          id={`offcanvasNavbar-expand-${showOffcanvas}`}
+          aria-labelledby={`offcanvasNavbarLabel-expand-${showOffcanvas}`}
           placement="start"
           className="offcanvas-project"
-          show={showOffCanvas}
-          onHide={handleCloseCanvas}
         >
-          <Offcanvas.Header closeVariant="white">
-            <CloseButton onClick={handleCloseCanvas} variant="white" />
+          <Offcanvas.Header
+            closeButton
+            closeVariant="white"
+            className="justify-content-between align-items-center py-0"
+          >
+            <span className="offcanvas-brand">KAIROS</span>
           </Offcanvas.Header>
-          <Navbar.Brand className="px-4 text-nabvar-brand ms-4">
-            <Link to="/" className="text-nabvar-brand"></Link>
-          </Navbar.Brand>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
-              <Nav.Link
-                className="justify-content-start p-0 fw-bold mt-3 btn-content btn-nav"
-                href="/about"
+              <Link
+                className="justify-content-start fw-bold mt-3"
+                to="/about"
+                onClick={() => handleToggleOffcanvas()}
               >
-                ABOUT THE PROJECT
-              </Nav.Link>
-              <Nav.Link
-                className="justify-content-start p-0 fw-bold mt-3 btn-content btn-nav"
-                href="/shop"
+                <div className="btn-content btn-nav">ABOUT THE PROJECT</div>
+              </Link>
+              <Link
+                className="justify-content-start fw-bold mt-3"
+                to="/shop"
+                onClick={() => handleToggleOffcanvas()}
               >
                 <div className="btn-content btn-nav">VIEW ALL WATCHES</div>
-              </Nav.Link>
+              </Link>
               <Link
                 className="justify-content-start mt-3 fw-bold"
                 to="/rolex/lines"
-                onClick={handleCloseCanvas}
+                onClick={() => handleToggleOffcanvas()}
               >
                 <div className="btn-content btn-nav">Rolex</div>
               </Link>
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Submariner</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Daytona</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Oyster</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">GMT-Master II</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Day-Date</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Pearlmaster</li>
                 </Link>
@@ -154,37 +158,43 @@ function NavbarSite() {
               <Link
                 className="justify-content-start mt-3 fw-bold"
                 to="/victorinox-swiss-army/lines"
+                onClick={() => handleToggleOffcanvas()}
               >
                 <div className="btn-content btn-nav">Victorinox Swiss Army</div>
               </Link>
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Officer's</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Maverick Large</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">INOX</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Alliance</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Alliance XS</li>
                 </Link>
@@ -192,19 +202,22 @@ function NavbarSite() {
               <Link
                 className="justify-content-start mt-3 fw-bold"
                 to="/omega/lines"
+                onClick={() => handleToggleOffcanvas()}
               >
                 <div className="btn-content btn-nav">Omega</div>
               </Link>
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Speedmaster</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Constellation</li>
                 </Link>
@@ -212,25 +225,29 @@ function NavbarSite() {
               <Link
                 className="justify-content-start mt-3 fw-bold"
                 to="/patek-philippe/lines"
+                onClick={() => handleToggleOffcanvas()}
               >
                 <div className="btn-content btn-nav">Patek Philippe</div>
               </Link>
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Calatrava</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Nautilus</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#action1"
+                  to="#"
+                  onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Aquanaut</li>
                 </Link>

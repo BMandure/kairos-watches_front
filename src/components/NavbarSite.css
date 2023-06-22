@@ -12,6 +12,12 @@
   margin-top: 0;
 }
 
+.offcanvas-brand {
+  color: var(--color-white);
+  font-family: Pinyon;
+  font-size: 2rem;
+}
+
 .text-navbar-links {
   text-decoration: none;
   color: var(--color-white);
