@@ -9,6 +9,8 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { CloseButton } from "react-bootstrap";
 import { useState } from "react";
 
+import deleteIcon from "../assets/delete.svg";
+
 function NavbarSite() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
@@ -83,16 +85,18 @@ function NavbarSite() {
           placement="start"
           className="offcanvas-project"
         >
-          <span className="offcanvas-brand d-md-none mt-5 ms-4">KAIROS</span>
-          <CloseButton
-            onClick={handleToggleOffcanvas}
-            variant="white"
-            className="m-3 position-absolute top-0 left-0"
-          />
-          <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
+          <Offcanvas.Header
+            closeButton
+            data-bs-theme="dark"
+            className="pt-2 pb-0 px-4 offcanvas-header"
+          >
+            <span className="offcanvas-brand">KAIROS</span>
+          </Offcanvas.Header>
+
+          <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 p-0">
             <Nav className="text-primary">
               <Link
-                className="justify-content-start fw-bold mt-4 "
+                className="justify-content-start fw-bold mt-3 "
                 to="/about"
                 onClick={() => handleToggleOffcanvas()}
               >
