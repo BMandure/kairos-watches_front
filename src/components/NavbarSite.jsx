@@ -36,15 +36,12 @@ function NavbarSite() {
       <Container className="d-flex justify-content-center">
         <div className="nav-general-cont">
           <div className="nav-brands-left">
-            <Link
-              className="btn d-none d-lg-inline-block"
-              to={"/collections/rolex"}
-            >
+            <Link className="btn d-none d-lg-inline-block" to={"/rolex/lines"}>
               <div className="btn-content">Rolex</div>
             </Link>
             <Link
               className="btn d-none d-lg-inline-block "
-              to={"/collections/victorinox"}
+              to={"/victorinox/lines"}
             >
               <div className="btn-content">Victorinox</div>
             </Link>
@@ -57,15 +54,12 @@ function NavbarSite() {
             </Navbar.Brand>
           </div>
           <div className="nav-brands-right">
-            <Link
-              className="btn d-none d-lg-inline-block "
-              to={"/collections/omega"}
-            >
+            <Link className="btn d-none d-lg-inline-block " to={"/omega/lines"}>
               <div className="btn-content">Omega</div>
             </Link>
             <Link
               className="btn d-none d-lg-inline-block "
-              to={"/collections/patekphilippe"}
+              to={"/patek-philippe/lines"}
             >
               <div className="btn-content">Patek Philippe</div>
             </Link>

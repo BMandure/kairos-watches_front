@@ -3,6 +3,7 @@ import BrandLeft from "../components/BrandLeft";
 import BrandRight from "../components/BrandRight";
 import Banner from "../components/Banner";
 import SubBanner from "../components/SubBanner";
+import ButtonBanner from "../components/ButtonBanner";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -25,10 +26,10 @@ function Home() {
       <Banner />
       <SubBanner
         title="ABOUT THE PROJECT"
-        buttonText="DISCOVER MORE"
+        buttonText="MORE INFO"
         link="/about"
       />
-      <SubBanner
+      <ButtonBanner
         buttonText="VIEW ALL WATCHES"
         link="/shop"
         img="src/assets/banner.png"
