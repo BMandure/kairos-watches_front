@@ -3,7 +3,8 @@ import deleteProduct from "../assets/delete.svg";
 import add from "../assets/add.svg";
 import rest from "../assets/rest.svg";
 
-function ItemCart() {
+function ItemCart({ product }) {
+  console.log(product);
   return (
     <div className="position-relative">
       <div className="d-flex justify-content-between item-cart px-3 py-1">
@@ -13,14 +14,16 @@ function ItemCart() {
         <div className="d-flex my-auto" style={{ width: "40%" }}>
           <div style={{ width: "100%" }} className="my-auto">
             <img
-              src="https://www.omegawatches.com/media/catalog/product/cache/a5c37fddc1a529a1a44fea55d527b9a116f3738da3a2cc38006fcc613c37c391/o/m/omega-de-ville-tresor-42818396003001-l.png"
+              src={`${import.meta.env.VITE_APP_DOMAIN}/img/products/${
+                product.product.image[0]
+              }`}
               alt=""
               className="img-fluid"
             />
           </div>
         </div>
         <div className="d-flex flex-column my-auto" style={{ width: "60%" }}>
-          <p className="my-1 fs-6 text-white">Rolex Gmt II Master</p>
+          <p className="my-1 fs-6 text-white">{`${product.product.brand.name} ${product.product.line.name} ${product.product.name}`}</p>
           <div className="d-flex w-75 text-white m-0">
             <p className="btn-quantity">
               <img src={rest} alt="-1 product quantity" />
@@ -30,7 +33,9 @@ function ItemCart() {
               <img src={add} alt="+1 product quantity" />
             </p>
           </div>
-          <span className="my-1 fs-5 text-white">USD 500</span>
+          <span className="my-1 fs-5 text-white">
+            USD {product.product.price}
+          </span>
         </div>
       </div>
     </div>

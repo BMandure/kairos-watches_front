@@ -40,6 +40,8 @@ function Shop() {
   }, [render]);
 
   useEffect(() => {
+    setLines("");
+    setFilterLine("");
     if (brand) {
       const getLines = async () => {
         const response = await axios({
@@ -50,7 +52,7 @@ function Shop() {
       };
       getLines();
     }
-  }, [filterBrand]);
+  }, [filterBrand, render]);
 
   const handleFilterBrand = (event) => {
     setFilterBrand(event.target.value);
