@@ -83,17 +83,16 @@ function NavbarSite() {
           placement="start"
           className="offcanvas-project"
         >
-          <Offcanvas.Header
-            closeButton
-            closeVariant="white"
-            className="justify-content-between align-items-center py-0"
-          >
-            <span className="offcanvas-brand">KAIROS</span>
-          </Offcanvas.Header>
+          <span className="offcanvas-brand d-md-none mt-5 ms-4">KAIROS</span>
+          <CloseButton
+            onClick={handleToggleOffcanvas}
+            variant="white"
+            className="m-3 position-absolute top-0 left-0"
+          />
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
               <Link
-                className="justify-content-start fw-bold mt-3"
+                className="justify-content-start fw-bold mt-4 "
                 to="/about"
                 onClick={() => handleToggleOffcanvas()}
               >

@@ -14,7 +14,7 @@ function Home() {
     async function fetchData() {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/brands`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/brands`,
       });
       setBrands(response.data);
     }

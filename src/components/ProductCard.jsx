@@ -16,7 +16,7 @@ function ProductCard({ product }) {
           <Card.Img
             className="product-img"
             variant="top"
-            src={`${import.meta.env.VITE_APP_DOMAIN}/img/products/${
+            src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
               product.image[0]
             }`}
           />

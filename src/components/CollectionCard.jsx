@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import "./CollectionCard.css";
 
-function CollectionCard({ name, img, description, slug, lineSlug }) {
+function CollectionCard({ name, img, slug, lineSlug }) {
   return (
     <Link
       to={`/${slug}/lines/${lineSlug}`}
       className="collection-thumbnail-img"
       style={{
-        backgroundImage: `url(${import.meta.env.VITE_APP_DOMAIN}${img})`,
+        backgroundImage: `url(${import.meta.env.VITE_API_DOMAIN}${img})`,
       }}
     >
       <div className="collection-background">

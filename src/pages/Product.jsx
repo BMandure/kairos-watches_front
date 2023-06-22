@@ -19,7 +19,7 @@ function Product() {
     const getProduct = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/product/${params.slug}`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/product/${params.slug}`,
       });
       setProduct(response.data);
     };
@@ -42,7 +42,7 @@ function Product() {
                       <img
                         className="w-100"
                         src={`${
-                          import.meta.env.VITE_APP_DOMAIN
+                          import.meta.env.VITE_API_DOMAIN
                         }/img/products/${img}`}
                         alt="..."
                       />

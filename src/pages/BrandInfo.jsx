@@ -18,7 +18,7 @@ function BrandInfo() {
     const getLines = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/${slug}/lines`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/${slug}/lines`,
       });
       setLines(response.data);
     };
@@ -33,7 +33,7 @@ function BrandInfo() {
             <div className="brand-info-logo-container">
               <img
                 className="brand-info-logo"
-                src={`${import.meta.env.VITE_APP_DOMAIN}${lines[0].brand.logo}`}
+                src={`${import.meta.env.VITE_API_DOMAIN}${lines[0].brand.logo}`}
                 alt="brand-logo"
               />
             </div>
@@ -45,7 +45,6 @@ function BrandInfo() {
                 key={line._id}
                 name={line.name}
                 img={line.image}
-                description={line.description}
                 slug={slug}
                 lineSlug={line.slug}
               />

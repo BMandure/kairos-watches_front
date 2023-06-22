@@ -21,7 +21,7 @@ function Shop() {
       const response = await axios({
         method: "GET",
         url: `${
-          import.meta.env.VITE_APP_DOMAIN
+          import.meta.env.VITE_API_DOMAIN
         }/products?filterBrand=${filterBrand}&filterLine=${filterLine}&filterColor=${filterColor}`,
       });
       setProducts(response.data);
@@ -30,7 +30,7 @@ function Shop() {
     const getBrands = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_APP_DOMAIN}/brands`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/brands`,
       });
       setBrands(response.data);
     };
@@ -46,7 +46,7 @@ function Shop() {
       const getLines = async () => {
         const response = await axios({
           method: "GET",
-          url: `${import.meta.env.VITE_APP_DOMAIN}/${brand.slug}/lines`,
+          url: `${import.meta.env.VITE_API_DOMAIN}/${brand.slug}/lines`,
         });
         setLines(response.data);
       };
