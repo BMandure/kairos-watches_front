@@ -30,7 +30,7 @@ function ArticleModal({ article }) {
         <Modal.Header closeButton closeVariant="white">
           <img
             className="about-project-title-brand-modal"
-            src={article.modalPic}
+            src={`${import.meta.env.VITE_API_DOMAIN}${article.modalPic}`}
             alt="brand-logo"
           />
         </Modal.Header>
