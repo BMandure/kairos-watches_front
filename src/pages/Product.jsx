@@ -28,7 +28,7 @@ function Product() {
   const handleAddToCart = () => {
     dispatch(addItem(product));
   };
-
+  console.log(product);
   return (
     <>
       {product && (
@@ -37,7 +37,7 @@ function Product() {
             <div className="col-12 col-lg-6 p-4">
               <div>
                 <Carousel indicators={true}>
-                  {product.image.map((img, i) => (
+                  {product.product.image.map((img, i) => (
                     <Carousel.Item key={i}>
                       <img
                         className="w-100"
@@ -63,10 +63,10 @@ function Product() {
                     Next product &rarr;{" "}
                   </Link>
                 </div>
-                <h2 className="mt-2">{`${product.brand.name} ${product.line.name} ${product.name} - ${product.gender}`}</h2>
+                <h2 className="mt-2">{`${product.product.brand.name} ${product.product.line.name} ${product.product.name} - ${product.product.gender}`}</h2>
                 <div className="list-group-flush col-5 product-list-group mt-2">
                   <h2>
-                    <em>{`USD ${product.price}`}</em>
+                    <em>{`USD ${product.product.price}`}</em>
                   </h2>
                 </div>
                 <div>
