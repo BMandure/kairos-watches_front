@@ -6,9 +6,20 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import { CloseButton } from "react-bootstrap";
+import { useState } from "react";
+import CloseButton from "react-bootstrap/CloseButton";
 
 function NavbarSite() {
+  const [showOffCanvas, setShowOffCanvas] = useState(false);
+
+  const handleCloseCanvas = () => {
+    setShowOffCanvas(false);
+  };
+
+  const handleShowCanvas = () => {
+    setShowOffCanvas(true);
+  };
+
   const expand = false;
   return (
     <Navbar expand="false" className="navbar-project">
@@ -20,6 +31,7 @@ function NavbarSite() {
           src="../src/assets/list_hamburger_icon.svg"
           alt="navbar-icon"
           className="navbar-icon"
+          onClick={handleShowCanvas}
         />
       </NavbarToggle>
       <Container className="d-flex justify-content-center">
@@ -71,12 +83,15 @@ function NavbarSite() {
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="start"
           className="offcanvas-project"
+          show={showOffCanvas}
+          onHide={handleCloseCanvas}
         >
-          <Offcanvas.Header
-            closeButton
-            closeVariant="white"
-            className="justify-content-end"
-          ></Offcanvas.Header>
+          <Offcanvas.Header closeVariant="white">
+            <CloseButton onClick={handleCloseCanvas} variant="white" />
+          </Offcanvas.Header>
+          <Navbar.Brand className="px-4 text-nabvar-brand ms-4">
+            <Link to="/" className="text-nabvar-brand"></Link>
+          </Navbar.Brand>
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 offcanvas-project p-0">
             <Nav className="text-primary">
               <Nav.Link
@@ -89,11 +104,12 @@ function NavbarSite() {
                 className="justify-content-start p-0 fw-bold mt-3 btn-content btn-nav"
                 href="/shop"
               >
-                VIEW ALL WATCHES
+                <div className="btn-content btn-nav">VIEW ALL WATCHES</div>
               </Nav.Link>
               <Link
                 className="justify-content-start mt-3 fw-bold"
                 to="/rolex/lines"
+                onClick={handleCloseCanvas}
               >
                 <div className="btn-content btn-nav">Rolex</div>
               </Link>
