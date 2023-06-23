@@ -24,7 +24,11 @@ function Cart() {
 
   return (
     <>
-      <span variant="primary" onClick={handleShow} className="cart-btn z-3">
+      <span
+        variant="primary"
+        onClick={handleShow}
+        className="cart-btn z-3 slide-in-blurred-top"
+      >
         <img src={cart} alt="" />
       </span>
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>

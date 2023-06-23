@@ -23,7 +23,7 @@ function LineInfo() {
       setLine(response.data);
     };
     getLine();
-  }, []);
+  }, [lineSlug]);
 
   useEffect(() => {
     if (line) {

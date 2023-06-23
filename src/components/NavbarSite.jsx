@@ -113,42 +113,42 @@ function NavbarSite() {
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="/rolex/lines/submariner"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Submariner</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="/rolex/lines/daytona"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Daytona</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="/rolex/lines/oyster"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Oyster</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/rolex/lines/gmt-master-II"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">GMT-Master II</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/rolex/lines/day-date"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Day-Date</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="pearlmaster"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Pearlmaster</li>
@@ -164,35 +164,35 @@ function NavbarSite() {
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="/victorinox-swiss-army/lines/officers"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Officer's</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start"
-                  to="#"
+                  to="/victorinox-swiss-army/lines/mavericks-large"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Maverick Large</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/victorinox-swiss-army/lines/inox"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">INOX</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/victorinox-swiss-army/lines/alliance"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Alliance</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/victorinox-swiss-army/lines/alliance-xs"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Alliance XS</li>
@@ -208,14 +208,14 @@ function NavbarSite() {
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/omega/lines/speedmaster"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Speedmaster</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/omega/lines/constellation"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Constellation</li>
@@ -231,21 +231,21 @@ function NavbarSite() {
               <ul className="list-unstyled m-0 ms-1">
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/patek-philippe/lines/calatrava"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Calatrava</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/patek-philippe/lines/nautilus"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Nautilus</li>
                 </Link>
                 <Link
                   className="border-0 mx-2 d-flex justify-content-start "
-                  to="#"
+                  to="/patek-philippe/lines/aquanaut"
                   onClick={() => handleToggleOffcanvas()}
                 >
                   <li className="btn-content btn-nav">Aquanaut</li>
