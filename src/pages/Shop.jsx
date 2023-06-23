@@ -40,13 +40,14 @@ function Shop() {
   }, [render]);
 
   useEffect(() => {
-    setLines("");
     setFilterLine("");
     if (brand) {
       const getLines = async () => {
         const response = await axios({
           method: "GET",
-          url: `${import.meta.env.VITE_API_DOMAIN}/${brand.slug}/lines`,
+          url: `${import.meta.env.VITE_API_DOMAIN}/lines?filterBrand=${
+            brand.slug
+          }`,
         });
         setLines(response.data);
       };
