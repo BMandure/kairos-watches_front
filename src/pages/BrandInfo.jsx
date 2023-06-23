@@ -8,9 +8,12 @@ import CollectionCard from "../components/CollectionCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import { Col, Row } from "react-bootstrap";
+
 function BrandInfo() {
   const params = useParams();
   const [lines, setLines] = useState(null);
+  const [render, setRender] = useState(0);
 
   const slug = params.brand;
 
@@ -23,7 +26,7 @@ function BrandInfo() {
       setLines(response.data);
     };
     getLines();
-  }, [lines]);
+  }, [slug]);
 
   return (
     lines && (
@@ -53,11 +56,18 @@ function BrandInfo() {
 
           <div>
             <h2 className="brand-info-subtitle">NEWS</h2>
-            <div className="brand-info-cards d-flex">
+            <Row className="mx-auto">
               {lines[0].brand.articles.map((article) => (
-                <ArticleCard key={article.id} article={article} />
+                <Col
+                  key={article.id}
+                  md={12}
+                  lg={4}
+                  className="d-flex justify-content-center"
+                >
+                  <ArticleCard article={article} />
+                </Col>
               ))}
-            </div>
+            </Row>
           </div>
         </div>
       </>
