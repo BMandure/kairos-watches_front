@@ -12,7 +12,7 @@
 
 .offcanvas-header {
   border-bottom: 1px solid black;
-  background-color: black;
+  background-color: black !important;
   color: white;
 }
 
@@ -22,9 +22,11 @@
 }
 
 .info-cart-container {
+  margin: 0.5rem 0 0.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  gap: 10px;
   width: 75%;
 }
