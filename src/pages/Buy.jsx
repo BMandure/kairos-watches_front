@@ -1,40 +1,33 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./Buy.css";
-import ItemBuy from "../components/ItemToBuy";
+import ItemToBuy from "../components/ItemToBuy";
+import { Link } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
 
 function Cart() {
+  const cartState = useSelector((state) => state.cart);
+
+  const prices = cartState.map((product) => product.price);
+  const totalPrice = prices.reduce((a, b) => a + b, 0);
+
   return (
-    <Container style={{ marginTop: "100px" }}>
+    <Container style={{ marginTop: "100px", height: "55vh" }}>
       <div className="d-flex justify-content-between">
         <div
-          className="d-flex flex-wrap justify-content-around overflow-auto me-4"
-          style={{ width: "50%", height: "90vh" }}
+          className="flex-wrap  overflow-auto me-4"
+          style={{ width: "50%", height: "60vh" }}
         >
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
-          <ItemBuy />
+          {cartState.length > 0 &&
+            cartState.map((product) => (
+              <ItemToBuy key={product._id} product={product} />
+            ))}
         </div>
 
         <div className="mt-4 mb-5" style={{ width: "50%" }}>
-          <div className="total-price-row d-flex justify-content-between mb-3">
-            <span>Total:</span>
-            <span>USD 1000</span>
-          </div>
           <form action="">
+            <p className="text-white fs-5 my-2">Shipping address</p>
             <div className="input-group">
-              <label htmlFor="email" className="fs-4 my-3">
-                Contact
-              </label>
-              <input type="email" name="email" id="email" placeholder="email" />
-            </div>
-            <p className="text-white fs-4 my-3">Shipping address</p>
-            <div className="input-group my-3">
               <input
                 type="country"
                 name="country"
@@ -42,23 +35,10 @@ function Cart() {
                 placeholder="Country/Region"
               />
             </div>
-            <div className="input-group my-3 d-flex justify-content-between">
-              <input
-                style={{ width: "48%" }}
-                type="firstname"
-                name="firstname"
-                id="firstname"
-                placeholder="Firstname"
-              />
-              <input
-                style={{ width: "48%" }}
-                type="lastname"
-                name="lastname"
-                id="lastname"
-                placeholder="Lastname"
-              />
+            <div className="input-group mt-2">
+              <input type="city" name="city" id="city" placeholder="City" />
             </div>
-            <div className="input-group my-3">
+            <div className="input-group mt-2">
               <input
                 type="address"
                 name="address"
@@ -66,43 +46,24 @@ function Cart() {
                 placeholder="Address"
               />
             </div>
-            <div className="input-group my-3">
+            <div className="input-group mt-2">
               <input
-                type="country"
-                name="country"
-                id="country"
-                placeholder="Apartament/suite/etc. (optional)"
-              />
-            </div>
-            <div className="input-group my-3 d-flex justify-content-between">
-              <input
-                style={{ width: "30%" }}
                 type="postalCode"
                 name="postalCode"
                 id="postalCode"
                 placeholder="Postal code"
               />
-              <input
-                style={{ width: "30%" }}
-                type="city"
-                name="city"
-                id="city"
-                placeholder="City"
-              />
-              <input
-                style={{ width: "30%" }}
-                type="region"
-                name="region"
-                id="region"
-                placeholder="Region"
-              />
             </div>
-            <div className="input-group my-3">
+            <div className="input-group mt-2">
               <input type="phone" name="phone" id="phone" placeholder="Phone" />
             </div>
-            <div className="d-flex flex-column justify-content-between align-items-end">
-              <button className="buy-btn">Continue to shipping</button>
-              <span className="back-btn">← Return to store</span>
+            <div className="d-flex flex-column justify-content-between align-items-end mt-5">
+              <button className="buy-btn">
+                Continue to shipping - USD {totalPrice}
+              </button>
+              <Link to={"/"}>
+                <span className="back-btn">← Return to store</span>
+              </Link>
             </div>
           </form>
         </div>
