@@ -42,7 +42,7 @@ function Product() {
                   {product.image.map((img, i) => (
                     <Carousel.Item key={i}>
                       <img
-                        className="w-100"
+                        className="img-carousel"
                         src={`${
                           import.meta.env.VITE_API_DOMAIN
                         }/img/products/${img}`}

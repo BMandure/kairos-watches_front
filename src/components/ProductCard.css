@@ -92,6 +92,28 @@
   justify-content: right;
 }
 
+.btn-fast-add {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--color-white);
+  background: transparent;
+  border: transparent;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.img-product-add {
+  height: 25px;
+  transition: 0.1s ease;
+}
+.img-product-add:hover {
+  scale: 1.05;
+  transition: 0.1s ease;
+}
+
 @media screen and (max-width: 992px) {
   .card-info {
     font-size: 1.2rem;

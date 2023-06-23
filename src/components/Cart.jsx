@@ -22,13 +22,11 @@ function Cart() {
   const cartState = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
+  let total = 0;
+
   return (
     <>
-      <span
-        variant="primary"
-        onClick={handleShow}
-        className="cart-btn z-3 slide-in-blurred-top"
-      >
+      <span variant="primary" onClick={handleShow} className="cart-btn z-3">
         <img src={cart} alt="" />
       </span>
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
@@ -41,19 +39,24 @@ function Cart() {
         </Offcanvas.Header>
         <Offcanvas.Body className="p-0">
           <div className="overflow-auto bg-black" style={{ height: "70%" }}>
-            {cartState.map((item, i) => (
-              <>
-                <ItemCart key={i} product={item} />
-                <hr
-                  style={{
-                    height: "2px",
-                    backgroundColor: "#454545",
-                    border: "none",
-                    margin: "0 40px",
-                  }}
-                />
-              </>
-            ))}
+            {cartState.map(
+              (item, i) => (
+                (total = total + item.price),
+                (
+                  <div key={i}>
+                    <ItemCart product={item} />
+                    <hr
+                      style={{
+                        height: "2px",
+                        backgroundColor: "#454545",
+                        border: "none",
+                        margin: "0 40px",
+                      }}
+                    />
+                  </div>
+                )
+              )
+            )}
           </div>
           <div
             className="bg-black d-flex flex-column justify-content-around align-items-center py-3"
@@ -63,7 +66,7 @@ function Cart() {
               <button expand="true" className="btn-gray p-4 text-center w-100">
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
-                <span className="px-2">USD 1000</span>
+                <span className="px-2">USD {total}</span>
               </button>
             </Link>
             <div className="info-cart-container">

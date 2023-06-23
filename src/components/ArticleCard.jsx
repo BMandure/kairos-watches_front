@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "react-bootstrap";
 import ArticleModal from "./ArticleModal";
 import "./ArticleCard.css";
+import { Col } from "react-bootstrap";
 
 function ArticleCard({ article }) {
   const [showModal, setShowModal] = useState(false);

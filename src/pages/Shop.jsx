@@ -69,12 +69,13 @@ function Shop() {
     <Container className="shop-container">
       <div className="shop-filter-container">
         <p className="d-block">FILTER BY</p>
-        <div className="d-flex gap-5">
-          <Form>
+        <div className="d-flex">
+          <Form className="d-flex gap-3">
             <Form.Group>
               <Form.Select
                 onChange={handleFilterBrand}
                 aria-label="Default select example"
+                className="filter-selector"
               >
                 <option value="" key={0}>
                   Brand
@@ -91,6 +92,7 @@ function Shop() {
                 <Form.Select
                   onChange={handleFilterLine}
                   aria-label="Default select example"
+                  className="filter-selector"
                 >
                   <option value="" key={1}>
                     Lines
@@ -104,15 +106,28 @@ function Shop() {
                 </Form.Select>
               </Form.Group>
             )}
-
-            {/* <Form.Group>
-                <Form.Select aria-label="Default select example">
-                  <option>Color</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </Form.Select>
-                      </Form.Group>*/}
+            <Form.Group>
+              <Form.Select
+                aria-label="Default select example"
+                className="filter-selector"
+              >
+                <option>Color</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </Form.Select>
+            </Form.Group>
+            <Form.Group>
+              <Form.Select
+                aria-label="Default select example"
+                className="filter-selector"
+              >
+                <option>Gender</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </Form.Select>
+            </Form.Group>
           </Form>
         </div>
       </div>
