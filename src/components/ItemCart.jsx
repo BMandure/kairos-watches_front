@@ -13,21 +13,19 @@ function ItemCart({ product }) {
   };
 
   return (
-    <div className="position-relative">
+    <div className="position-relative ">
       <div className="d-flex justify-content-between item-cart px-3 py-1">
         <div className="position-absolute top-0 end-0 pe-2 pt-2">
           <img src={deleteProduct} alt="" onClick={handleDeleteProduct} />
         </div>
-        <div className="d-flex my-auto" style={{ width: "40%" }}>
-          <div style={{ width: "100%" }} className="my-auto">
-            <img
-              src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
-                product.image[0]
-              }`}
-              alt=""
-              className="img-fluid"
-            />
-          </div>
+        <div className="img-item-cart-container">
+          <img
+            src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
+              product.image[0]
+            }`}
+            alt=""
+            className="img-item-cart"
+          />
         </div>
         <div className="d-flex flex-column my-auto" style={{ width: "60%" }}>
           <p className="my-1 fs-6 text-white">{`${product.brand.name} ${product.line.name} ${product.name}`}</p>

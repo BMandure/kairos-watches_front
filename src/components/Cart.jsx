@@ -26,11 +26,7 @@ function Cart() {
 
   return (
     <>
-      <span
-        variant="primary"
-        onClick={handleShow}
-        className="cart-btn z-3 slide-in-blurred-top"
-      >
+      <span variant="primary" onClick={handleShow} className="cart-btn z-3">
         <img src={cart} alt="" />
       </span>
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
@@ -47,8 +43,8 @@ function Cart() {
               (item, i) => (
                 (total = total + item.price),
                 (
-                  <>
-                    <ItemCart key={i} product={item} />
+                  <div key={i}>
+                    <ItemCart product={item} />
                     <hr
                       style={{
                         height: "2px",
@@ -57,7 +53,7 @@ function Cart() {
                         margin: "0 40px",
                       }}
                     />
-                  </>
+                  </div>
                 )
               )
             )}
