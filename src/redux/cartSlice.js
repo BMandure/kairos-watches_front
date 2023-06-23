@@ -11,9 +11,6 @@ const cartSlice = createSlice({
         state.push(action.payload);
       }
     },
-    setShowAdd: (state, action) => {
-      state.showAdd = action.payload;
-    },
     deleteItem(state, action) {
       const productIndex = state.findIndex(
         (p) => p._id === action.payload.productId
@@ -27,5 +24,5 @@ const cartSlice = createSlice({
 });
 
 const { actions, reducer } = cartSlice;
-export const { addItem, deleteItem, setShowAdd } = actions;
+export const { addItem, deleteItem } = actions;
 export default reducer;
