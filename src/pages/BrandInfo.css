@@ -29,9 +29,11 @@
 }
 .brand-info-logo {
   max-height: 100%;
+  width: 100%;
 }
 .brand-info-logo-container {
-  width: 100%;
+  margin: 0 auto 0 auto;
+  width: 50%;
   height: calc(50vh - 3rem);
   text-align: center;
 }
@@ -42,12 +44,7 @@
   color: var(--color-white);
   padding: 2rem;
 }
-.brand-info-cards {
-  display: flex;
-  gap: 1px;
-  justify-content: center;
-  padding-bottom: 150px;
-}
+
 .collection-container-gap {
   gap: 1.5px;
 }
