@@ -28,7 +28,6 @@ function Product() {
     getProduct();
   }, []);
   const handleAddToCart = () => {
-    console.log(cartState);
     dispatch(addItem(product));
   };
 
