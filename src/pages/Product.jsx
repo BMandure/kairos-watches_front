@@ -4,16 +4,18 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { Carousel } from "react-bootstrap";
 import { Tooltip } from "antd";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/cartSlice";
 
 function Product() {
   const params = useParams();
   const [product, setProduct] = useState();
   const [brand, setBrand] = useState(null);
+
   const [hoverFav, setHoverFav] = useState(false);
   const text = "Out of the project's scope";
   const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cart);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -26,6 +28,7 @@ function Product() {
     getProduct();
   }, []);
   const handleAddToCart = () => {
+    console.log(cartState);
     dispatch(addItem(product));
   };
 
@@ -144,7 +147,10 @@ function Product() {
                   className="btn-gray p-4 text-center w-100"
                   onClick={handleAddToCart}
                 >
-                  <i className="bi bi-cart3 me-2"></i>Add To Cart
+                  <i className="bi bi-cart3 me-2"></i>{" "}
+                  {cartState.some((p) => p.id === product.id)
+                    ? "Already in Cart"
+                    : "Add To Cart"}
                 </button>
                 <div className="ms-4">
                   <i

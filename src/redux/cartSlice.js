@@ -5,14 +5,21 @@ const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addItem(state, action) {
-      state.push(action.payload);
+      if (state.some((product) => product.id === action.payload.id)) {
+        console.log("already in cart");
+      } else {
+        state.push(action.payload);
+      }
+    },
+    setShowAdd: (state, action) => {
+      state.showAdd = action.payload;
     },
     deleteItem(state, action) {
       const productIndex = state.findIndex(
         (p) => p._id === action.payload.productId
       );
-
-      if (!productIndex) {
+      console.log(productIndex);
+      if (productIndex !== -1) {
         state.splice(productIndex, 1);
       }
     },
@@ -20,5 +27,5 @@ const cartSlice = createSlice({
 });
 
 const { actions, reducer } = cartSlice;
-export const { addItem, deleteItem } = actions;
+export const { addItem, deleteItem, setShowAdd } = actions;
 export default reducer;
