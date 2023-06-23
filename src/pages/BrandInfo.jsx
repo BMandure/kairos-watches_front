@@ -21,7 +21,7 @@ function BrandInfo() {
     const getLines = async () => {
       const response = await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_DOMAIN}/${slug}/lines`,
+        url: `${import.meta.env.VITE_API_DOMAIN}/lines?filterBrand=${slug}`,
       });
       setLines(response.data);
     };
