@@ -24,11 +24,7 @@ function Home() {
   return (
     <div>
       <Banner />
-      <SubBanner
-        title="ABOUT THE PROJECT"
-        buttonText="MORE INFO"
-        link="/about"
-      />
+      <ButtonBanner buttonText="ABOUT THE PROJECT" link="/about" />
       <ButtonBanner
         buttonText="VIEW ALL WATCHES"
         link="/shop"
