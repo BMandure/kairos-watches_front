@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Badge } from "antd";
+import { Badge, Switch } from "antd";
 
 import { Link } from "react-router-dom";
 
@@ -29,17 +29,17 @@ function Cart() {
     (product) => (totalPrice = totalPrice + product.price * product.qty)
   );
 
+  let productsQty = 0;
+  cartState.map((product) => (productsQty = productsQty + product.qty));
   return (
     <>
-      <Badge count={5}>
-        <span
-          variant="primary"
-          onClick={handleShow}
-          className="cart-btn z-3 slide-in-blurred-top"
-        >
-          <img src={cart} alt="" />
-        </span>
-      </Badge>
+      <span className="cart-btn-container z-3 slide-in-blurred-top">
+        <Badge count={productsQty} color={"black"}>
+          <span variant="primary" onClick={handleShow} className="cart-btn">
+            <img src={cart} alt="" />
+          </span>
+        </Badge>
+      </span>
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
         <Offcanvas.Header
           closeButton
