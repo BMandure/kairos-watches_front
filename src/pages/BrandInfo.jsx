@@ -50,7 +50,6 @@ function BrandInfo() {
                 img={line.image}
                 slug={slug}
                 lineSlug={line.slug}
-                canBePressed={true}
               />
             ))}
           </div>
