@@ -78,7 +78,6 @@ function ProductCard({ product }) {
               />
             )}
           </button>
-          {console.log(product)}
           <img
             className="brand-logo-product"
             src={`${import.meta.env.VITE_API_DOMAIN}${product.brand.logo}`}
