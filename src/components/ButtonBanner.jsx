@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ButtonBanner.css";
 
-function SubBanner({ buttonText, link, img }) {
+function ButtonBanner({ buttonText, link, img }) {
   return (
     <div
       className="container-banner-project"
@@ -22,4 +22,4 @@ function SubBanner({ buttonText, link, img }) {
   );
 }
 
-export default SubBanner;
+export default ButtonBanner;

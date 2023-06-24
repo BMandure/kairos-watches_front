@@ -6,6 +6,7 @@ import SubBanner from "../components/SubBanner";
 import ButtonBanner from "../components/ButtonBanner";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import FeaturedContainer from "../components/featuredContainer";
 
 function Home() {
   const [brands, setBrands] = useState(null);
@@ -30,6 +31,7 @@ function Home() {
         link="/shop"
         img="src/assets/banner.png"
       />
+      <FeaturedContainer />
       {brands && (
         <>
           <BrandRight

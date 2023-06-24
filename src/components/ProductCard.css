@@ -14,7 +14,7 @@
 }
 .card-info {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   margin: 0;
   color: var(--color-white);
 }
@@ -109,9 +109,23 @@
   transition: 0.1s ease;
 }
 
+.brand-logo-product {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 80px;
+  object-fit: cover;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 @media screen and (max-width: 992px) {
   .card-info {
     font-size: 1.2rem;
+    color: var(--color-white);
   }
   .product-card {
     height: 500px;

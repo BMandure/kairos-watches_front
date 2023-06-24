@@ -1,0 +1,30 @@
+.featured-container {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featured-card-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-featured {
+  display: flex;
+}
+.item-featured {
+  flex: 0 0 calc(100% / 3);
+  margin-right: 0;
+  display: block;
+}
+.featured-title {
+  font-size: 3rem;
+  font-family: Pinyon;
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-white);
+  text-align: center;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}

@@ -78,6 +78,13 @@ function ProductCard({ product }) {
               />
             )}
           </button>
+          {console.log(product)}
+          <img
+            className="brand-logo-product"
+            src={`${import.meta.env.VITE_API_DOMAIN}${product.brand.logo}`}
+            alt=""
+          />
+
           <Card.Img
             className="product-img"
             variant="top"
@@ -87,7 +94,7 @@ function ProductCard({ product }) {
           />
         </div>
         <Card.Body className="product-card-body">
-          <Card.Title className="card-info">{`${product.brand.name} - ${product.line.name} ${product.name}`}</Card.Title>
+          <div className="card-info">{`${product.line.name} ${product.name}`}</div>
           <Link className="btn" to={`/product/${product.slug}`}>
             <div className="btn-content">VIEW DETAILS</div>
           </Link>
