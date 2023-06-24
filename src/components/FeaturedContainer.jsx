@@ -36,7 +36,7 @@ function FeaturedContainer() {
     getTrendings();
   }, []);
   return (
-    <>
+    <div className="featured-container">
       <p className="featured-title">FEATURED PRODUCTS</p>
       {items.length > 0 ? (
         <AliceCarousel
@@ -50,7 +50,7 @@ function FeaturedContainer() {
       ) : (
         console.log("SHOW SKELETON | Line 56 FeaturedContainer.jsx")
       )}
-    </>
+    </div>
   );
 }
 
