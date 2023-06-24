@@ -96,7 +96,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 80%;
 }
 .nav-brands-right {
   display: flex;
@@ -109,7 +109,7 @@ a {
   width: 400px;
 }
 .nav-brand {
-  min-width: 400px;
+  width: 400px;
   text-align: center;
 }
 

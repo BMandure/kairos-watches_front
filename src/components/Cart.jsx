@@ -23,7 +23,6 @@ function Cart() {
   const dispatch = useDispatch();
 
   let total = 0;
-
   return (
     <>
       <span variant="primary" onClick={handleShow} className="cart-btn z-3">

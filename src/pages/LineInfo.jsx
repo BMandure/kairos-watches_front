@@ -1,7 +1,7 @@
 import "./LineInfo.css";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-import CollectionCard from "../components/CollectionCard";
+import CollectionCardStatic from "../components/CollectionCardStatic";
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -46,10 +46,11 @@ function LineInfo() {
       <>
         <div className="brand-info-container">
           <div className="d-flex flex-column mt-2">
-            <CollectionCard
+            <CollectionCardStatic
               name={line[0].name}
               img={line[0].image}
               imgLogo={line[0].brand.logo}
+              canBePressed={false}
             />
           </div>
           <div className="d-flex flex-column">

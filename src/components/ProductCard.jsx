@@ -1,20 +1,50 @@
 import React from "react";
 import "./ProductCard.css";
-import { Badge, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, deleteItem } from "../redux/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
+
+  const notifyAdd = () =>
+    toast.success("Product Added to Cart", {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
+  const notifyRemove = () =>
+    toast.error("Product Removed from Cart", {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
   const handleAddToCart = () => {
     if (!cartState.some((p) => p.id === product.id)) {
+      notifyAdd();
       dispatch(addItem(product));
     } else {
+      notifyRemove();
       dispatch(deleteItem({ productId: product._id }));
     }
   };
+
   return (
     <>
       <Card className="product-card">
@@ -32,13 +62,17 @@ function ProductCard({ product }) {
           >
             {cartState.some((p) => p.id === product.id) ? (
               <img
-                src="src/assets/check.svg"
+                src={`${
+                  import.meta.env.VITE_REACT_APP_DOMAIN
+                }/src/assets/check.svg`}
                 alt=""
                 className="img-product-add"
               />
             ) : (
               <img
-                src="src/assets/add.svg"
+                src={`${
+                  import.meta.env.VITE_REACT_APP_DOMAIN
+                }/src/assets/add.svg`}
                 alt=""
                 className="img-product-add"
               />
@@ -59,6 +93,7 @@ function ProductCard({ product }) {
           </Link>
         </Card.Body>
       </Card>
+      <ToastContainer />
     </>
   );
 }

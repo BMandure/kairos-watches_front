@@ -1,4 +1,5 @@
-.collection-thumbnail-img {
+.collection-thumbnail-img,
+.collection-thumbnail-img-static {
   min-width: 100vw;
   min-height: 350px;
   background-repeat: no-repeat;
@@ -13,6 +14,11 @@
   position: relative;
   transition: 0.5s ease;
 }
+.collection-thumbnail-img-static {
+  pointer-events: none;
+  filter: brightness(150%);
+}
+
 .collection-background {
   background-color: var(--color-black-transparent);
   position: absolute;

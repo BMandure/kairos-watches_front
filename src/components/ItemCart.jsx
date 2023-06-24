@@ -16,7 +16,12 @@ function ItemCart({ product }) {
     <div className="position-relative ">
       <div className="d-flex justify-content-between item-cart px-3 py-1">
         <div className="position-absolute top-0 end-0 pe-2 pt-2">
-          <img src={deleteProduct} alt="" onClick={handleDeleteProduct} />
+          <img
+            src={deleteProduct}
+            alt=""
+            onClick={handleDeleteProduct}
+            role="button"
+          />
         </div>
         <div className="img-item-cart-container">
           <img
@@ -31,11 +36,11 @@ function ItemCart({ product }) {
           <p className="my-1 fs-6 text-white">{`${product.brand.name} ${product.line.name} ${product.name}`}</p>
           <div className="d-flex w-75 text-white m-0">
             <p className="btn-quantity">
-              <img src={rest} alt="-1 product quantity" />
+              <img src={rest} alt="-1 product quantity" role="button" />
             </p>
             <p className="my-auto ms-3">1</p>
             <p className="btn-quantity ms-3">
-              <img src={add} alt="+1 product quantity" />
+              <img src={add} alt="+1 product quantity" role="button" />
             </p>
           </div>
           <span className="my-1 fs-5 text-white">USD {product.price}</span>

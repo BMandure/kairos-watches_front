@@ -4,11 +4,9 @@
   font-size: 2rem;
 }
 .about-team-title {
-  border-bottom: 1px solid var(--color-white);
   font-family: Pinyon;
   color: var(--color-white);
   font-size: 2rem;
-  text-align: center;
 }
 .team-container {
   max-width: 65vw;

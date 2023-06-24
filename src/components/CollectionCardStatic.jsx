@@ -1,10 +1,15 @@
-import { Link } from "react-router-dom";
 import "./CollectionCard.css";
-
-function CollectionCard({ name, img, slug, lineSlug, imgLogo, canBePressed }) {
+function CollectionCardStatic({
+  name,
+  img,
+  slug,
+  lineSlug,
+  imgLogo,
+  canBePressed,
+}) {
   return (
-    <Link
-      className="collection-thumbnail-img"
+    <div
+      className="collection-thumbnail-img-static"
       style={{
         backgroundImage: `url(${import.meta.env.VITE_API_DOMAIN}${img})`,
       }}
@@ -23,8 +28,8 @@ function CollectionCard({ name, img, slug, lineSlug, imgLogo, canBePressed }) {
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
-export default CollectionCard;
+export default CollectionCardStatic;
