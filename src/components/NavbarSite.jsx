@@ -90,7 +90,7 @@ function NavbarSite() {
           <Offcanvas.Body className="d-flex flex-column align-items-start mx-5 p-0">
             <Nav className="text-primary">
               <Link
-                className="justify-content-start fw-bold mt-3 "
+                className="justify-content-start fw-bold mt-3"
                 to="/about"
                 onClick={() => handleToggleOffcanvas()}
               >

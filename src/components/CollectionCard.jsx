@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./CollectionCard.css";
 
 function CollectionCard({ name, img, slug, lineSlug, imgLogo }) {
+  console.log(img);
   return (
     <Link
       to={`${lineSlug}`}

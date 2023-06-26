@@ -54,6 +54,7 @@ function Shop() {
       getLines();
     }
   }, [filterBrand, render]);
+  lines.map((line) => console.log(line));
 
   const handleFilterBrand = (event) => {
     setFilterBrand(event.target.value);

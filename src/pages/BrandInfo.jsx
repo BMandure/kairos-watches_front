@@ -40,7 +40,7 @@ function BrandInfo() {
                 alt="brand-logo"
               />
             </div>
-            <h2 className="brand-info-subtitle">COLLECTIONS</h2>
+            <h2 className="brand-info-subtitle">LINES</h2>
           </div>
           <div className="collection-container-gap d-flex flex-column">
             {lines.map((line) => (
