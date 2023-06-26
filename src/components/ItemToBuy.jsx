@@ -16,13 +16,28 @@ function ItemToBuy({ product }) {
         </div>
       </div>
       <div
-        className="d-flex justify-content-around my-auto"
+        className="d-flex justify-content-between my-auto mx-3"
         style={{ width: "80%" }}
       >
-        <p className="my-1 fs-5 text-white">{`${product.brand.name} ${product.line.name} ${product.name}`}</p>
-        <span className="my-1 fs-5 text-white">{product.price}</span>
-        <img src={deleteProduct} alt="" />
+        <div className="d-flex flex-column" style={{ minWidth: "50%" }}>
+          <p className="m-0 fs-6 text-white">{product.brand.name}</p>
+          <p className="m-0 fs-6 text-white">{product.line.name}</p>
+          <p className="m-0 fs-6 text-white">{product.name}</p>
+        </div>
+        <div
+          className="my-1 fs-5 text-white d-flex align-items-center"
+          style={{ minWidth: "25%" }}
+        >
+          <span>x {product.qty} Uni.</span>
+        </div>
+        <div
+          className="my-1 fs-5 text-white d-flex align-items-center justify-content-end"
+          style={{ minWidth: "25%" }}
+        >
+          <span>USD {product.price * product.qty}</span>
+        </div>
       </div>
+      <img src={deleteProduct} alt="" className="" />
     </div>
   );
 }

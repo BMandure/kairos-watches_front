@@ -49,7 +49,7 @@ function Cart() {
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="p-0">
-          <div className="overflow-auto bg-black" style={{ height: "70%" }}>
+          <div className="overflow-auto bg-black" style={{ height: "65%" }}>
             {cartState.map((item, i) => (
               <div key={i}>
                 <ItemCart product={item} />
@@ -66,10 +66,10 @@ function Cart() {
           </div>
           <div
             className="bg-black d-flex flex-column justify-content-around align-items-center py-3"
-            style={{ height: "30%" }}
+            style={{ height: "35%" }}
           >
             <Link to={"/buy"} className="text-black mx-auto w-75">
-              <button expand="true" className="btn-gray p-4 text-center w-100">
+              <button expand="true" className="btn-gray py-3 text-center w-100">
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
                 <span className="px-2">USD {totalPrice}</span>
