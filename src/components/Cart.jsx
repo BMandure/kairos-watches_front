@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useDispatch, useSelector } from "react-redux";
+
+import { Badge, Switch } from "antd";
 
 import { Link } from "react-router-dom";
 
@@ -22,15 +24,21 @@ function Cart() {
   const cartState = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  let total = 0;
+  let totalPrice = 0;
+  cartState.map(
+    (product) => (totalPrice = totalPrice + product.price * product.qty)
+  );
+
+  let productsQty = 0;
+  cartState.map((product) => (productsQty = productsQty + product.qty));
   return (
     <>
-      <span
-        variant="primary"
-        onClick={handleShow}
-        className="cart-btn z-3 slide-in-blurred-top"
-      >
-        <img src={cart} alt="" />
+      <span className="cart-btn-container z-3 slide-in-blurred-top">
+        <Badge count={productsQty} color={"black"}>
+          <span variant="primary" onClick={handleShow} className="cart-btn">
+            <img src={cart} alt="" />
+          </span>
+        </Badge>
       </span>
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
         <Offcanvas.Header
@@ -41,35 +49,30 @@ function Cart() {
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="p-0">
-          <div className="overflow-auto bg-black" style={{ height: "70%" }}>
-            {cartState.map(
-              (item, i) => (
-                (total = total + item.price),
-                (
-                  <div key={i}>
-                    <ItemCart product={item} />
-                    <hr
-                      style={{
-                        height: "2px",
-                        backgroundColor: "#454545",
-                        border: "none",
-                        margin: "0 40px",
-                      }}
-                    />
-                  </div>
-                )
-              )
-            )}
+          <div className="overflow-auto bg-black" style={{ height: "65%" }}>
+            {cartState.map((item, i) => (
+              <div key={i}>
+                <ItemCart product={item} />
+                <hr
+                  style={{
+                    height: "2px",
+                    backgroundColor: "#454545",
+                    border: "none",
+                    margin: "0 40px",
+                  }}
+                />
+              </div>
+            ))}
           </div>
           <div
             className="bg-black d-flex flex-column justify-content-around align-items-center py-3"
-            style={{ height: "30%" }}
+            style={{ height: "35%" }}
           >
             <Link to={"/buy"} className="text-black mx-auto w-75">
-              <button expand="true" className="btn-gray p-4 text-center w-100">
+              <button expand="true" className="btn-gray py-3 text-center w-100">
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
-                <span className="px-2">USD {total}</span>
+                <span className="px-2">USD {totalPrice}</span>
               </button>
             </Link>
             <div className="info-cart-container">

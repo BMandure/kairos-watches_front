@@ -3,13 +3,26 @@ import deleteProduct from "../assets/delete.svg";
 import add from "../assets/add.svg";
 import rest from "../assets/rest.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteItem } from "../redux/cartSlice";
+import {
+  addItem,
+  addItemQty,
+  deleteItem,
+  restItemQty,
+} from "../redux/cartSlice";
 
 function ItemCart({ product }) {
   const dispatch = useDispatch();
 
   const handleDeleteProduct = () => {
     dispatch(deleteItem({ productId: product._id }));
+  };
+
+  const handleAddQty = () => {
+    dispatch(addItemQty({ productId: product._id }));
+  };
+
+  const handleRestQty = () => {
+    dispatch(restItemQty({ productId: product._id }));
   };
 
   return (
@@ -36,14 +49,26 @@ function ItemCart({ product }) {
           <p className="my-1 fs-6 text-white">{`${product.brand.name} ${product.line.name} ${product.name}`}</p>
           <div className="d-flex w-75 text-white m-0">
             <p className="btn-quantity">
-              <img src={rest} alt="-1 product quantity" role="button" />
+              <img
+                src={rest}
+                alt="-1 product quantity"
+                role="button"
+                onClick={handleRestQty}
+              />
             </p>
-            <p className="my-auto ms-3">1</p>
+            <p className="my-auto ms-3">{product.qty}</p>
             <p className="btn-quantity ms-3">
-              <img src={add} alt="+1 product quantity" role="button" />
+              <img
+                src={add}
+                alt="+1 product quantity"
+                role="button"
+                onClick={handleAddQty}
+              />
             </p>
           </div>
-          <span className="my-1 fs-5 text-white">USD {product.price}</span>
+          <span className="my-1 fs-5 text-white">
+            USD {product.price * product.qty}
+          </span>
         </div>
       </div>
     </div>
