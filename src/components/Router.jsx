@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -9,14 +10,20 @@ import Register from "./Register";
 import Login from "./Login";
 import BrandInfo from "../pages/BrandInfo";
 import LineInfo from "../pages/LineInfo";
+import Pay from "../pages/Pay";
+import ProtectedRoute from "./ProtectedRoute";
 
 function Router() {
+  const [orderAddress, setOrderAddress] = useState("");
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/shop" element={<Shop />} />
-      <Route path="/buy" element={<Buy />} />
+      <Route path="/buy" element={<Buy setOrderAddress={setOrderAddress} />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/pay" element={<Pay orderAddress={orderAddress} />} />
+      </Route>
       <Route path="/product/:slug" element={<Product />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

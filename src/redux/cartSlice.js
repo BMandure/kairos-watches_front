@@ -39,9 +39,13 @@ const cartSlice = createSlice({
         state.splice(productIndex, 1);
       }
     },
+    clearCart(state, action) {
+      return [];
+    },
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { addItem, deleteItem, addItemQty, restItemQty } = actions;
+export const { addItem, deleteItem, addItemQty, restItemQty, clearCart } =
+  actions;
 export default reducer;
