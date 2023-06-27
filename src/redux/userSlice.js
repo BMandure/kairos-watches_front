@@ -4,14 +4,15 @@ const userSlice = createSlice({
   name: "user",
   initialState: null,
   reducers: {
-    setUser(state, action) {
+    setToken(state, action) {
       return action.payload;
     },
-    logoutUser(state) {
-      return state;
+    removeToken(state, action) {
+      console.log("borrando token");
+      return null;
     },
   },
 });
 
-export const { setUser, logoutUser } = userSlice.actions;
+export const { setToken, removeToken } = userSlice.actions;
 export default userSlice.reducer;

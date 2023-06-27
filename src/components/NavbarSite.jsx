@@ -4,19 +4,30 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { removeToken } from "../redux/userSlice";
 
 import deleteIcon from "../assets/delete.svg";
 
 function NavbarSite() {
+  const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleToggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
   };
 
+  function handleLogout() {
+    dispatch(removeToken());
+    console.log("quitando token");
+    navigate("/");
+  }
   return (
     <Navbar expand="false" className="navbar-project">
       <NavbarToggle
@@ -65,9 +76,15 @@ function NavbarSite() {
           </div>
         </div>
         <div className="login-container me-4">
-          <Link to={"/login"} className="btn">
-            <div className="btn-content">Login</div>
-          </Link>
+          {user === null ? (
+            <Link to={"/login"} className="btn">
+              <div className="btn-content">Login</div>
+            </Link>
+          ) : (
+            <Link to={"/"} className="btn" onClick={handleLogout}>
+              <div className="btn-content">Logout</div>
+            </Link>
+          )}
         </div>
 
         <Navbar.Offcanvas
