@@ -7,9 +7,9 @@
   object-fit: cover;
 }
 .img-item-cart-container {
-  width: 40%;
+  width: 30%;
   height: 180px;
   display: flex;
-  margin: auto;
+  margin: 10px auto;
   object-fit: cover;
 }
