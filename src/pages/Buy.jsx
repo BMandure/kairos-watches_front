@@ -7,12 +7,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Buy({ setOrderAddress }) {
+function Buy({ setOrderAddress, setNumberPhone }) {
   const navigate = useNavigate();
   const cartState = useSelector((state) => state.cart);
   const [address, setAddress] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
+  const [number, setNumber] = useState("");
 
   let totalPrice = 0;
   cartState.map(
@@ -21,7 +22,8 @@ function Buy({ setOrderAddress }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setOrderAddress(`${address} ${city} ${country}`);
+    setOrderAddress(`${address}, ${city}, ${country}`);
+    setNumberPhone(number);
     navigate("/pay");
   };
 
@@ -90,6 +92,8 @@ function Buy({ setOrderAddress }) {
                   type="phone"
                   name="phone"
                   id="phone"
+                  value={number}
+                  onChange={(event) => setNumber(event.target.value)}
                   placeholder="Phone"
                   required
                 />

@@ -15,14 +15,28 @@ import ProtectedRoute from "./ProtectedRoute";
 
 function Router() {
   const [orderAddress, setOrderAddress] = useState("");
+  const [numberPhone, setNumberPhone] = useState("");
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/shop" element={<Shop />} />
-      <Route path="/buy" element={<Buy setOrderAddress={setOrderAddress} />} />
+      <Route
+        path="/buy"
+        element={
+          <Buy
+            setOrderAddress={setOrderAddress}
+            setNumberPhone={setNumberPhone}
+          />
+        }
+      />
       <Route element={<ProtectedRoute />}>
-        <Route path="/pay" element={<Pay orderAddress={orderAddress} />} />
+        <Route
+          path="/pay"
+          element={
+            <Pay orderAddress={orderAddress} numberPhone={numberPhone} />
+          }
+        />
       </Route>
       <Route path="/product/:slug" element={<Product />} />
       <Route path="/login" element={<Login />} />

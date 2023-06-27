@@ -10,7 +10,7 @@ import mastecard from "../assets/mastercard.svg";
 import visa from "../assets/visa.svg";
 import paypal from "../assets/paypal.svg";
 
-function Pay({ orderAddress }) {
+function Pay({ orderAddress, numberPhone }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const cartState = useSelector((state) => state.cart);
@@ -33,6 +33,7 @@ function Pay({ orderAddress }) {
       qty: product.qty,
     })
   );
+  console.log(user.email);
 
   let total = 0;
   cart.map((product) => (total = total + product.price * product.qty));
@@ -41,6 +42,8 @@ function Pay({ orderAddress }) {
     event.preventDefault();
     const formData = {
       fullname: fullname,
+      email: user.email,
+      phone: numberPhone,
       order: cart,
       status: "Pending",
       address: orderAddress,
