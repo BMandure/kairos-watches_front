@@ -34,34 +34,12 @@ function NavbarSite() {
       </NavbarToggle>
       <Container className="d-flex justify-content-center">
         <div className="nav-general-cont">
-          <div className="nav-brands-left">
-            <Link className="btn d-none d-lg-inline-block" to={"/rolex/lines"}>
-              <div className="btn-content">Rolex</div>
-            </Link>
-            <Link
-              className="btn d-none d-lg-inline-block"
-              to={"/victorinox-swiss-army/lines"}
-            >
-              <div className="btn-content">Victorinox</div>
-            </Link>
-          </div>
           <div className="nav-brand">
             <Navbar.Brand>
               <Link to="/" className="text-nabvar-brand">
                 Kairos
               </Link>
             </Navbar.Brand>
-          </div>
-          <div className="nav-brands-right">
-            <Link className="btn d-none d-lg-inline-block " to={"/omega/lines"}>
-              <div className="btn-content">Omega</div>
-            </Link>
-            <Link
-              className="btn d-none d-lg-inline-block "
-              to={"/patek-philippe/lines"}
-            >
-              <div className="btn-content">Patek Philippe</div>
-            </Link>
           </div>
         </div>
         <div className="login-container me-4">

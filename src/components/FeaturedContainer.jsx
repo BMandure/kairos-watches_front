@@ -14,7 +14,8 @@ function FeaturedContainer() {
   const responsive = {
     0: { items: 1 },
     768: { items: 2 },
-    1024: { items: 3 },
+    992: { items: 3 },
+    1024: { items: 4 },
   };
 
   useEffect(() => {
@@ -38,18 +39,16 @@ function FeaturedContainer() {
   return (
     <div className="featured-container">
       <p className="featured-title">FEATURED PRODUCTS</p>
-      {items.length > 0 ? (
-        <AliceCarousel
-          disableDotsControls
-          mouseTracking
-          items={items}
-          responsive={responsive}
-          controlsStrategy="alternate"
-          infinite={true}
-        />
-      ) : (
-        console.log("SHOW SKELETON | Line 56 FeaturedContainer.jsx")
-      )}
+      <AliceCarousel
+        autoPlay={true}
+        autoPlayInterval={3000}
+        disableDotsControls
+        mouseTracking
+        items={items}
+        responsive={responsive}
+        controlsStrategy="alternate"
+        infinite={true}
+      />
     </div>
   );
 }

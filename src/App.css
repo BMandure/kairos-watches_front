@@ -23,6 +23,16 @@
 body {
   background-color: var(--color-black);
 }
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
 
 .app {
   min-height: 100vh;
@@ -81,6 +91,7 @@ body {
   transition-delay: 0.2s;
   color: #ffffff;
 }
+
 .btn-content {
   position: relative;
   z-index: 500;
