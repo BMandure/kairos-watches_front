@@ -1,8 +1,8 @@
-.container-form {
+.container-form-register {
   margin-top: 70px;
 }
 
-.container-form {
+.container-form-register {
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -10,8 +10,8 @@
   font-family: Quicksand;
 }
 
-.form-container {
-  width: 375px;
+.form-container-register {
+  max-width: 760px !important;
   background-color: var(--color-main);
   padding: 2rem;
   color: var(--color-white);
