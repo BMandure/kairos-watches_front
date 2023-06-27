@@ -68,7 +68,11 @@ function Cart() {
             className="bg-black d-flex flex-column justify-content-around align-items-center py-3"
             style={{ height: "35%" }}
           >
-            <Link to={"/buy"} className="text-black mx-auto w-75">
+            <Link
+              to={"/buy"}
+              className="text-black mx-auto w-75"
+              onClick={handleClose}
+            >
               <button expand="true" className="btn-gray py-3 text-center w-100">
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>

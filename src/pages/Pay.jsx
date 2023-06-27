@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { clearCart } from "../redux/cartSlice";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import mastecard from "../assets/mastercard.svg";
 import visa from "../assets/visa.svg";
@@ -52,11 +52,15 @@ function Pay({ orderAddress }) {
       },
     });
 
+    setFullname("");
+    setNumberCard("");
+    setExpiryDate("");
+    setCvv("");
     return console.log("La orden fue enviada.");
   };
 
   return (
-    <Container style={{ marginTop: "80px" }}>
+    <Container style={{ marginTop: "100px" }}>
       <Row>
         <Col className="">
           <div className="d-flex flex-column align-items-center">
@@ -64,17 +68,6 @@ function Pay({ orderAddress }) {
               className=""
               onSubmit={(event) => (handleSubmit(event), dispatch(clearCart()))}
             >
-              <div className="d-flex justify-content-between">
-                <span>
-                  <img src={visa} alt="" />
-                </span>
-                <span>
-                  <img src={mastecard} alt="" />
-                </span>
-                <span>
-                  <img src={paypal} alt="" />
-                </span>
-              </div>
               <div
                 className="mb-3 input-group"
                 controlId="exampleForm.ControlInput1"
@@ -118,6 +111,7 @@ function Pay({ orderAddress }) {
                     placeholder="00/00"
                     name="expiryDate"
                     id="expiryDate"
+                    value={expiryDate}
                     onChange={(event) => setExpiryDate(event.target.value)}
                     className="w-75 "
                     required
@@ -127,15 +121,38 @@ function Pay({ orderAddress }) {
                     placeholder="000"
                     name="cvv"
                     id="cvv"
+                    value={cvv}
                     onChange={(event) => setCvv(event.target.value)}
                     className="w-25 ms-3"
                     required
                   />
                 </div>
               </div>
+              <div className="d-flex justify-content-between w-50 mb-3">
+                <span>
+                  <img src={visa} alt="" />
+                </span>
+                <span>
+                  <img src={mastecard} alt="" />
+                </span>
+                <span>
+                  <img src={paypal} alt="" />
+                </span>
+              </div>
               <button className="buy-btn" type="submit">
                 Checkout
               </button>
+              {cartState.length === 0 && (
+                <p className="text-success text-center bg-success bg-opacity-25 py-1 mt-3 border border-success">
+                  Your order has been successfully sent.{" "}
+                  <Link
+                    to={"/"}
+                    className="text-success text-decoration-underline"
+                  >
+                    Click to return.
+                  </Link>
+                </p>
+              )}
             </form>
           </div>
         </Col>

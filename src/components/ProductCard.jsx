@@ -54,30 +54,32 @@ function ProductCard({ product }) {
               FEATURED
             </small>
           )}
+          {product.stock > 0 && (
+            <button
+              expand="true"
+              className="btn-fast-add"
+              onClick={handleAddToCart}
+            >
+              {cartState.some((p) => p.id === product.id) ? (
+                <img
+                  src={`${
+                    import.meta.env.VITE_REACT_APP_DOMAIN
+                  }/src/assets/check.svg`}
+                  alt=""
+                  className="img-product-add"
+                />
+              ) : (
+                <img
+                  src={`${
+                    import.meta.env.VITE_REACT_APP_DOMAIN
+                  }/src/assets/add.svg`}
+                  alt=""
+                  className="img-product-add"
+                />
+              )}
+            </button>
+          )}
 
-          <button
-            expand="true"
-            className="btn-fast-add"
-            onClick={handleAddToCart}
-          >
-            {cartState.some((p) => p.id === product.id) ? (
-              <img
-                src={`${
-                  import.meta.env.VITE_REACT_APP_DOMAIN
-                }/src/assets/check.svg`}
-                alt=""
-                className="img-product-add"
-              />
-            ) : (
-              <img
-                src={`${
-                  import.meta.env.VITE_REACT_APP_DOMAIN
-                }/src/assets/add.svg`}
-                alt=""
-                className="img-product-add"
-              />
-            )}
-          </button>
           <img
             className="brand-logo-product"
             src={`${import.meta.env.VITE_API_DOMAIN}${product.brand.logo}`}
@@ -94,9 +96,13 @@ function ProductCard({ product }) {
         </div>
         <Card.Body className="product-card-body">
           <div className="card-info">{`${product.line.name} ${product.name}`}</div>
-          <Link className="btn" to={`/product/${product.slug}`}>
-            <div className="btn-content">VIEW DETAILS</div>
-          </Link>
+          {product.stock > 0 ? (
+            <Link className="btn" to={`/product/${product.slug}`}>
+              <div className="btn-content">VIEW DETAILS</div>
+            </Link>
+          ) : (
+            <div className="out-of-stock">Coming soon</div>
+          )}
         </Card.Body>
       </Card>
       <ToastContainer />

@@ -122,6 +122,14 @@
   gap: 5px;
 }
 
+.out-of-stock {
+  color: rgb(255, 82, 82);
+  font-family: Quicksand;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(255, 82, 82);
+}
+
 @media screen and (max-width: 992px) {
   .card-info {
     font-size: 1.2rem;
