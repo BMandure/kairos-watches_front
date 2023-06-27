@@ -2,21 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
   name: "user",
-  initialState: {
-    user: null,
-    isLoggedIn: false,
-  },
+  initialState: null,
   reducers: {
-    setUser(state, action) {
-      state.user = action.payload;
-      state.isLoggedIn = true;
+    setToken(state, action) {
+      return action.payload;
     },
-    logoutUser(state) {
-      state.user = null;
-      state.isLoggedIn = false;
+    removeToken(state, action) {
+      console.log("borrando token");
+      return null;
     },
   },
 });
 
-export const { setUser, logoutUser } = userSlice.actions;
+export const { setToken, removeToken } = userSlice.actions;
 export default userSlice.reducer;

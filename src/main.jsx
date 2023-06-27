@@ -10,11 +10,11 @@ import { store, persistor } from "./redux/storeConfig.js";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <PersistGate loading={null} persistor={persistor}>
           <App />
-        </BrowserRouter>
-      </PersistGate>
+        </PersistGate>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );

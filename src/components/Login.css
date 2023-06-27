@@ -10,8 +10,8 @@
   font-family: Quicksand;
 }
 
-.form-container {
-  width: 375px;
+.form-container-login {
+  width: 375px !important;
   background-color: var(--color-main);
   padding: 2rem;
   color: var(--color-white);
