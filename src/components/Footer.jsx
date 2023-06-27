@@ -9,48 +9,52 @@ function Footer() {
     <footer id="footer">
       <Row className="footer-fat">
         <Col xs={6} md={6} lg={3} className="col-footer">
-          <p className="footer-title">About Us</p>
+          <p className="footer-title text-start">About Us</p>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">About Us</button>
+            <button className="footer-text text-start">About Us</button>
           </Tooltip>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Customer Reviews</button>
+            <button className="footer-text text-start">Customer Reviews</button>
           </Tooltip>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Press Reviews</button>
-          </Tooltip>
-        </Col>
-        <Col xs={6} md={6} lg={3} className="col-footer">
-          <p className="footer-title">Contact & Support</p>
-          <Tooltip placement="top" title={text}>
-            <button className="footer-text">Support</button>
-          </Tooltip>
-          <Tooltip placement="top" title={text}>
-            <button className="footer-text">Product Manuals</button>
-          </Tooltip>
-          <Tooltip placement="top" title={text}>
-            <button className="footer-text">Pre-order Status Update</button>
+            <button className="footer-text text-start">Press Reviews</button>
           </Tooltip>
         </Col>
         <Col xs={6} md={6} lg={3} className="col-footer">
-          <p className="footer-title">Follow Us</p>
+          <p className="footer-title text-start">Contact & Support</p>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Facebook</button>
+            <button className="footer-text text-start">Support</button>
           </Tooltip>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Instagram</button>
+            <button className="footer-text text-start">Product Manuals</button>
           </Tooltip>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Twitter</button>
+            <button className="footer-text text-start">
+              Pre-order Status Update
+            </button>
+          </Tooltip>
+        </Col>
+        <Col xs={6} md={6} lg={3} className="col-footer">
+          <p className="footer-title text-start">Follow Us</p>
+          <Tooltip placement="top" title={text}>
+            <button className="footer-text text-start">Facebook</button>
+          </Tooltip>
+          <Tooltip placement="top" title={text}>
+            <button className="footer-text text-start">Instagram</button>
+          </Tooltip>
+          <Tooltip placement="top" title={text}>
+            <button className="footer-text text-start">Twitter</button>
           </Tooltip>
         </Col>{" "}
         <Col xs={6} md={6} lg={3} className="col-footer">
-          <p className="footer-title">More</p>
+          <p className="footer-title text-start">More</p>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">Cookies Configuration</button>
+            <button className="footer-text text-start">
+              Cookies Configuration
+            </button>
           </Tooltip>
           <Tooltip placement="top" title={text}>
-            <button className="footer-text">FAQ</button>
+            <button className="footer-text text-start">FAQ</button>
           </Tooltip>
         </Col>
       </Row>
