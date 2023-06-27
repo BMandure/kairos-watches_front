@@ -1,6 +1,6 @@
+import "./Register.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Register.css";
 import { Tooltip } from "antd";
 import { useState } from "react";
 import axios from "axios";
@@ -41,81 +41,82 @@ function Register() {
 
   return (
     <div className="w-100 container-form">
-      <div className="form-container">
+      <div className="form-container-register">
         <p className="form-title">Register</p>
         <form className="form" onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="firstname">Firstname</label>
-            <input
-              type="text"
-              name="firstname"
-              id="firstname"
-              placeholder="Example: Leia"
-              value={firstname}
-              onChange={(event) => setFirstName(event.target.value)}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="lastname">Lastname</label>
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              placeholder="Example: Organa"
-              value={lastname}
-              onChange={(event) => setLastName(event.target.value)}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="name@example.com"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="address">Address</label>
-            <input
-              type="text"
-              name="address"
-              id="address"
-              placeholder="Example: Alderaan Avenue 2356"
-              value={address}
-              onChange={(event) => setAddress(event.target.value)}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="phone">Phone</label>
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              placeholder="Example: +598 XX XXX XXX"
-              value={phone}
-              onChange={(event) => setPhone(event.target.value)}
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder=" "
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-            />
-            <div className="forgot">
-              <Tooltip placement="left" title="Out of the scope of the proyect">
-                Forgot Password?
-              </Tooltip>
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <div className="input-group">
+                <label htmlFor="firstname">Firstname</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="Leia"
+                  value={firstname}
+                  onChange={(event) => setFirstName(event.target.value)}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="lastname">Lastname</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Organa"
+                  value={lastname}
+                  onChange={(event) => setLastName(event.target.value)}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="name@example.com"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+            </div>
+            <div className="col">
+              <div className="input-group">
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Alderaan Avenue 2356"
+                  value={address}
+                  onChange={(event) => setAddress(event.target.value)}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="+598 XX XXX XXX"
+                  value={phone}
+                  onChange={(event) => setPhone(event.target.value)}
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="enter password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                />
+              </div>
             </div>
           </div>
-          <button className="sign" type="submit">
+          <button className="sign" type="submit" style={{ marginTop: "1rem" }}>
             Register
           </button>
         </form>

@@ -32,6 +32,7 @@ function Login() {
         setError(response.data.error);
       } else {
         dispatch(setToken(response.data));
+
         navigate("/");
       }
     } catch (error) {
