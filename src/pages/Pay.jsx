@@ -34,6 +34,9 @@ function Pay({ orderAddress }) {
     })
   );
 
+  let total = 0;
+  cart.map((product) => (total = total + product.price * product.qty));
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = {
@@ -41,6 +44,7 @@ function Pay({ orderAddress }) {
       order: cart,
       status: "Pending",
       address: orderAddress,
+      totalPrice: total,
     };
     await axios({
       method: "POST",
