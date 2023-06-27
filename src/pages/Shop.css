@@ -8,10 +8,11 @@
 .shop-filter-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 1rem auto;
+  width: fit-content;
+  margin: 1rem 0 1rem auto;
   justify-content: center;
-  align-items: center;
+  text-align: right;
+  align-items: right;
   color: white;
 }
 .filter-selector {
