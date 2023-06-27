@@ -39,8 +39,8 @@ function AboutIntroduction() {
         </Col>
       </Row>
       <div className="w-100vw text-center">
-        <div className="btn">
-          <div className="btn-content">View MER</div>
+        <div className="btn-kairos">
+          <div className="btn-kairos-content">View MER</div>
         </div>
       </div>
     </Container>

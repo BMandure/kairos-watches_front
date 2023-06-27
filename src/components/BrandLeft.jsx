@@ -41,8 +41,8 @@ function BrandLeft({ name, logo, description, videos, link }) {
             />
             <p className="brandLeft-description">{description}</p>
 
-            <Link className="btn" to={link}>
-              <div className="btn-content">View Collection</div>
+            <Link className="btn-kairos" to={link}>
+              <div className="btn-kairos-content">View Collection</div>
             </Link>
           </div>
         </Col>

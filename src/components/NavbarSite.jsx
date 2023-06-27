@@ -64,10 +64,12 @@ function NavbarSite() {
             <DropdownButton
               id="dropdown-basic-button"
               title={
-                <i class="bi bi-person-fill ">
-                  {"  "}
-                  {`${user.firstname} ${user.lastname}`}
-                </i>
+                <div className="btn">
+                  <i class="bi bi-person-fill btn-content">
+                    {"  "}
+                    {`${user.firstname} ${user.lastname}`}
+                  </i>
+                </div>
               }
             >
               <Dropdown.Item to="">My profile</Dropdown.Item>

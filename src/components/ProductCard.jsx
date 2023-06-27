@@ -76,7 +76,7 @@ function ProductCard({ product }) {
               to={`/product/${product.slug}`}
               onClick={handleAddToCart}
             >
-              <div className="btn-content">ALREADY IN CART</div>
+              <div className="btn-kairos-content">ALREADY IN CART</div>
             </div>
           ) : (
             <div
@@ -84,7 +84,7 @@ function ProductCard({ product }) {
               to={`/product/${product.slug}`}
               onClick={handleAddToCart}
             >
-              <div className="btn-content">ADD TO CART</div>
+              <div className="btn-kairos-content">ADD TO CART</div>
             </div>
           )}
         </Card.Body>

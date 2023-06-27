@@ -11,11 +11,11 @@ function ButtonBanner({ buttonText, link, img }) {
     >
       <div className="about-project-brightness">
         <div className="about-project-content">
-          <div>
-            <Link className="btn" to={link}>
-              <div className="btn-content button-banner-text">{buttonText}</div>
-            </Link>
-          </div>
+          <Link className="btn-kairos" to={link}>
+            <div className="btn-kairos-content button-banner-text">
+              {buttonText}
+            </div>
+          </Link>
         </div>
       </div>
     </div>
