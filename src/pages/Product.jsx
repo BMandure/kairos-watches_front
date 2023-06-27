@@ -141,16 +141,22 @@ function Product() {
                 </div>
               </div>
               <div className="w-100 d-flex justify-content-between mt-2 align-items-center">
-                <button
-                  expand="true"
-                  className="btn-gray p-4 text-center w-100"
-                  onClick={handleAddToCart}
-                >
-                  <i className="bi bi-cart3 me-2"></i>{" "}
-                  {cartState.some((p) => p.id === product.id)
-                    ? "Already in Cart"
-                    : "Add To Cart"}
-                </button>
+                {product.stock > 0 ? (
+                  <button
+                    expand="true"
+                    className="btn-gray p-4 text-center w-100"
+                    onClick={handleAddToCart}
+                  >
+                    <i className="bi bi-cart3 me-2"></i>{" "}
+                    {cartState.some((p) => p.id === product.id)
+                      ? "Already in Cart"
+                      : "Add To Cart"}
+                  </button>
+                ) : (
+                  <div className="w-100 coming-soon p-4">
+                    Coming soon, stock available
+                  </div>
+                )}
                 <div className="ms-4">
                   <i
                     className={`bi ${

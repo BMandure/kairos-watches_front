@@ -96,13 +96,9 @@ function ProductCard({ product }) {
         </div>
         <Card.Body className="product-card-body">
           <div className="card-info">{`${product.line.name} ${product.name}`}</div>
-          {product.stock > 0 ? (
-            <Link className="btn" to={`/product/${product.slug}`}>
-              <div className="btn-content">VIEW DETAILS</div>
-            </Link>
-          ) : (
-            <div className="out-of-stock">Coming soon</div>
-          )}
+          <Link className="btn" to={`/product/${product.slug}`}>
+            <div className="btn-content">VIEW DETAILS</div>
+          </Link>
         </Card.Body>
       </Card>
       <ToastContainer />

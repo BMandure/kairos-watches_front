@@ -45,3 +45,12 @@ h5 {
   object-fit: contain;
   height: 500px;
 }
+
+.coming-soon {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-family: Quicksand;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
