@@ -8,11 +8,14 @@ import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { CloseButton } from "react-bootstrap";
 import { useState } from "react";
-
+import LoginButton from "./LoginButton";
+import { useSelector } from "react-redux";
+import { logoutUser, setUser } from "../redux/userSlice";
 import deleteIcon from "../assets/delete.svg";
 
 function NavbarSite() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
 
   const handleToggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
@@ -40,7 +43,7 @@ function NavbarSite() {
               <div className="btn-content">Rolex</div>
             </Link>
             <Link
-              className="btn d-none d-lg-inline-block "
+              className="btn d-none d-lg-inline-block"
               to={"/victorinox-swiss-army/lines"}
             >
               <div className="btn-content">Victorinox</div>
@@ -66,8 +69,8 @@ function NavbarSite() {
           </div>
         </div>
         <div className="login-container">
-          <Link className="btn" to={"/login"}>
-            <div className="btn-content">Login</div>
+          <Link className="d-none d-lg-inline-block" to={"/login"}>
+            <LoginButton isLoggedIn={isLoggedIn} />
           </Link>
         </div>
 
