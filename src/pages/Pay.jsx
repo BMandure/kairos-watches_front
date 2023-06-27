@@ -33,9 +33,6 @@ function Pay({ orderAddress, numberPhone }) {
       qty: product.qty,
     })
   );
-  console.log(user);
-  console.log(orderAddress);
-  console.log(numberPhone);
 
   let total = 0;
   cart.map((product) => (total = total + product.price * product.qty));
