@@ -8,7 +8,6 @@ const userSlice = createSlice({
       return action.payload;
     },
     removeToken(state, action) {
-      console.log("borrando token");
       return null;
     },
   },
