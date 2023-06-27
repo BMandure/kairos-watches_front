@@ -34,7 +34,7 @@ function Login() {
 
   return (
     <div className="w-100 container-form">
-      <div className="form-container">
+      <div className="form-container-login">
         <p className="form-title">Login</p>
         <form className="form" onSubmit={handleSubmit} autoComplete="off">
           <div className="input-group">
