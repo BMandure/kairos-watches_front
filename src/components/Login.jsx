@@ -1,6 +1,6 @@
 import { Tooltip } from "antd";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setToken } from "../redux/userSlice";
 import axios from "axios";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
+  const cart = useSelector((state) => state.cart);
   const [email, setEmail] = useState("user@email.com");
   const [password, setPassword] = useState("user");
   const [error, setError] = useState(null); // Estado para almacenar el mensaje de error
@@ -32,8 +33,11 @@ function Login() {
         setError(response.data.error);
       } else {
         dispatch(setToken(response.data));
-
-        navigate("/");
+        if (cart.length !== 0) {
+          navigate("/pay");
+        } else {
+          navigate("/");
+        }
       }
     } catch (error) {
       console.error(error);

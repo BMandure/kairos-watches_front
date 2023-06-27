@@ -23,6 +23,7 @@
 body {
   background-color: var(--color-black);
 }
+
 p::selection,
 h1::selection,
 h2::selection,

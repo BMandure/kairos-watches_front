@@ -9,6 +9,8 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeToken } from "../redux/userSlice";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 import deleteIcon from "../assets/delete.svg";
 
@@ -25,7 +27,7 @@ function NavbarSite() {
 
   function handleLogout() {
     dispatch(removeToken());
-    console.log("quitando token");
+
     navigate("/");
   }
   return (
@@ -59,9 +61,20 @@ function NavbarSite() {
               <div className="btn-content">Login</div>
             </Link>
           ) : (
-            <Link to={"/"} className="btn" onClick={handleLogout}>
-              <div className="btn-content">Logout</div>
-            </Link>
+            <DropdownButton
+              id="dropdown-basic-button"
+              title={
+                <i class="bi bi-person-fill ">
+                  {"  "}
+                  {`${user.firstname} ${user.lastname}`}
+                </i>
+              }
+            >
+              <Dropdown.Item to="">My profile</Dropdown.Item>
+              <Dropdown.Item to="/" onClick={handleLogout}>
+                Logout
+              </Dropdown.Item>
+            </DropdownButton>
           )}
         </div>
 
