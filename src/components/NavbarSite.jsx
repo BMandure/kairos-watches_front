@@ -57,15 +57,15 @@ function NavbarSite() {
         </div>
         <div className="login-container me-4">
           {user === null ? (
-            <Link to={"/login"} className="btn">
-              <div className="btn-content">Login</div>
+            <Link to={"/login"} className="btn-kairos">
+              <div className="btn-kairos-content">Login</div>
             </Link>
           ) : (
             <DropdownButton
               id="dropdown-basic-button"
               title={
                 <div className="btn">
-                  <i class="bi bi-person-fill btn-content">
+                  <i class="bi bi-person-fill">
                     {"  "}
                     {`${user.firstname} ${user.lastname}`}
                   </i>

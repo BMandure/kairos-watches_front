@@ -39,7 +39,7 @@ function AboutIntroduction() {
         </Col>
       </Row>
       <div className="w-100vw text-center">
-        <div className="btn-kairos">
+        <div className="btn-kairos pointer">
           <div className="btn-kairos-content">View MER</div>
         </div>
       </div>
