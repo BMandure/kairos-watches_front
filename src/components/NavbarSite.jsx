@@ -6,16 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import { CloseButton } from "react-bootstrap";
 import { useState } from "react";
-import LoginButton from "./LoginButton";
-import { useSelector } from "react-redux";
 
 import deleteIcon from "../assets/delete.svg";
 
 function NavbarSite() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
 
   const handleToggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
@@ -68,9 +64,9 @@ function NavbarSite() {
             </Link>
           </div>
         </div>
-        <div className="login-container btn-content">
-          <Link to={"/login"}>
-            <LoginButton isLoggedIn={isLoggedIn} />
+        <div className="login-container me-4">
+          <Link to={"/login"} className="btn">
+            <div className="btn-content">Login</div>
           </Link>
         </div>
 
