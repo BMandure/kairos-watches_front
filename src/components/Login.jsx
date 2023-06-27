@@ -1,15 +1,17 @@
 import { Tooltip } from "antd";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setUser } from "../redux/userSlice";
+import { setToken } from "../redux/userSlice";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const cart = useSelector((state) => state.cart);
+  const [email, setEmail] = useState("user@email.com");
+  const [password, setPassword] = useState("user");
+  const [error, setError] = useState(null); // Estado para almacenar el mensaje de error
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -25,16 +27,30 @@ function Login() {
           password,
         },
       });
-      dispatch(setUser(response.data));
-      navigate("/");
+
+      if (response.data.error) {
+        // Mostrar error de credenciales inválidas
+        setError(response.data.error);
+      } else {
+        dispatch(setToken(response.data));
+        if (cart.length !== 0) {
+          navigate("/pay");
+        } else {
+          navigate("/");
+        }
+      }
     } catch (error) {
       console.error(error);
+      setError("Error en el servidor");
     }
   }
 
   return (
     <div className="w-100 container-form">
-      <div className="form-container-login">
+      <div className="form-container">
+        {error && (
+          <p className="text-center font-quicksand color-red">{error}</p>
+        )}
         <p className="form-title">Login</p>
         <form className="form" onSubmit={handleSubmit} autoComplete="off">
           <div className="input-group">
@@ -43,7 +59,7 @@ function Login() {
               type="email"
               name="email"
               id="email"
-              placeholder="Leia Organa"
+              placeholder="user@email.com"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -54,7 +70,7 @@ function Login() {
               type="password"
               name="password"
               id="password"
-              placeholder="1234"
+              placeholder="user"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />

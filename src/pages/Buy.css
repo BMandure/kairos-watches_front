@@ -30,3 +30,17 @@
   color: var(--color-white);
   font-family: Quicksand;
 }
+
+.info-cart-container-buy {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  gap: 20px;
+}
+.info-buy {
+  color: var(--color-gray);
+}
+.img-info {
+  width: 20px;
+  height: auto;
+}

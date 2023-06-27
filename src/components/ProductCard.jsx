@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductCard.css";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -50,42 +50,13 @@ function ProductCard({ product }) {
       <Card className="product-card">
         <div className="container-img-featured">
           {product.trending && (
-            <small className="rounded-pill d-inline mx-auto featured-pill mb-1">
-              FEATURED
-            </small>
-          )}
+            <i className="bi bi-bookmark-star fs-4 text-secondary icon-bookmark"></i>
+          )}{" "}
           {product.stock > 0 && (
-            <button
-              expand="true"
-              className="btn-fast-add"
-              onClick={handleAddToCart}
-            >
-              {cartState.some((p) => p.id === product.id) ? (
-                <img
-                  src={`${
-                    import.meta.env.VITE_REACT_APP_DOMAIN
-                  }/src/assets/check.svg`}
-                  alt=""
-                  className="img-product-add"
-                />
-              ) : (
-                <img
-                  src={`${
-                    import.meta.env.VITE_REACT_APP_DOMAIN
-                  }/src/assets/add.svg`}
-                  alt=""
-                  className="img-product-add"
-                />
-              )}
-            </button>
+            <Link className="btn-fast-add" to={`/product/${product.slug}`}>
+              <i className={"bi bi-search text-secondary fs-4"}></i>
+            </Link>
           )}
-
-          <img
-            className="brand-logo-product"
-            src={`${import.meta.env.VITE_API_DOMAIN}${product.brand.logo}`}
-            alt=""
-          />
-
           <Card.Img
             className="product-img"
             variant="top"
@@ -95,10 +66,27 @@ function ProductCard({ product }) {
           />
         </div>
         <Card.Body className="product-card-body">
-          <div className="card-info">{`${product.line.name} ${product.name}`}</div>
-          <Link className="btn" to={`/product/${product.slug}`}>
-            <div className="btn-content">VIEW DETAILS</div>
-          </Link>
+          <div className="card-info">
+            <p>{`${product.line.name} ${product.name}`}</p>
+          </div>
+
+          {cartState.some((p) => p.id === product.id) ? (
+            <div
+              className="btn-add-cart"
+              to={`/product/${product.slug}`}
+              onClick={handleAddToCart}
+            >
+              <div className="btn-content">ALREADY IN CART</div>
+            </div>
+          ) : (
+            <div
+              className="btn-add-cart"
+              to={`/product/${product.slug}`}
+              onClick={handleAddToCart}
+            >
+              <div className="btn-content">ADD TO CART</div>
+            </div>
+          )}
         </Card.Body>
       </Card>
       <ToastContainer />

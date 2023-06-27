@@ -14,7 +14,10 @@ function ItemToBuy({ product }) {
   return (
     <>
       <div className="d-flex justify-content-between item-cart px-3 py-1">
-        <div className="d-flex my-auto" style={{ width: "20%" }}>
+        <div
+          className="d-flex my-auto"
+          style={{ width: "25%", padding: "1rem" }}
+        >
           <div style={{ width: "100%" }} className="my-auto">
             <img
               src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${

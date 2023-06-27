@@ -3,9 +3,14 @@ import "./Buy.css";
 import ItemToBuy from "../components/ItemToBuy";
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import truckCart from "../assets/truckCart.svg";
+import creditCard from "../assets/creditCardCart.svg";
+import shield from "../assets/shieldCart.svg";
+import check from "../assets/check.svg";
 
 function Buy({ setOrderAddress, setNumberPhone }) {
   const navigate = useNavigate();
@@ -29,7 +34,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
 
   return (
     <Container style={{ marginTop: "100px" }}>
-      <Row className="">
+      <Row>
         <Col lg={6}>
           <div
             className="flex-wrap overflow-auto me-4"
@@ -42,8 +47,11 @@ function Buy({ setOrderAddress, setNumberPhone }) {
           </div>
         </Col>
         <Col lg={6}>
-          <div className="mb-5">
-            <form action="" onSubmit={handleSubmit}>
+          <div className="h-100">
+            <form
+              className="h-100 d-flex flex-column justify-content-between"
+              onSubmit={handleSubmit}
+            >
               <p className="text-white fs-5 mb-2">Shipping address</p>
               <div className="input-group">
                 <input
@@ -98,14 +106,31 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                   required
                 />
               </div>
-              <div className="d-flex flex-column justify-content-between align-items-end mt-5">
+              <div className="d-flex flex-column justify-content-between align-items-end mt-4">
                 <button className="buy-btn text-center" type="submit">
                   Continue to shipping - USD {totalPrice}
                 </button>
-
-                <Link to={"/shop"}>
-                  <span className="back-btn">← Return to store</span>
-                </Link>
+              </div>
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="info-cart-container-buy">
+                  <div className="info-buy">
+                    <img className="img-info" src={truckCart} alt="" />
+                  </div>
+                  <div className="info-buy">
+                    <img className="img-info" src={creditCard} alt="" />
+                  </div>
+                  <div className="info-buy">
+                    <img className="img-info" src={shield} alt="" />
+                  </div>
+                  <div className="info-buy">
+                    <img className="img-info" src={check} alt="" />
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end">
+                  <Link to={"/shop"} className="btn border-0">
+                    <div className="btn-content">&larr; Return to Store</div>
+                  </Link>
+                </div>
               </div>
             </form>
           </div>

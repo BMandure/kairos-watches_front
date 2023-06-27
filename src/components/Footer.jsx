@@ -56,8 +56,14 @@ function Footer() {
       </Row>
       <Row className="footer-thin">
         <Col xs={12} md={6} lg={4} className="d-flex align-items-center pe-0">
-          <button className="footer-option footer-text-copy">Use Terms</button>
-          <button className="footer-option footer-text-copy">Privacy</button>
+          <Tooltip placement="top" title={text}>
+            <button className="footer-option footer-text-copy">
+              Use Terms
+            </button>
+          </Tooltip>
+          <Tooltip placement="top" title={text}>
+            <button className="footer-option footer-text-copy">Privacy</button>
+          </Tooltip>
         </Col>
         <Col xs={12} md={6} lg={4} lg-offset={4}>
           <p className="footer-text-copy-names">

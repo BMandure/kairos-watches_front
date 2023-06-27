@@ -4,19 +4,32 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { removeToken } from "../redux/userSlice";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 import deleteIcon from "../assets/delete.svg";
 
 function NavbarSite() {
+  const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleToggleOffcanvas = () => {
     setShowOffcanvas(!showOffcanvas);
   };
 
+  function handleLogout() {
+    dispatch(removeToken());
+
+    navigate("/");
+  }
   return (
     <Navbar expand="false" className="navbar-project">
       <NavbarToggle
@@ -34,17 +47,6 @@ function NavbarSite() {
       </NavbarToggle>
       <Container className="d-flex justify-content-center">
         <div className="nav-general-cont">
-          <div className="nav-brands-left">
-            <Link className="btn d-none d-lg-inline-block" to={"/rolex/lines"}>
-              <div className="btn-content">Rolex</div>
-            </Link>
-            <Link
-              className="btn d-none d-lg-inline-block"
-              to={"/victorinox-swiss-army/lines"}
-            >
-              <div className="btn-content">Victorinox</div>
-            </Link>
-          </div>
           <div className="nav-brand">
             <Navbar.Brand>
               <Link to="/" className="text-nabvar-brand">
@@ -52,22 +54,28 @@ function NavbarSite() {
               </Link>
             </Navbar.Brand>
           </div>
-          <div className="nav-brands-right">
-            <Link className="btn d-none d-lg-inline-block " to={"/omega/lines"}>
-              <div className="btn-content">Omega</div>
-            </Link>
-            <Link
-              className="btn d-none d-lg-inline-block "
-              to={"/patek-philippe/lines"}
-            >
-              <div className="btn-content">Patek Philippe</div>
-            </Link>
-          </div>
         </div>
         <div className="login-container me-4">
-          <Link to={"/login"} className="btn">
-            <div className="btn-content">Login</div>
-          </Link>
+          {user === null ? (
+            <Link to={"/login"} className="btn">
+              <div className="btn-content">Login</div>
+            </Link>
+          ) : (
+            <DropdownButton
+              id="dropdown-basic-button"
+              title={
+                <i class="bi bi-person-fill ">
+                  {"  "}
+                  {`${user.firstname} ${user.lastname}`}
+                </i>
+              }
+            >
+              <Dropdown.Item to="">My profile</Dropdown.Item>
+              <Dropdown.Item to="/" onClick={handleLogout}>
+                Logout
+              </Dropdown.Item>
+            </DropdownButton>
+          )}
         </div>
 
         <Navbar.Offcanvas

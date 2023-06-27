@@ -8,8 +8,7 @@ const cartSlice = createSlice({
       if (state.some((product) => product.id === action.payload.id)) {
         console.log("Already in cart");
       } else {
-        const product = action.payload;
-        product.qty = 1;
+        const product = { ...action.payload, qty: 1 };
         state.push(product);
       }
     },
