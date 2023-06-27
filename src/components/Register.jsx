@@ -50,7 +50,7 @@ function Register() {
               type="text"
               name="firstname"
               id="firstname"
-              placeholder="Leia"
+              placeholder="Example: Leia"
               value={firstname}
               onChange={(event) => setFirstName(event.target.value)}
             />
@@ -61,7 +61,7 @@ function Register() {
               type="text"
               name="lastname"
               id="lastname"
-              placeholder="Organa"
+              placeholder="Example: Organa"
               value={lastname}
               onChange={(event) => setLastName(event.target.value)}
             />
@@ -72,7 +72,7 @@ function Register() {
               type="email"
               name="email"
               id="email"
-              placeholder="leiaorgana@gmail.com"
+              placeholder="name@example.com"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
@@ -83,7 +83,7 @@ function Register() {
               type="text"
               name="address"
               id="address"
-              placeholder="Avenida Alderaan 2356"
+              placeholder="Example: Alderaan Avenue 2356"
               value={address}
               onChange={(event) => setAddress(event.target.value)}
             />
@@ -94,7 +94,7 @@ function Register() {
               type="text"
               name="phone"
               id="phone"
-              placeholder="Avenida Alderaan 2356"
+              placeholder="Example: +598 XX XXX XXX"
               value={phone}
               onChange={(event) => setPhone(event.target.value)}
             />
@@ -105,7 +105,7 @@ function Register() {
               type="password"
               name="password"
               id="password"
-              placeholder="1234"
+              placeholder=" "
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
