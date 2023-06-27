@@ -10,7 +10,7 @@ import { CloseButton } from "react-bootstrap";
 import { useState } from "react";
 import LoginButton from "./LoginButton";
 import { useSelector } from "react-redux";
-import { logoutUser, setUser } from "../redux/userSlice";
+
 import deleteIcon from "../assets/delete.svg";
 
 function NavbarSite() {
@@ -68,8 +68,8 @@ function NavbarSite() {
             </Link>
           </div>
         </div>
-        <div className="login-container">
-          <Link className="d-none d-lg-inline-block" to={"/login"}>
+        <div className="login-container btn-content">
+          <Link to={"/login"}>
             <LoginButton isLoggedIn={isLoggedIn} />
           </Link>
         </div>
