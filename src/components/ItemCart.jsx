@@ -30,7 +30,7 @@ function ItemCart({ product }) {
       <div className="d-flex justify-content-between item-cart px-3 py-1">
         <div className="position-absolute top-0 end-0 pe-2 pt-2">
           <i
-            class="bi bi-trash3 fs-4 text-secondary"
+            className="bi bi-trash3 fs-4 text-secondary"
             onClick={handleDeleteProduct}
             role="button"
           ></i>
