@@ -11,6 +11,7 @@ import truckCart from "../assets/truckCart.svg";
 import creditCard from "../assets/creditCardCart.svg";
 import shield from "../assets/shieldCart.svg";
 import check from "../assets/check.svg";
+import BackButton from "../components/BackButton";
 
 function Buy({ setOrderAddress, setNumberPhone }) {
   const navigate = useNavigate();
@@ -130,13 +131,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                     <img className="img-info" src={check} alt="" />
                   </div>
                 </div>
-                <div className="d-flex justify-content-end">
-                  <Link to={"/shop"} className="btn-kairos border-0">
-                    <div className="btn-kairos-content">
-                      &larr; Return to Store
-                    </div>
-                  </Link>
-                </div>
+                <BackButton link="/shop" text="Shop" padding="0" />
               </div>
             </form>
           </div>
