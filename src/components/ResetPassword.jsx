@@ -37,7 +37,7 @@ function ResetPassword() {
         <p className="form-title">Reset Password</p>
         {success && (
           <p className="text-center font-quicksand text-success">
-            Password successfully resetted and sent to your email.
+            Password successfully reset and sent to your email.
           </p>
         )}
         {error && (
