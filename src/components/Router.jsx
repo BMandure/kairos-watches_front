@@ -13,6 +13,8 @@ import LineInfo from "../pages/LineInfo";
 import Pay from "../pages/Pay";
 import ProtectedRoute from "./ProtectedRoute";
 import ResetPassword from "./ResetPassword";
+import Profile from "../pages/Profile";
+import UserInfo from "./UserInfo";
 
 function Router() {
   const [orderAddress, setOrderAddress] = useState("");
@@ -21,8 +23,10 @@ function Router() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+
       <Route path="/about" element={<About />} />
       <Route path="/shop" element={<Shop />} />
+
       <Route
         path="/buy"
         element={
@@ -33,6 +37,7 @@ function Router() {
         }
       />
       <Route element={<ProtectedRoute />}>
+        <Route path="/profile/*" element={<Profile />} />
         <Route
           path="/pay"
           element={

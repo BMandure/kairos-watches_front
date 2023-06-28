@@ -95,7 +95,7 @@ function NavbarSite() {
               }
               menuVariant="dark"
             >
-              <NavDropdown.Item href="">My profile</NavDropdown.Item>
+              <NavDropdown.Item href="/profile">My profile</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/" onClick={handleLogout}>
                 Logout
