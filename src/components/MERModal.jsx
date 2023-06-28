@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./ArticleModal.css";
+import "./MERModal.css";
 
 function MERModal() {
   const [showModal, setShowModal] = useState(false);
@@ -25,12 +24,12 @@ function MERModal() {
         onHide={handleCloseModal}
         className="modal-content-style"
         centered
-        size="lg"
+        dialogClassName="modal-90w"
       >
         <Modal.Header closeButton closeVariant="white"></Modal.Header>
         <Modal.Body>
           <img
-            src="src/assets/CosmographDaytona.jpeg"
+            src="src/assets/mer.png"
             alt="MER Image"
             className="w-100 h-100 border"
           />
