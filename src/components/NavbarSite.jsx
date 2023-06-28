@@ -88,7 +88,7 @@ function NavbarSite() {
               id="nav-dropdown-dark-example"
               drop="down-centered"
               title={
-                <i class="bi bi-person-fill dropdown-style">
+                <i className="bi bi-person-fill dropdown-style">
                   {"  "}
                   {`${user.firstname} ${user.lastname}`}
                 </i>
