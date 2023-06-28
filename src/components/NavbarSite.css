@@ -123,3 +123,8 @@ a {
   font-family: Quicksand;
   font-style: normal;
 }
+
+.dropdown-menu {
+  border-radius: 0;
+  left: -25px !important;
+}

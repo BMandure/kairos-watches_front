@@ -83,24 +83,25 @@ function NavbarSite() {
               <div className="btn-kairos-content">Login</div>
             </Link>
           ) : (
-            <NavDropdown
-              className="text-white"
-              id="nav-dropdown-dark-example"
-              drop="down-centered"
-              title={
-                <i className="bi bi-person-fill dropdown-style">
-                  {"  "}
-                  {`${user.firstname} ${user.lastname}`}
-                </i>
-              }
-              menuVariant="dark"
-            >
-              <NavDropdown.Item href="">My profile</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/" onClick={handleLogout}>
-                Logout
-              </NavDropdown.Item>
-            </NavDropdown>
+            <div className="d-flex align-items-center justify-content-center gap-2">
+              <div>
+                <i className="bi bi-person-fill dropdown-style  text-light"></i>
+              </div>
+
+              <NavDropdown
+                className="text-white"
+                id="nav-dropdown-dark-example"
+                drop="down-centered"
+                title={<>{`${user.firstname} ${user.lastname}`}</>}
+                menuVariant=""
+              >
+                <NavDropdown.Item href="">My profile</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/" onClick={handleLogout}>
+                  Logout
+                </NavDropdown.Item>
+              </NavDropdown>
+            </div>
           )}
         </div>
 

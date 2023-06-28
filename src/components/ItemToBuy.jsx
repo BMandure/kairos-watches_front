@@ -50,13 +50,13 @@ function ItemToBuy({ product }) {
             <span>USD {product.price * product.qty}</span>
           </div>
         </div>
-        <img
-          src={deleteProduct}
-          alt=""
-          className=""
-          onClick={handleDeleteProduct}
-          role="button"
-        />
+        <div className=" pe-3 pt-2">
+          <i
+            className="bi bi-trash3 fs-6 text-secondary"
+            onClick={handleDeleteProduct}
+            role="button"
+          ></i>
+        </div>
       </div>
       <hr
         style={{
