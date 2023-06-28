@@ -116,19 +116,21 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                   Continue to shipping - USD {totalPrice}
                 </button>
               </div>
-              <div className="d-flex justify-content-between align-items-center">
-                <div className="info-cart-container-buy">
-                  <div className="info-buy">
-                    <img className="img-info" src={truckCart} alt="" />
-                  </div>
-                  <div className="info-buy">
-                    <img className="img-info" src={creditCard} alt="" />
-                  </div>
-                  <div className="info-buy">
-                    <img className="img-info" src={shield} alt="" />
-                  </div>
-                  <div className="info-buy">
-                    <img className="img-info" src={check} alt="" />
+              <div className="d-flex w-100 justify-content-between mt-2">
+                <div className="d-flex justify-content-between align-items-center">
+                  <div className="info-cart-container-buy">
+                    <div className="info-buy">
+                      <img className="img-info" src={truckCart} alt="" />
+                    </div>
+                    <div className="info-buy">
+                      <img className="img-info" src={creditCard} alt="" />
+                    </div>
+                    <div className="info-buy">
+                      <img className="img-info" src={shield} alt="" />
+                    </div>
+                    <div className="info-buy">
+                      <img className="img-info" src={check} alt="" />
+                    </div>
                   </div>
                 </div>
                 <BackButton link="/shop" text="Shop" padding="0" />
