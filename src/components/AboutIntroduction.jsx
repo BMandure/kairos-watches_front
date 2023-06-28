@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 
 import "./AboutIntroduction.css";
+import MERModal from "./MERModal";
 
 function AboutIntroduction() {
   return (
@@ -39,9 +40,7 @@ function AboutIntroduction() {
         </Col>
       </Row>
       <div className="w-100vw text-center">
-        <div className="btn-kairos pointer">
-          <div className="btn-kairos-content">View MER</div>
-        </div>
+        <MERModal />
       </div>
     </Container>
   );
