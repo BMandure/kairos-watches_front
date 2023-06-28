@@ -112,6 +112,9 @@ a {
   display: flex;
   justify-content: start;
 }
+.btn-nav {
+  border-bottom: 1px solid transparent;
+}
 .btn-nav:hover {
   border-bottom: 1px solid white;
 }

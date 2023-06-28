@@ -1,7 +1,4 @@
 import "./BrandInfo.css";
-{
-  /*Link in react-router-dom*/
-}
 import { useParams } from "react-router-dom";
 import ArticleCard from "../components/ArticleCard";
 import CollectionCard from "../components/CollectionCard";
@@ -9,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import { Col, Row } from "react-bootstrap";
+import BackButton from "../components/BackButton";
 
 function BrandInfo() {
   const params = useParams();
@@ -68,6 +66,10 @@ function BrandInfo() {
                 </Col>
               ))}
             </Row>
+          </div>
+
+          <div className="mx-5">
+            <BackButton link="/" text="Home" />
           </div>
         </div>
       </>

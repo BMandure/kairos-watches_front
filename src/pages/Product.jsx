@@ -6,6 +6,7 @@ import { Carousel } from "react-bootstrap";
 import { Tooltip } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/cartSlice";
+import BackButton from "../components/BackButton";
 
 function Product() {
   const params = useParams();
@@ -171,6 +172,9 @@ function Product() {
           </div>
         </div>
       )}
+      <div className="mx-5">
+        <BackButton link="/shop" text="Shop" />
+      </div>
     </>
   );
 }
