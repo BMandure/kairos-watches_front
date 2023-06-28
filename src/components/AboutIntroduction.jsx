@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 
 import "./AboutIntroduction.css";
+import MERModal from "./MERModal";
 
 function AboutIntroduction() {
   return (
@@ -10,38 +11,44 @@ function AboutIntroduction() {
         <Col xs={12} className="about-col px-4">
           <div className="container-text">
             <p className="about-intro-text">
-              <strong>Kairos</strong> es un e-commerce de relojes de alta gama,
-              desarrollado por un grupo de estudiantes de Hack Academy con fines
-              unicamente educativos.
+              <strong>Kairos</strong> is the result of an integrative project
+              carried out during the Coding Bootcamp at Hack Academy, which
+              involved more than 600 hours of practice over three months. We
+              were presented with the challenge of creating an e-commerce
+              platform within a three-week time limit. We chose high-end watches
+              as the industry, and we took <strong>MAEN Watches'</strong>{" "}
+              website as a reference.
             </p>
             <p className="about-intro-text">
-              El objetivo de este proyecto es recorrer todos los conocimientos
-              adquiridos a traves del bootcamp y podes plasmarlos todos en un
-              mismo proyecto. Tras manejar varias opciones e investigar cada
-              una, como grupo tomamos la decision de hacer un e-commerce de
-              relojes de alta gama, esto debido a la cantidad de imagenes y
-              videos de calidad que teniamos disponibles para lograr el
-              resultado deseado.
+              The architecture of this project consists of a front-end for the
+              store, a front-end for administration and management, and a
+              back-end server that connects to a database.
             </p>
           </div>
         </Col>
         <Col xs={12} className="about-col px-4">
           <p className="about-intro-text">
-            La pagina que tomamos como inspiracion es la de Omega, nos parecio
-            que abarcaba muchas de las cosas que nos gustan y buscabamos en
-            nuestro sitio. El proyecto se forma por dos subproyectos: la tienda
-            por un lado, que es una Single Page Application hecha en React,
-            donde utilizamos suna store de Redux en la cual guardamos el carrito
-            y el token, por el otro el back-end conectado a la base de datos
-            hecha en MongoDB. Nuestra tienda se comunica con el servidor
-            back-end con llamadas AJAX gracias a la libreria Axios. ....
+            Both the store and the administration page are{" "}
+            <strong>Single Page Applications</strong> built with{" "}
+            <strong>React</strong>, and we use a <strong>Redux</strong> store to
+            store the user's shopping cart and access token. The front-end makes
+            AJAX calls to the <strong>Node.js-based</strong> back-end using the{" "}
+            <strong>Axios</strong> library, which then queries the{" "}
+            <strong>MongoDB</strong> database using the Mongoose ODM. The
+            database stores user information, including their orders,
+            administrators, products, brands, lines, and colors. It allows for
+            CRUD operations on products, lines, and administrators.
+          </p>
+          <p className="about-intro-text">
+            We deployed the application using <strong>Vercel</strong>, stored
+            images in <strong>Supabase</strong>, and hosted the database on{" "}
+            <strong>Mongo DB Atlas</strong>.
           </p>
         </Col>
       </Row>
+
       <div className="w-100vw text-center">
-        <div className="btn-kairos pointer">
-          <div className="btn-kairos-content">View MER</div>
-        </div>
+        <MERModal />
       </div>
     </Container>
   );

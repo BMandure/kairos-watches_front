@@ -6,16 +6,17 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link, useNavigate } from "react-router-dom";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeToken } from "../redux/userSlice";
-
-import deleteIcon from "../assets/delete.svg";
 import { NavDropdown } from "react-bootstrap";
+import axios from "axios";
 
 function NavbarSite() {
   const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [brands, setBrands] = useState(null);
+  const [lines, setLines] = useState(null);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,6 +30,28 @@ function NavbarSite() {
 
     navigate("/");
   }
+
+  useEffect(() => {
+    const getBrands = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_DOMAIN}/brands`,
+      });
+      setBrands(response.data);
+    };
+
+    const getLines = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_DOMAIN}/lines`,
+      });
+      setLines(response.data);
+    };
+
+    getBrands();
+    getLines();
+  }, []);
+
   return (
     <Navbar expand="false" className="navbar-project">
       <NavbarToggle
@@ -113,154 +136,35 @@ function NavbarSite() {
               >
                 <div className="btn-content btn-nav">VIEW ALL WATCHES</div>
               </Link>
-              <Link
-                className="justify-content-start mt-3 fw-bold"
-                to="/rolex/lines"
-                onClick={() => handleToggleOffcanvas()}
-              >
-                <div className="btn-content btn-nav">Rolex</div>
-              </Link>
-              <ul className="list-unstyled m-0 ms-1">
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="/rolex/lines/submariner"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Submariner</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="/rolex/lines/daytona"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Daytona</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="/rolex/lines/oyster"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Oyster</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/rolex/lines/gmt-master-II"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">GMT-Master II</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/rolex/lines/day-date"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Day-Date</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="pearlmaster"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Pearlmaster</li>
-                </Link>
-              </ul>
-              <Link
-                className="justify-content-start mt-3 fw-bold"
-                to="/victorinox-swiss-army/lines"
-                onClick={() => handleToggleOffcanvas()}
-              >
-                <div className="btn-content btn-nav">Victorinox Swiss Army</div>
-              </Link>
-              <ul className="list-unstyled m-0 ms-1">
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="/victorinox-swiss-army/lines/officers"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Officer's</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start"
-                  to="/victorinox-swiss-army/lines/mavericks-large"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Maverick Large</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/victorinox-swiss-army/lines/inox"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">INOX</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/victorinox-swiss-army/lines/alliance"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Alliance</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/victorinox-swiss-army/lines/alliance-xs"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Alliance XS</li>
-                </Link>
-              </ul>
-              <Link
-                className="justify-content-start mt-3 fw-bold"
-                to="/omega/lines"
-                onClick={() => handleToggleOffcanvas()}
-              >
-                <div className="btn-content btn-nav">Omega</div>
-              </Link>
-              <ul className="list-unstyled m-0 ms-1">
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/omega/lines/speedmaster"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Speedmaster</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/omega/lines/constellation"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Constellation</li>
-                </Link>
-              </ul>
-              <Link
-                className="justify-content-start mt-3 fw-bold"
-                to="/patek-philippe/lines"
-                onClick={() => handleToggleOffcanvas()}
-              >
-                <div className="btn-content btn-nav">Patek Philippe</div>
-              </Link>
-              <ul className="list-unstyled m-0 ms-1">
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/patek-philippe/lines/calatrava"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Calatrava</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/patek-philippe/lines/nautilus"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Nautilus</li>
-                </Link>
-                <Link
-                  className="border-0 mx-2 d-flex justify-content-start "
-                  to="/patek-philippe/lines/aquanaut"
-                  onClick={() => handleToggleOffcanvas()}
-                >
-                  <li className="btn-content btn-nav">Aquanaut</li>
-                </Link>
-              </ul>
+              {brands &&
+                brands.map((brand) => (
+                  <div key={brand.id} className="mt-3">
+                    <Link
+                      className="justify-content-start mt-3 fw-bold"
+                      to={`/${brand.slug}/lines`}
+                      onClick={() => handleToggleOffcanvas()}
+                    >
+                      <div className="btn-content btn-nav">{brand.name}</div>
+                    </Link>
+                    <ul className="list-unstyled m-0 ms-1">
+                      {lines.map(
+                        (line) =>
+                          line.brand.id === brand.id && (
+                            <Link
+                              key={line.id}
+                              className="border-0 mx-2 d-flex justify-content-start"
+                              to={`/${brand.slug}/lines/${line.slug}`}
+                              onClick={() => handleToggleOffcanvas()}
+                            >
+                              <li className="btn-content btn-nav">
+                                {line.name}
+                              </li>
+                            </Link>
+                          )
+                      )}
+                    </ul>
+                  </div>
+                ))}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

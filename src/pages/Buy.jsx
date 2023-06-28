@@ -11,6 +11,7 @@ import truckCart from "../assets/truckCart.svg";
 import creditCard from "../assets/creditCardCart.svg";
 import shield from "../assets/shieldCart.svg";
 import check from "../assets/check.svg";
+import BackButton from "../components/BackButton";
 
 function Buy({ setOrderAddress, setNumberPhone }) {
   const navigate = useNavigate();
@@ -107,7 +108,11 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                 />
               </div>
               <div className="d-flex flex-column justify-content-between align-items-end mt-4">
-                <button className="buy-btn text-center" type="submit">
+                <button
+                  className="buy-btn py-3 text-center border-0"
+                  type="submit"
+                >
+                  <i className="bi bi-cart3 me-2"></i>
                   Continue to shipping - USD {totalPrice}
                 </button>
               </div>
@@ -126,11 +131,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                     <img className="img-info" src={check} alt="" />
                   </div>
                 </div>
-                <div className="d-flex justify-content-end">
-                  <Link to={"/shop"} className="btn border-0">
-                    <div className="btn-content">&larr; Return to Store</div>
-                  </Link>
-                </div>
+                <BackButton link="/shop" text="Shop" padding="0" />
               </div>
             </form>
           </div>

@@ -1,0 +1,7 @@
+.back-container-btn {
+  display: inline;
+  width: fit-content;
+  display: flex;
+  justify-content: start;
+  background-color: var(--color-black-transparent);
+}

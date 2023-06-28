@@ -2,9 +2,11 @@ import React from "react";
 import "./Footer.css";
 import { Tooltip } from "antd";
 import { Col, Container, Row } from "react-bootstrap";
+import BackButton from "./BackButton";
 
 function Footer() {
   const text = "Out of the project's scope";
+
   return (
     <footer id="footer">
       <Row className="footer-fat">

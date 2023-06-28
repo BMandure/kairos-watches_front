@@ -17,11 +17,9 @@ function ArticleModal({ article }) {
 
   return (
     <>
-      <Link className="btn">
-        <div onClick={handleCardClick} className="btn-content">
-          Read More
-        </div>
-      </Link>
+      <div className="btn-kairos pointer" onClick={handleCardClick}>
+        <div className="btn-kairos-content">Read More</div>
+      </div>
       <Modal
         show={showModal}
         onHide={handleCloseModal}

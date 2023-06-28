@@ -18,8 +18,12 @@
   background-color: var(--color-white);
   font-weight: bold;
   padding: 10px;
-  border: solid 1px white;
   width: 100%;
+}
+
+.buy-btn:hover {
+  background-color: grey;
+  color: white;
 }
 
 .input-group input {

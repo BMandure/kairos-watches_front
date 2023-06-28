@@ -5,6 +5,7 @@ import CollectionCardStatic from "../components/CollectionCardStatic";
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import BackButton from "../components/BackButton";
 
 function LineInfo() {
   const params = useParams();
@@ -69,6 +70,9 @@ function LineInfo() {
               </Row>
             </Container>
           </div>
+        </div>
+        <div className="mx-5">
+          <BackButton link="/" text="Home" />
         </div>
       </>
     )
