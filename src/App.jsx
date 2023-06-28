@@ -1,10 +1,10 @@
 import "./App.css";
+import "./components/Forms.css";
 
 import NavbarSite from "./components/NavbarSite";
 import Footer from "./components/Footer";
 import Router from "./components/Router";
 import Cart from "./components/Cart";
-import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {

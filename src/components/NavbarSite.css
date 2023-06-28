@@ -115,3 +115,8 @@ a {
 .btn-nav:hover {
   border-bottom: 1px solid white;
 }
+.dropdown-style {
+  text-transform: uppercase;
+  font-family: Quicksand;
+  font-style: normal;
+}

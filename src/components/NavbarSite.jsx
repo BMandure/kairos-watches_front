@@ -9,10 +9,9 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeToken } from "../redux/userSlice";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 
 import deleteIcon from "../assets/delete.svg";
+import { NavDropdown } from "react-bootstrap";
 
 function NavbarSite() {
   const user = useSelector((state) => state.user);
@@ -61,22 +60,24 @@ function NavbarSite() {
               <div className="btn-kairos-content">Login</div>
             </Link>
           ) : (
-            <DropdownButton
-              id="dropdown-basic-button"
+            <NavDropdown
+              className="text-white"
+              id="nav-dropdown-dark-example"
+              drop="down-centered"
               title={
-                <div className="btn">
-                  <i class="bi bi-person-fill">
-                    {"  "}
-                    {`${user.firstname} ${user.lastname}`}
-                  </i>
-                </div>
+                <i class="bi bi-person-fill dropdown-style">
+                  {"  "}
+                  {`${user.firstname} ${user.lastname}`}
+                </i>
               }
+              menuVariant="dark"
             >
-              <Dropdown.Item to="">My profile</Dropdown.Item>
-              <Dropdown.Item to="/" onClick={handleLogout}>
+              <NavDropdown.Item href="">My profile</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/" onClick={handleLogout}>
                 Logout
-              </Dropdown.Item>
-            </DropdownButton>
+              </NavDropdown.Item>
+            </NavDropdown>
           )}
         </div>
 

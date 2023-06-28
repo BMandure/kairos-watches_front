@@ -48,10 +48,10 @@ function Login() {
   return (
     <div className="w-100 container-form">
       <div className="form-container">
-        {error && (
-          <p className="text-center font-quicksand color-red">{error}</p>
-        )}
         <p className="form-title">Login</p>
+        {error && (
+          <p className="text-center font-quicksand text-danger">{error}</p>
+        )}
         <form className="form" onSubmit={handleSubmit} autoComplete="off">
           <div className="input-group">
             <label htmlFor="email">Email</label>
@@ -74,11 +74,9 @@ function Login() {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
-            <div className="forgot">
-              <Tooltip placement="left" title="Out of the scope of the proyect">
-                Forgot Password?
-              </Tooltip>
-            </div>
+            <Link to="/reset-password" className="forgot">
+              Forgot Password?
+            </Link>
           </div>
           <button className="sign" type="submit">
             Sign in
@@ -121,7 +119,7 @@ function Login() {
         <p className="signup">
           Don't have an account?{" "}
           <strong className="text-decoration-underline ms-1 pb-1">
-            <Link to="/register" rel="noopener noreferrer" className="">
+            <Link to="/register" rel="noopener noreferrer">
               Sign up
             </Link>
           </strong>

@@ -109,7 +109,7 @@ function Register() {
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="enter password"
+                  placeholder="--------------"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                 />
@@ -122,7 +122,7 @@ function Register() {
         </form>
         <div className="social-message">
           <div className="line"></div>
-          <p className="message">Login with social accounts</p>
+          <p className="message">Sign up with social accounts</p>
           <div className="line"></div>
         </div>
         <div className="social-icons">
@@ -155,10 +155,10 @@ function Register() {
           </button>
         </div>
         <p className="signup">
-          Don't have an account?{" "}
+          Already have an account?{" "}
           <strong className="text-decoration-underline ms-1 pb-1">
-            <Link to="/register" rel="noopener noreferrer" className="">
-              Sign up
+            <Link to="/login" rel="noopener noreferrer" className="">
+              Sign in
             </Link>
           </strong>
         </p>

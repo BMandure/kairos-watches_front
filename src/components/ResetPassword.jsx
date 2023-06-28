@@ -32,23 +32,30 @@ function ResetPassword() {
   }
 
   return (
-    <div className="h-75 w-100 d-flex justify-content-center align-items-center reset-page">
-      <div className="border reset-container ">
-        <h2 className="text-white">Reset Password</h2>
-
-        <form className="reset-form">
-          {success && (
-            <p>Password successfully resetted and sent to your email.</p>
-          )}
-          {error && <p>{error}</p>}
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          <div className="btn-kairos pointer" onClick={handleSubmit}>
+    <div className="w-100 container-form">
+      <div className="form-container">
+        <p className="form-title">Reset Password</p>
+        {success && (
+          <p className="text-center font-quicksand text-success">
+            Password successfully resetted and sent to your email.
+          </p>
+        )}
+        {error && (
+          <p className="text-center font-quicksand text-danger">{error}</p>
+        )}
+        <form className="form" onSubmit={handleSubmit} autoComplete="off">
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="user@email.com"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </div>
+          <div className="btn-kairos pointer mt-4" onClick={handleSubmit}>
             <div className="btn-kairos-content">Reset Password</div>
           </div>
         </form>
