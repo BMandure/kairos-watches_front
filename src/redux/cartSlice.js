@@ -5,9 +5,7 @@ const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addItem(state, action) {
-      if (state.some((product) => product.id === action.payload.id)) {
-        console.log("Already in cart");
-      } else {
+      if (!state.some((product) => product.id === action.payload.id)) {
         const product = { ...action.payload, qty: 1 };
         state.push(product);
       }
@@ -33,7 +31,6 @@ const cartSlice = createSlice({
       const productIndex = state.findIndex(
         (p) => p._id === action.payload.productId
       );
-      console.log(productIndex);
       if (productIndex !== -1) {
         state.splice(productIndex, 1);
       }

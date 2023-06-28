@@ -127,8 +127,10 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                   </div>
                 </div>
                 <div className="d-flex justify-content-end">
-                  <Link to={"/shop"} className="btn border-0">
-                    <div className="btn-content">&larr; Return to Store</div>
+                  <Link to={"/shop"} className="btn-kairos border-0">
+                    <div className="btn-kairos-content">
+                      &larr; Return to Store
+                    </div>
                   </Link>
                 </div>
               </div>

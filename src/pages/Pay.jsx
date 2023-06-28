@@ -62,7 +62,6 @@ function Pay({ orderAddress, numberPhone }) {
     setNumberCard("");
     setExpiryDate("");
     setCvv("");
-    return console.log("La orden fue enviada.");
   };
 
   return (

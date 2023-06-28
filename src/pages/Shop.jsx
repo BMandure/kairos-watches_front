@@ -3,6 +3,7 @@ import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import "./Shop.css";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import BackButton from "../components/BackButton";
 
 function Shop() {
   const [render, setRender] = useState(0);
@@ -54,7 +55,6 @@ function Shop() {
       getLines();
     }
   }, [filterBrand, render]);
-  lines.map((line) => console.log(line));
 
   const handleFilterBrand = (event) => {
     setFilterBrand(event.target.value);
@@ -68,84 +68,90 @@ function Shop() {
   };
 
   return (
-    <Container className="shop-container">
-      <div className="shop-filter-container">
-        <p className="d-block">FILTER BY</p>
-        <div className="d-flex">
-          <Form className="d-flex gap-3">
-            <Form.Group>
-              <Form.Select
-                onChange={handleFilterBrand}
-                aria-label="Default select example"
-                className="filter-selector"
-              >
-                <option value="" key={0}>
-                  Brand
-                </option>
-                {brands.map((brand) => (
-                  <option key={brand._id} value={brand._id}>
-                    {brand.name}
-                  </option>
-                ))}
-              </Form.Select>
-            </Form.Group>
-            {filterBrand !== "" && (
+    <>
+      <Container className="shop-container">
+        <div className="shop-filter-container">
+          <p className="d-block">FILTER BY</p>
+          <div className="d-flex">
+            <Form className="d-flex gap-3">
               <Form.Group>
                 <Form.Select
-                  onChange={handleFilterLine}
+                  onChange={handleFilterBrand}
                   aria-label="Default select example"
                   className="filter-selector"
                 >
-                  <option value="" key={1}>
-                    Lines
+                  <option value="" key={0}>
+                    Brand
                   </option>
-                  {lines.length > 0 &&
-                    lines.map((line) => (
-                      <option key={line.id} value={line._id}>
-                        {line.name}
-                      </option>
-                    ))}
+                  {brands.map((brand) => (
+                    <option key={brand._id} value={brand._id}>
+                      {brand.name}
+                    </option>
+                  ))}
                 </Form.Select>
               </Form.Group>
-            )}
-            <Form.Group>
-              <Form.Select
-                aria-label="Default select example"
-                className="filter-selector"
-              >
-                <option>Color</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </Form.Select>
-            </Form.Group>
-            <Form.Group>
-              <Form.Select
-                aria-label="Default select example"
-                className="filter-selector"
-              >
-                <option>Gender</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </Form.Select>
-            </Form.Group>
-          </Form>
+              {filterBrand !== "" && (
+                <Form.Group>
+                  <Form.Select
+                    onChange={handleFilterLine}
+                    aria-label="Default select example"
+                    className="filter-selector"
+                  >
+                    <option value="" key={1}>
+                      Lines
+                    </option>
+                    {lines.length > 0 &&
+                      lines.map((line) => (
+                        <option key={line.id} value={line._id}>
+                          {line.name}
+                        </option>
+                      ))}
+                  </Form.Select>
+                </Form.Group>
+              )}
+              <Form.Group>
+                <Form.Select
+                  aria-label="Default select example"
+                  className="filter-selector"
+                >
+                  <option>Color</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+              </Form.Group>
+              <Form.Group>
+                <Form.Select
+                  aria-label="Default select example"
+                  className="filter-selector"
+                >
+                  <option>Gender</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </Form.Select>
+              </Form.Group>
+            </Form>
+          </div>
         </div>
+        <Row>
+          {products.map((product) => (
+            <Col
+              key={product._id}
+              xs={{ span: 10, offset: 1 }}
+              md={{ span: 6, offset: 0 }}
+              lg={{ span: 3, offset: 0 }}
+            >
+              <ProductCard product={product} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
+      <div className="mx-5">
+        <BackButton link="/" text="Home" />
       </div>
-      <Row>
-        {products.map((product) => (
-          <Col
-            key={product._id}
-            xs={{ span: 10, offset: 1 }}
-            md={{ span: 6, offset: 0 }}
-            lg={{ span: 3, offset: 0 }}
-          >
-            <ProductCard product={product} />
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    </>
   );
 }
 

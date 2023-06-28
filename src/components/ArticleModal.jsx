@@ -17,8 +17,8 @@ function ArticleModal({ article }) {
 
   return (
     <>
-      <Link className="btn">
-        <div onClick={handleCardClick} className="btn-content">
+      <Link className="btn-kairos">
+        <div onClick={handleCardClick} className="btn-kairos-content">
           Read More
         </div>
       </Link>
