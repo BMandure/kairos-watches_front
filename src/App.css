@@ -108,7 +108,6 @@ h6::selection {
 
 .btn-gray:hover {
   background-color: grey;
-  border: 1px solid white;
   color: white;
 }
 

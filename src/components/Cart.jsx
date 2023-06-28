@@ -73,7 +73,10 @@ function Cart() {
               className="text-black mx-auto w-75"
               onClick={handleClose}
             >
-              <button expand="true" className="btn-gray py-3 text-center w-100">
+              <button
+                expand="true"
+                className="btn-gray py-3 text-center w-100 fw-bold"
+              >
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
                 <span className="px-2">USD {totalPrice}</span>

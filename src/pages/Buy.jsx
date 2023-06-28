@@ -107,7 +107,11 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                 />
               </div>
               <div className="d-flex flex-column justify-content-between align-items-end mt-4">
-                <button className="buy-btn text-center" type="submit">
+                <button
+                  className="buy-btn py-3 text-center border-0"
+                  type="submit"
+                >
+                  <i className="bi bi-cart3 me-2"></i>
                   Continue to shipping - USD {totalPrice}
                 </button>
               </div>
