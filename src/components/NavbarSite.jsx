@@ -65,14 +65,14 @@ function NavbarSite() {
               id="nav-dropdown-dark-example"
               drop="down-centered"
               title={
-                <i class="bi bi-person-fill dropdown-style">
+                <i className="bi bi-person-fill dropdown-style">
                   {"  "}
                   {`${user.firstname} ${user.lastname}`}
                 </i>
               }
               menuVariant="dark"
             >
-              <NavDropdown.Item href="">My profile</NavDropdown.Item>
+              <NavDropdown.Item href="/profile">My profile</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/" onClick={handleLogout}>
                 Logout
