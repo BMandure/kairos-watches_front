@@ -42,12 +42,12 @@ function ModalOrder({ products, order }) {
         onHide={handleClose}
         size={"xl"}
       >
-        <Modal.Header closeButton closeVariant={"white"} className="bg-dark">
+        <Modal.Header closeButton closeVariant={"white"} className="modal-bg">
           <Modal.Title className="text-white">
             {`Order ID: #${order.id}`}
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-dark">
+        <Modal.Body className="modal-bg">
           <div className="d-flex justify-content-between mb-3">
             <div className="d-flex flex-column">
               <span className="text-white">Fullname: {order.fullname}</span>
@@ -111,7 +111,7 @@ function ModalOrder({ products, order }) {
             <p className="my-auto text-white">Total: USD {order.totalPrice}</p>
           </div>
         </Modal.Body>
-        <Modal.Footer className="bg-dark d-flex justify-content-end">
+        <Modal.Footer className="modal-bg d-flex justify-content-end">
           <div
             className="btn-kairos float-end my-3 mx-2 pointer"
             onClick={handleClose}
