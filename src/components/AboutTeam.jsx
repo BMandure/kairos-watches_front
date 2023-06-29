@@ -5,7 +5,7 @@ import TeamCard from "./TeamCard";
 import "./AboutTeam.css";
 
 import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
-import BackButton from "./BackButton";
+import imgAugusto from "../assets/Augusto.jpg";
 
 function AboutTeam() {
   return (
@@ -13,7 +13,7 @@ function AboutTeam() {
       <h2 className="about-team-title  p-0 px-4">Our Team</h2>
       <Row className="d-flex mt-2 px-2 justify-content-between g-4">
         <TeamCard
-          img={img}
+          img={imgAugusto}
           name="Augusto"
           title="Full Stack Developer"
           ghLink="https://github.com/augustoriccardi"
