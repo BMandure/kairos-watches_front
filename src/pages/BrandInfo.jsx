@@ -38,9 +38,6 @@ function BrandInfo() {
                 alt="brand-logo"
               />
             </div>
-            <div className="back-style">
-              <BackButton link="/" text="Home" />
-            </div>
             <h2 className="brand-info-subtitle">LINES</h2>
           </div>
           <div className="collection-container-gap d-flex flex-column">

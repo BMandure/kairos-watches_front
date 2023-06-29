@@ -4,6 +4,8 @@ import TeamCard from "./TeamCard";
 
 import "./AboutTeam.css";
 
+import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
+import imgAugusto from "../assets/Augusto.jpg";
 import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import brunoImg from "../assets/fotoBruno.jpg";
 import gastonImg from "../assets/IMG_9237.jpg";
@@ -14,7 +16,7 @@ function AboutTeam() {
       <h2 className="about-team-title  p-0 px-4">Our Team</h2>
       <Row className="d-flex mt-2 px-2 justify-content-between g-4">
         <TeamCard
-          img=""
+          img={imgAugusto}
           name="Augusto"
           title="Full Stack Developer"
           ghLink="https://github.com/augustoriccardi"
