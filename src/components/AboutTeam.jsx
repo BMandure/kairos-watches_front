@@ -8,7 +8,12 @@ import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import imgAugusto from "../assets/Augusto.jpg";
 import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import brunoImg from "../assets/fotoBruno.jpg";
+<<<<<<< Updated upstream
 import gastonImg from "../assets/IMG_9237.jpg";
+=======
+import joaquinImg from "../assets/joaquinFotoPerfil.jpeg";
+import gastonImg from "../assets/gastonFotoPerfil.png";
+>>>>>>> Stashed changes
 
 function AboutTeam() {
   return (
@@ -37,7 +42,7 @@ function AboutTeam() {
           ldLink="https://www.linkedin.com/in/gastonlaffitte/"
         />
         <TeamCard
-          img=""
+          img={joaquinImg}
           name="Joaquin"
           title="Full Stack Developer"
           ghLink="https://github.com/joaquingonjua"
