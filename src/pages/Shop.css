@@ -7,10 +7,9 @@
 }
 .shop-filter-container {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin: 1rem 0 1rem auto;
-  justify-content: center;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  justify-content: space-between;
   text-align: right;
   align-items: right;
   color: white;

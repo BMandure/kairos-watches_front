@@ -9,6 +9,7 @@ import ItemToBuy from "../components/ItemToBuy";
 import mastecard from "../assets/mastercard.svg";
 import visa from "../assets/visa.svg";
 import paypal from "../assets/paypal.svg";
+import BackButton from "../components/BackButton";
 
 function Pay({ orderAddress, numberPhone }) {
   const dispatch = useDispatch();
@@ -78,6 +79,9 @@ function Pay({ orderAddress, numberPhone }) {
 
   return (
     <Container style={{ marginTop: "100px" }}>
+      <div className="back-style">
+        <BackButton link="/" text="Home" />
+      </div>
       {!confirmation ? (
         <Row>
           <Col lg={6}>

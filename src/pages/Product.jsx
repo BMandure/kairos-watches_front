@@ -68,6 +68,9 @@ function Product() {
         <div className="container product-container">
           <div className="row d-flex justify-content-center align-items-center mt-4 p-4">
             <div className="col-12 col-lg-6 p-4">
+              <div className="back-style">
+                <BackButton link="/shop" text="Shop" />
+              </div>
               <div>
                 <Carousel indicators={true}>
                   {product.image.map((img, i) => (
@@ -208,9 +211,6 @@ function Product() {
           </div>
         </div>
       )}
-      <div className="mx-5">
-        <BackButton link="/shop" text="Shop" />
-      </div>
     </>
   );
 }

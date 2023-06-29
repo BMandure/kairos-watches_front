@@ -45,6 +45,7 @@ function LineInfo() {
   return (
     line && (
       <>
+        {" "}
         <div className="brand-info-container">
           <div className="d-flex flex-column mt-2">
             <CollectionCardStatic
@@ -56,6 +57,9 @@ function LineInfo() {
           </div>
           <div className="d-flex flex-column">
             <Container className="shop-container">
+              <div className="back-style">
+                <BackButton link="/" text="Home" />
+              </div>
               <Row>
                 {products.map((product) => (
                   <Col
@@ -70,9 +74,6 @@ function LineInfo() {
               </Row>
             </Container>
           </div>
-        </div>
-        <div className="mx-5">
-          <BackButton link="/" text="Home" />
         </div>
       </>
     )

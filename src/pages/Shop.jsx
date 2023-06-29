@@ -74,70 +74,76 @@ function Shop() {
 
   return (
     <>
+      {" "}
       <Container className="shop-container">
         <div className="shop-filter-container">
-          <p className="d-block">FILTER BY</p>
-          <div className="d-flex">
-            <Form className="d-flex gap-3">
-              <Form.Group>
-                <Form.Select
-                  onChange={handleFilterBrand}
-                  aria-label="Default select example"
-                  className="filter-selector"
-                  value={filterBrand}
-                >
-                  <option value="" key={0}>
-                    Brand
-                  </option>
-                  {brands.map((brand) => (
-                    <option key={brand._id} value={brand._id}>
-                      {brand.name}
-                    </option>
-                  ))}
-                </Form.Select>
-              </Form.Group>
-              {filterBrand !== "" && (
+          <div className="back-style mb-0 mt-auto d-flex align-items-bottom">
+            <BackButton link="/" text={"Home"} />
+          </div>
+          <div className="d-flex flex-column">
+            <p className="d-block">FILTER BY</p>
+            <div className="d-flex">
+              <Form className="d-flex gap-3">
                 <Form.Group>
                   <Form.Select
-                    onChange={handleFilterLine}
+                    onChange={handleFilterBrand}
                     aria-label="Default select example"
                     className="filter-selector"
-                    value={filterLine}
+                    value={filterBrand}
                   >
                     <option value="" key={0}>
-                      Lines
+                      Brand
                     </option>
-                    {lines.length > 0 &&
-                      lines.map((line) => (
-                        <option key={line.id} value={line._id}>
-                          {line.name}
-                        </option>
-                      ))}
+                    {brands.map((brand) => (
+                      <option key={brand._id} value={brand._id}>
+                        {brand.name}
+                      </option>
+                    ))}
                   </Form.Select>
                 </Form.Group>
-              )}
-              <Form.Group>
-                <Form.Select
-                  aria-label="Default select example"
-                  className="filter-selector"
-                >
-                  <option>Color</option>
-                </Form.Select>
-              </Form.Group>
-              <Form.Group>
-                <Form.Select
-                  aria-label="Default select example"
-                  className="filter-selector"
-                  value={filterGender}
-                  onChange={handleFilterGender}
-                >
-                  <option value="">Gender</option>
-                  <option value="Man">Man</option>
-                  <option value="Woman">Woman</option>
-                  <option value="Unisex">Unisex</option>
-                </Form.Select>
-              </Form.Group>
-            </Form>
+                {filterBrand !== "" && (
+                  <Form.Group>
+                    <Form.Select
+                      onChange={handleFilterLine}
+                      aria-label="Default select example"
+                      className="filter-selector"
+                      value={filterLine}
+                    >
+                      <option value="" key={0}>
+                        Lines
+                      </option>
+                      {lines.length > 0 &&
+                        lines.map((line) => (
+                          <option key={line.id} value={line._id}>
+                            {line.name}
+                          </option>
+                        ))}
+                    </Form.Select>
+                  </Form.Group>
+                )}
+                <Form.Group>
+                  <Form.Select
+                    aria-label="Default select example"
+                    className="filter-selector"
+                  >
+                    <option>Color</option>
+                  </Form.Select>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Select
+                    aria-label="Default select example"
+                    className="filter-selector"
+                    value={filterGender}
+                    onChange={handleFilterGender}
+                  >
+                    <option value="">Gender</option>
+                    <option value="Man">Man</option>
+                    <option value="Woman">Woman</option>
+                    <option value="Unisex">Unisex</option>
+                  </Form.Select>
+                </Form.Group>
+              </Form>
+            </div>
           </div>
         </div>
         <Row>
@@ -161,7 +167,6 @@ function Shop() {
           )}
         </Row>
       </Container>
-
       <div className="mx-5">
         <BackButton link="/" text="Home" />
       </div>

@@ -10,9 +10,6 @@ function About() {
       <AboutIntroduction />
       <AboutTechnologies />
       <AboutTeam />
-      <div className="mx-5">
-        <BackButton link="/" text={"Home"} />
-      </div>
     </div>
   );
 }
