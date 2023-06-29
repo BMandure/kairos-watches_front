@@ -4,7 +4,7 @@ import TeamCard from "./TeamCard";
 
 import "./AboutTeam.css";
 
-import img from "../assets/cara-de-hombre-de-negocios-contra-el-fondo-blanco.png";
+import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import BackButton from "./BackButton";
 
 function AboutTeam() {
