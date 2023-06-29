@@ -1,8 +1,8 @@
 .sidebar {
   min-height: 100vh !important;
   background-color: black;
-  margin-top: 40px;
-  min-width: 300px;
+  padding-top: 3rem;
+  border-right: 1px solid var(--color-gray-transparent);
 }
 
 .link-sidebar-zone {

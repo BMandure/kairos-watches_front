@@ -1,16 +1,32 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./UserInfo.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { Row, Col } from "react-bootstrap";
 
 function UserInfo() {
   const user = useSelector((state) => state.user);
+
+  const [userInfo, setUserInfo] = useState(null);
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
   const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_DOMAIN}/api/user/${user.email}`,
+        headers: {
+          Authorization: `bearer ${user.token}`,
+        },
+      });
+      setUserInfo(response.data);
+    };
+    getUser();
+  }, []);
 
   const username = user.email;
 
@@ -47,51 +63,95 @@ function UserInfo() {
   }
 
   return (
-    <div className="w-100 container-form">
-      <div className="form-container">
-        <p className="form-title">Change your password below</p>
-        {status !== "Successfully password change" ? (
-          <p className="text-center font-quicksand text-danger">{status}</p>
-        ) : (
-          <p className="text-center font-quicksand text-success">{status}</p>
-        )}
+    <>
+      {userInfo && (
+        <div className="user-info-fields">
+          <Row className="form-container w-100">
+            <Col xs={6}>
+              <p className="form-title info-field">Full name:</p>
+              <p>
+                {userInfo.firstname} {userInfo.lastname}
+              </p>
+            </Col>
+            <Col xs={6}>
+              <p className="form-title info-field">E-mail:</p>
+              <p>{userInfo.email}</p>
+            </Col>
+            <Col xs={6}>
+              <p className="form-title info-field">Address:</p>
+              <p>{userInfo.address}</p>
+            </Col>
 
-        <form className="form" onSubmit={handleSubmit} autoComplete="off">
-          <div className="input-group">
-            <label htmlFor="currentpassword">Current password *</label>
-            <input
-              type="password"
-              name="currentpassword"
-              id="currentpassword"
-              placeholder=""
-              value={currentPassword}
-              onChange={(event) => setCurrentPassword(event.target.value)}
-            />
-            <label htmlFor="newpassword">New password *</label>
-            <input
-              type="password"
-              name="newpassword"
-              id="newpassword"
-              placeholder=""
-              value={newPassword}
-              onChange={(event) => setNewPassword(event.target.value)}
-            />
-            <label htmlFor="password">New password confirmation *</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder=""
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-            />
-          </div>
-          <div className="btn-kairos pointer mt-4" onClick={handleSubmit}>
-            <div className="btn-kairos-content">Change Password</div>
-          </div>
-        </form>
-      </div>
-    </div>
+            <Col xs={6}>
+              <p className="form-title info-field">Phone:</p>
+              <p>{userInfo.phone}</p>
+            </Col>
+            <hr />
+            <p className="form-title">Change your password</p>
+
+            {status &&
+              (status !== "Successfully password change" ? (
+                <p className="text-center font-quicksand text-danger mt-2 mb-0">
+                  {status}
+                </p>
+              ) : (
+                <p className="text-center font-quicksand text-success mt-2 mb-0">
+                  {status}
+                </p>
+              ))}
+
+            <form
+              className="form mt-0"
+              onSubmit={handleSubmit}
+              autoComplete="off"
+            >
+              <div className="input-group d-flex flex-column gap-3">
+                <div>
+                  <label htmlFor="currentpassword">
+                    Current password <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="currentpassword"
+                    id="currentpassword"
+                    value={currentPassword}
+                    onChange={(event) => setCurrentPassword(event.target.value)}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="newpassword">
+                    New password <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="newpassword"
+                    id="newpassword"
+                    value={newPassword}
+                    onChange={(event) => setNewPassword(event.target.value)}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="password">
+                    New password confirmation{" "}
+                    <span className="text-danger">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="btn-kairos pointer mt-4" onClick={handleSubmit}>
+                <div className="btn-kairos-content">Change Password</div>
+              </div>
+            </form>
+          </Row>
+        </div>
+      )}
+    </>
   );
 }
 
