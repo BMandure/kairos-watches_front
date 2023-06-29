@@ -46,6 +46,9 @@ function Buy({ setOrderAddress, setNumberPhone }) {
 
   return (
     <Container style={{ marginTop: "100px" }}>
+      <div className="mx-5">
+        <BackButton link="/shop" text="Shop" />
+      </div>
       <Row>
         <Col lg={6}>
           <div
@@ -144,7 +147,6 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                     </div>
                   </div>
                 </div>
-                <BackButton link="/shop" text="Shop" padding="0" />
               </div>
             </form>
           </div>

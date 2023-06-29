@@ -38,6 +38,9 @@ function BrandInfo() {
                 alt="brand-logo"
               />
             </div>
+            <div className="back-style">
+              <BackButton link="/" text="Home" />
+            </div>
             <h2 className="brand-info-subtitle">LINES</h2>
           </div>
           <div className="collection-container-gap d-flex flex-column">
@@ -51,7 +54,6 @@ function BrandInfo() {
               />
             ))}
           </div>
-
           <div>
             <h2 className="brand-info-subtitle">NEWS</h2>
             <Row className="mx-auto">
@@ -66,10 +68,6 @@ function BrandInfo() {
                 </Col>
               ))}
             </Row>
-          </div>
-
-          <div className="mx-5">
-            <BackButton link="/" text="Home" />
           </div>
         </div>
       </>

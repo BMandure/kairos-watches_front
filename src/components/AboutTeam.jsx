@@ -6,6 +6,8 @@ import "./AboutTeam.css";
 
 import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import imgAugusto from "../assets/Augusto.jpg";
+import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
+import brunoImg from "../assets/fotoBruno.jpg";
 
 function AboutTeam() {
   return (
@@ -20,28 +22,28 @@ function AboutTeam() {
           ldLink="https://www.linkedin.com/in/augusto-riccardi/"
         />
         <TeamCard
-          img={img}
+          img={maxiImg}
           name="Maximiliano"
           title="Full Stack Developer"
           ghLink="https://github.com/kasenawe"
           ldLink="https://www.linkedin.com/in/maximiliano-quintana-tabarez/"
         />
         <TeamCard
-          img={img}
+          img=""
           name="Gastón"
           title="Full Stack Developer"
           ghLink="https://github.com/G-Laffitte"
           ldLink="https://www.linkedin.com/in/gastonlaffitte/"
         />
         <TeamCard
-          img={img}
+          img=""
           name="Joaquin"
           title="Full Stack Developer"
           ghLink="https://github.com/joaquingonjua"
           ldLink="https://www.linkedin.com/in/joaquingonzalezjuambeltz/"
         />
         <TeamCard
-          img={img}
+          img={brunoImg}
           name="Bruno"
           title="Full Stack Developer"
           ghLink="https://github.com/BMandure"

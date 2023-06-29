@@ -5,3 +5,7 @@
   justify-content: start;
   background-color: var(--color-black-transparent);
 }
+.back-style {
+  margin: 0 2.3rem 1rem 2.3rem;
+  width: fit-content;
+}

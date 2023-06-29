@@ -6,14 +6,17 @@ function Sidemenu() {
     <>
       <div className="sidebar">
         <div className="d-flex flex-column align-items-start mx-5 link-sidebar-zone">
-          <Link className="justify-content-start fw-bold btn-nav" to="/orders">
-            My orders
-          </Link>
           <Link
-            className="justify-content-start fw-bold mt-3 btn-nav"
+            className="justify-content-start fw-bold btn-nav"
             to="/profile/user-info"
           >
             My information
+          </Link>{" "}
+          <Link
+            className="justify-content-start fw-bold btn-nav mt-3"
+            to="/profile/orders"
+          >
+            My orders
           </Link>
         </div>
       </div>
