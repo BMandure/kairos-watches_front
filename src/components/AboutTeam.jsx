@@ -6,6 +6,7 @@ import "./AboutTeam.css";
 
 import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import brunoImg from "../assets/fotoBruno.jpg";
+import gastonImg from "../assets/IMG_9237.jpg";
 
 function AboutTeam() {
   return (
@@ -27,7 +28,7 @@ function AboutTeam() {
           ldLink="https://www.linkedin.com/in/maximiliano-quintana-tabarez/"
         />
         <TeamCard
-          img=""
+          img={gastonImg}
           name="Gastón"
           title="Full Stack Developer"
           ghLink="https://github.com/G-Laffitte"
