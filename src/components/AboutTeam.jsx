@@ -8,6 +8,8 @@ import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import imgAugusto from "../assets/Augusto.jpg";
 import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import brunoImg from "../assets/fotoBruno.jpg";
+import gastonImg from "../assets/gastonFotoPerfil.png";
+import joaquinImg from "../assets/joaquinFotoPerfil.jpeg";
 
 function AboutTeam() {
   return (
@@ -29,14 +31,14 @@ function AboutTeam() {
           ldLink="https://www.linkedin.com/in/maximiliano-quintana-tabarez/"
         />
         <TeamCard
-          img=""
+          img={gastonImg}
           name="Gastón"
           title="Full Stack Developer"
           ghLink="https://github.com/G-Laffitte"
           ldLink="https://www.linkedin.com/in/gastonlaffitte/"
         />
         <TeamCard
-          img=""
+          img={joaquinImg}
           name="Joaquin"
           title="Full Stack Developer"
           ghLink="https://github.com/joaquingonjua"

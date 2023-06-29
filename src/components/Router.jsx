@@ -15,17 +15,10 @@ import ProtectedRoute from "./ProtectedRoute";
 import ResetPassword from "./ResetPassword";
 import Profile from "../pages/Profile";
 import UserInfo from "./UserInfo";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 function Router() {
   const [orderAddress, setOrderAddress] = useState("");
   const [numberPhone, setNumberPhone] = useState("");
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    console.log(location.pathname);
-  }, [location.pathname]);
 
   return (
     <Routes>

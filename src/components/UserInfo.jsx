@@ -47,7 +47,6 @@ function UserInfo() {
         },
       });
       if (response.data.error === "Invalid credentials") {
-        console.log("no machea");
         return setStatus("Invalid credentials");
       }
       if (response.data.error === "Passwords not matching each other") {
@@ -71,7 +70,7 @@ function UserInfo() {
         <div className="user-info-fields w-75 pt-2 mx-auto">
           <Row className="form-container m-0 w-100">
             <Col xs={4}>
-              <p className="form-title info-field">Full name:</p>
+              <p className="form-title info-field">Full name:</p>s
               <p>
                 {userInfo.firstname} {userInfo.lastname}
               </p>
