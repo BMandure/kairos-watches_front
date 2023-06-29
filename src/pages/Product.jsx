@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Product.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Carousel } from "react-bootstrap";
 import { Tooltip } from "antd";
@@ -10,8 +10,12 @@ import BackButton from "../components/BackButton";
 
 function Product() {
   const params = useParams();
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState(null);
   const [brand, setBrand] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [filterBrand, setFilterBrand] = useState("");
+  const navigate = useNavigate();
+  const [productIndex, setProductIndex] = useState("");
 
   const [hoverFav, setHoverFav] = useState(false);
   const text = "Out of the project's scope";
@@ -24,12 +28,38 @@ function Product() {
         method: "GET",
         url: `${import.meta.env.VITE_API_DOMAIN}/product/${params.slug}`,
       });
+      setFilterBrand(response.data.product.brand.id);
       setProduct(response.data.product);
     };
     getProduct();
-  }, []);
+  }, [params.slug]);
+
   const handleAddToCart = () => {
     dispatch(addItem(product));
+  };
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `${
+          import.meta.env.VITE_API_DOMAIN
+        }/products?filterBrand=${filterBrand}`,
+      });
+      setProducts(response.data);
+      setProductIndex(response.data.findIndex((p) => p.id === product.id));
+    };
+    getProducts();
+  }, [product]);
+
+  const handlePrevious = () => {
+    const previousProduct = products[productIndex - 1];
+    navigate(`/product/${previousProduct.slug}`);
+  };
+
+  const handleNext = () => {
+    const nextProduct = products[productIndex + 1];
+    navigate(`/product/${nextProduct.slug}`);
   };
 
   return (
@@ -41,7 +71,7 @@ function Product() {
               <div>
                 <Carousel indicators={true}>
                   {product.image.map((img, i) => (
-                    <Carousel.Item key={i}>
+                    <Carousel.Item key={i} style={{ Width: "400px" }}>
                       <img
                         className="img-carousel"
                         src={`${
@@ -57,14 +87,20 @@ function Product() {
             <div className="col-12 col-lg-6 p-4">
               <div className="bg-transparent text-light d-flex flex-column">
                 <div className="d-flex justify-content-between ">
-                  <Link to={`/product/slug`} className="change-product">
-                    {" "}
-                    &larr; Previous product{" "}
-                  </Link>
-                  <Link to={`/product/slug`} className="change-product">
-                    {" "}
-                    Next product &rarr;{" "}
-                  </Link>
+                  <button
+                    disabled={productIndex === 0}
+                    onClick={handlePrevious}
+                    className="btn text-light"
+                  >
+                    &larr; Previous product
+                  </button>
+                  <button
+                    disabled={productIndex === products.length - 1}
+                    onClick={handleNext}
+                    className="btn text-light"
+                  >
+                    Next product &rarr;
+                  </button>
                 </div>
                 <h2 className="mt-2">{`${product.brand.name} ${product.line.name} ${product.name} - ${product.gender}`}</h2>
                 <div className="list-group-flush col-5 product-list-group mt-2">

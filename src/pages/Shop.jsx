@@ -36,7 +36,6 @@ function Shop() {
       });
       setBrands(response.data);
     };
-
     getBrands();
     getProducts();
   }, [render, filterGender]);

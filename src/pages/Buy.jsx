@@ -4,7 +4,7 @@ import ItemToBuy from "../components/ItemToBuy";
 import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import truckCart from "../assets/truckCart.svg";
@@ -20,6 +20,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [number, setNumber] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   let totalPrice = 0;
   cartState.map(
@@ -31,6 +32,16 @@ function Buy({ setOrderAddress, setNumberPhone }) {
     setOrderAddress(`${address}, ${city}, ${country}`);
     setNumberPhone(number);
     navigate("/pay");
+  };
+
+  useEffect(() => {
+    if (cartState.length === 0) {
+      handleRedirect();
+    }
+  }, [cartState]);
+
+  const handleRedirect = () => {
+    navigate("/");
   };
 
   return (
@@ -113,7 +124,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                   type="submit"
                 >
                   <i className="bi bi-cart3 me-2"></i>
-                  Continue to shipping - USD {totalPrice}
+                  Continue to payment - USD {totalPrice}
                 </button>
               </div>
               <div className="d-flex w-100 justify-content-between mt-2">
