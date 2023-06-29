@@ -95,7 +95,7 @@ function NavbarSite() {
                 title={<>{`${user.firstname} ${user.lastname}`}</>}
                 menuVariant=""
               >
-                <NavDropdown.Item href="">My profile</NavDropdown.Item>
+                <NavDropdown.Item href="/profile">My profile</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/" onClick={handleLogout}>
                   Logout
@@ -148,21 +148,22 @@ function NavbarSite() {
                       <div className="btn-content btn-nav">{brand.name}</div>
                     </Link>
                     <ul className="list-unstyled m-0 ms-1">
-                      {lines.map(
-                        (line) =>
-                          line.brand.id === brand.id && (
-                            <Link
-                              key={line.id}
-                              className="border-0 mx-2 d-flex justify-content-start"
-                              to={`/${brand.slug}/lines/${line.slug}`}
-                              onClick={() => handleToggleOffcanvas()}
-                            >
-                              <li className="btn-content btn-nav">
-                                {line.name}
-                              </li>
-                            </Link>
-                          )
-                      )}
+                      {lines &&
+                        lines.map(
+                          (line) =>
+                            line.brand.id === brand.id && (
+                              <Link
+                                key={line.id}
+                                className="border-0 mx-2 d-flex justify-content-start"
+                                to={`/${brand.slug}/lines/${line.slug}`}
+                                onClick={() => handleToggleOffcanvas()}
+                              >
+                                <li className="btn-content btn-nav">
+                                  {line.name}
+                                </li>
+                              </Link>
+                            )
+                        )}
                     </ul>
                   </div>
                 ))}

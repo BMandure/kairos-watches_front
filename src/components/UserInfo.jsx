@@ -12,7 +12,7 @@ function UserInfo() {
   const [success, setSuccess] = useState(false);
   const [status, setStatus] = useState("");
 
-  const mail = user.email;
+  const username = user.email;
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -24,13 +24,14 @@ function UserInfo() {
           currentPassword,
           newPassword,
           password,
-          mail,
+          username,
         },
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
       });
       if (response.data.error === "Invalid credentials") {
+        console.log("no machea");
         return setStatus("Invalid credentials");
       }
       if (response.data.error === "Passwords not matching each other") {
