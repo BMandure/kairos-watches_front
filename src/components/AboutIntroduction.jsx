@@ -13,11 +13,10 @@ function AboutIntroduction() {
             <p className="about-intro-text">
               <strong>Kairos</strong> is the result of an integrative project
               carried out during the Coding Bootcamp at Hack Academy, which
-              involved more than 600 hours of practice over three months. We
-              were presented with the challenge of creating an e-commerce
-              platform within a three-week time limit. We chose high-end watches
-              as the industry, and we took <strong>MAEN Watches'</strong>{" "}
-              website as a reference.
+              involved more than 600 hours of practice over three months. The
+              challenge was to create an e-commerce within a three-week time
+              limit. We chose high-end watches as the category, and we took{" "}
+              <strong>MAEN Watches'</strong> website as a reference.
             </p>
             <p className="about-intro-text">
               The architecture of this project consists of a front-end for the
@@ -31,7 +30,7 @@ function AboutIntroduction() {
             Both the store and the administration page are{" "}
             <strong>Single Page Applications</strong> built with{" "}
             <strong>React</strong>, and we use a <strong>Redux</strong> store to
-            store the user's shopping cart and access token. The front-end makes
+            save the user's shopping cart and access token. The front-end makes
             AJAX calls to the <strong>Node.js-based</strong> back-end using the{" "}
             <strong>Axios</strong> library, which then queries the{" "}
             <strong>MongoDB</strong> database using the Mongoose ODM. The
