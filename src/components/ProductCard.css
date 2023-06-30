@@ -20,7 +20,7 @@
 }
 
 .product-img {
-  width: 100%;
+  margin: auto;
   object-fit: contain;
   height: 100%;
   border-radius: 0;
