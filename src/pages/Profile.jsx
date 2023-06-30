@@ -18,7 +18,7 @@ function Profile() {
         <Col xs={12} md={10} lg={10} className="px-4">
           <div>
             <Routes>
-              <Route path="/profile/user-info" element={<UserInfo />} />
+              <Route path="/user-info" element={<UserInfo />} />
               <Route path="/orders" element={<Orders />} />
             </Routes>
           </div>
