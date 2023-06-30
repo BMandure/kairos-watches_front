@@ -107,7 +107,7 @@ function Product() {
                 </Carousel>
               </div>
             </div>
-            <div className="col-12 col-lg-6 p-4 h-100 d-flex flex-column justify-content-between">
+            <div className="col-12 col-lg-6 p-4 d-flex flex-column justify-content-between">
               <div className="bg-transparent text-light d-flex flex-column justify-content-between">
                 <div className="d-flex justify-content-between ">
                   <button

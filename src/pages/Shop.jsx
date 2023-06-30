@@ -76,11 +76,15 @@ function Shop() {
     <>
       {" "}
       <Container className="shop-container">
-        <div className="shop-filter-container">
-          <div className="back-style mb-0 mt-auto d-flex align-items-bottom">
+        <Row className="shop-filter-container">
+          <Col
+            xs={12}
+            md={6}
+            className="back-style mb-0 mt-auto d-flex align-items-bottom"
+          >
             <BackButton link="/" text={"Home"} />
-          </div>
-          <div className="d-flex flex-column">
+          </Col>
+          <Col xs={12} md={6} className="d-flex flex-column">
             <p className="d-block">FILTER BY</p>
             <div className="d-flex">
               <Form className="d-flex gap-3">
@@ -144,8 +148,8 @@ function Shop() {
                 </Form.Group>
               </Form>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
         <Row>
           {products.length > 0 ? (
             products.map((product) => (

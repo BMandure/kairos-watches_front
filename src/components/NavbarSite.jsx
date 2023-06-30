@@ -77,7 +77,7 @@ function NavbarSite() {
             </Navbar.Brand>
           </div>
         </div>
-        <div className="login-container me-4">
+        <div className="login-container">
           {user === null ? (
             <Link to={"/login"} className="btn-kairos">
               <div className="btn-kairos-content">Login</div>
