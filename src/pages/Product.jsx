@@ -7,6 +7,8 @@ import { Tooltip } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../redux/cartSlice";
 import BackButton from "../components/BackButton";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Product() {
   const params = useParams();
@@ -21,6 +23,19 @@ function Product() {
   const text = "Out of the project's scope";
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
+
+  const notifyError = () => {
+    toast.error(text, {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -62,6 +77,9 @@ function Product() {
   const handleNext = () => {
     const nextProduct = products[productIndex + 1];
     navigate(`/product/${nextProduct.slug}`);
+  };
+  const handleClick = () => {
+    notifyError();
   };
 
   return (
@@ -197,15 +215,14 @@ function Product() {
                       : "Add To Cart"}
                   </button>
                 ) : (
-                  <div className="w-100 coming-soon p-4">
-                    Coming soon, stock available
-                  </div>
+                  <div className="w-100 coming-soon p-4">Coming soon</div>
                 )}
                 <div className="ms-4">
                   <i
                     className={`bi ${
                       hoverFav ? "bi-heart-fill" : "bi-heart"
                     } text-light heart`}
+                    onClick={handleClick}
                     onMouseEnter={() => setHoverFav(true)}
                     onMouseLeave={() => setHoverFav(false)}
                   ></i>
@@ -215,6 +232,7 @@ function Product() {
           </div>
         </div>
       )}
+      <ToastContainer />
     </>
   );
 }
