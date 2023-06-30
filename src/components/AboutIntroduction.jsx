@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import "./AboutIntroduction.css";
+import "./AboutIntroductionStyles.css";
 import MERModal from "./MERModal";
 import BackButton from "./BackButton";
 
