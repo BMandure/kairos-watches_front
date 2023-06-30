@@ -1,5 +1,5 @@
 import React from "react";
-import AboutIntroduction from "../components/aboutIntroduction";
+import AboutIntroduction from "../components/AboutIntroduction";
 import AboutTechnologies from "../components/AboutTechnologies";
 import AboutTeam from "../components/AboutTeam";
 import BackButton from "../components/BackButton";
