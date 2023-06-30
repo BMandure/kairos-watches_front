@@ -29,7 +29,7 @@ function Home() {
       <ButtonBanner
         buttonText="VIEW ALL WATCHES"
         link="/shop"
-        img="../assets/banner.png"
+        img="kairos-watches.vercel.app/src/assets/banner.png"
       />
       <FeaturedContainer />
       {brands && (
