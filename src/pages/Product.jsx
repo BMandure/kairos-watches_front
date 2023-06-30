@@ -68,7 +68,7 @@ function Product() {
     <>
       {product && (
         <div className="container product-container">
-          <div className="row d-flex justify-content-center align-items-center mt-4 p-4">
+          <div className="row d-flex justify-content-center align-items-center mt-4 p-4 w-100">
             <div className="col-12 col-lg-6 p-4">
               <div className="back-style">
                 <BackButton link="/shop" text="Shop" />
@@ -89,8 +89,8 @@ function Product() {
                 </Carousel>
               </div>
             </div>
-            <div className="col-12 col-lg-6 p-4">
-              <div className="bg-transparent text-light d-flex flex-column">
+            <div className="col-12 col-lg-6 p-4 h-100 d-flex flex-column justify-content-between">
+              <div className="bg-transparent text-light d-flex flex-column justify-content-between">
                 <div className="d-flex justify-content-between ">
                   <button
                     disabled={productIndex === 0}
@@ -115,72 +115,72 @@ function Product() {
                     )}`}</em>
                   </h2>
                 </div>
-                <div>
-                  <div className="row">
-                    <h4 className="">Select your upgrades</h4>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2 pe-auto">
-                      <Tooltip placement="top" title={text}>
-                        <div className="form-check mt-2 mb-2">
-                          <label
-                            className="form-check-label"
-                            htmlFor="flexRadioDefault1"
-                          >
-                            <h4>Black Tropic Strap</h4>
-                          </label>
-                          <input
-                            className="form-check-input "
-                            type="radio"
-                            name="flexRadioDefault"
-                            id="flexRadioDefault1"
-                          />
-                          <div>
-                            <h5>USD 39.20</h5>
-                          </div>
+              </div>
+              <div className="text-light">
+                <div className="row">
+                  <h4>Select your upgrades</h4>
+                  <div className="col-sm-12 col-md-3 col-lg-12 border rounded m-2 pe-auto">
+                    <Tooltip placement="top" title={text}>
+                      <div className="form-check mt-2 mb-2">
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault1"
+                        >
+                          <h4>Black Tropic Strap</h4>
+                        </label>
+                        <input
+                          className="form-check-input "
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <div>
+                          <h5>USD 39.20</h5>
                         </div>
-                      </Tooltip>
-                    </div>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
-                      <Tooltip placement="top" title={text}>
-                        <div className="form-check mt-2 mb-2">
-                          <label
-                            className="form-check-label"
-                            htmlFor="flexRadioDefault1"
-                          >
-                            <h4>Grey Tropic Strap</h4>
-                          </label>
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="flexRadioDefault"
-                            id="flexRadioDefault1"
-                          />
-                          <div>
-                            <h5>USD 39.20</h5>
-                          </div>
+                      </div>
+                    </Tooltip>
+                  </div>
+                  <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
+                    <Tooltip placement="top" title={text}>
+                      <div className="form-check mt-2 mb-2">
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault1"
+                        >
+                          <h4>Grey Tropic Strap</h4>
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <div>
+                          <h5>USD 39.20</h5>
                         </div>
-                      </Tooltip>
-                    </div>
-                    <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
-                      <Tooltip placement="top" title={text}>
-                        <div className="form-check mt-2 mb-2">
-                          <label
-                            className="form-check-label"
-                            htmlFor="flexRadioDefault1"
-                          >
-                            <h4>Black Nato Strap</h4>
-                          </label>
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="flexRadioDefault"
-                            id="flexRadioDefault1"
-                          />
-                          <div>
-                            <h5>USD 23.20</h5>
-                          </div>
+                      </div>
+                    </Tooltip>
+                  </div>
+                  <div className="col-sm-12 col-md-3 col-lg-12 border rounded  m-2 pe-auto">
+                    <Tooltip placement="top" title={text}>
+                      <div className="form-check mt-2 mb-2">
+                        <label
+                          className="form-check-label"
+                          htmlFor="flexRadioDefault1"
+                        >
+                          <h4>Black Nato Strap</h4>
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                        <div>
+                          <h5>USD 23.20</h5>
                         </div>
-                      </Tooltip>
-                    </div>
+                      </div>
+                    </Tooltip>
                   </div>
                 </div>
               </div>
