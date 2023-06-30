@@ -14,7 +14,7 @@ import check from "../assets/check.svg";
 
 import ItemCart from "./ItemCart";
 
-import "./Cart.css";
+import "./CartStyles.css";
 
 function Cart() {
   const [show, setShow] = useState(false);
