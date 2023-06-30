@@ -6,7 +6,7 @@ function Banner() {
     <>
       <div className="container-banner container-fluid">
         <video autoPlay loop muted className="banner-video">
-          <source src="src/assets/videoIntro.mov" type="video/mp4" />
+          <source src="src/assets/videoIntro.mp4" type="video/mp4" />
         </video>
       </div>
     </>
