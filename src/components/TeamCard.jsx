@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function TeamCard({ img, name, title, ghLink, ldLink }) {
   return (
-    <div className="card-team">
+    <div className="card-team mx-auto">
       <div className="card-info">
         <div className="card-avatar">
           <img className="card-img" src={img} alt="" />
