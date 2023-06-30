@@ -29,7 +29,7 @@ function Home() {
       <ButtonBanner
         buttonText="VIEW ALL WATCHES"
         link="/shop"
-        img="src/assets/banner.png"
+        img="../assets/banner.png"
       />
       <FeaturedContainer />
       {brands && (
