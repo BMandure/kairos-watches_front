@@ -95,7 +95,9 @@ function NavbarSite() {
                 title={<>{`${user.firstname} ${user.lastname}`}</>}
                 menuVariant=""
               >
-                <NavDropdown.Item href="/profile">My profile</NavDropdown.Item>
+                <NavDropdown.Item href="/profile/user-info">
+                  My profile
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/" onClick={handleLogout}>
                   Logout
