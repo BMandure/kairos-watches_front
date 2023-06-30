@@ -8,7 +8,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import FeaturedContainer from "../components/FeaturedContainer";
 
-import bannerAbout from "../src/assets/banner.png";
+import bannerAbout from "../assets/banner.png";
 
 function Home() {
   const [brands, setBrands] = useState(null);
