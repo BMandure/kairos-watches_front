@@ -38,7 +38,7 @@ function Router() {
         }
       />
       <Route element={<ProtectedRoute />}>
-        <Route path="/profile/user-info" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
         <Route
           path="/pay"
           element={
