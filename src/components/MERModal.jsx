@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import "./MERModal.css";
 
+import merImg from "../assets/mer.png";
+
 function MERModal() {
   const [showModal, setShowModal] = useState(false);
 
@@ -34,11 +36,7 @@ function MERModal() {
           MER
         </Modal.Header>
         <Modal.Body className="modal-content-article">
-          <img
-            src="src/assets/mer.png"
-            alt="MER Image"
-            className="w-100 h-100 border"
-          />
+          <img src={merImg} alt="MER Image" className="w-100 h-100 border" />
         </Modal.Body>
       </Modal>
     </>
