@@ -38,7 +38,7 @@ function FeaturedContainer() {
   }, []);
   return (
     <div className="featured-container">
-      <p className="featured-title">FEATURED PRODUCTS</p>
+      <p className="featured-title mt-5">FEATURED PRODUCTS</p>
       <AliceCarousel
         autoPlay={true}
         autoPlayInterval={3000}

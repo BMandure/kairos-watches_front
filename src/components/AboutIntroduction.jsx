@@ -7,7 +7,7 @@ import BackButton from "./BackButton";
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
-      <div className="back-style">
+      <div className="back-style px-4 mx-2 mb-2">
         <BackButton link="/" text={"Home"} />
       </div>
       <h2 className="about-intro-title p-0 px-4 mx-2">About The Project</h2>
