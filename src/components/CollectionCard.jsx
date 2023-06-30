@@ -7,7 +7,9 @@ function CollectionCard({ name, img, slug, lineSlug, imgLogo }) {
       to={`${lineSlug}`}
       className="collection-thumbnail-img"
       style={{
-        backgroundImage: `url(${import.meta.env.VITE_API_DOMAIN}${img})`,
+        backgroundImage: `url(${
+          import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL
+        }${img})`,
       }}
     >
       <div className="collection-background">
@@ -17,7 +19,9 @@ function CollectionCard({ name, img, slug, lineSlug, imgLogo }) {
             className={`logo-container mt-3 ${!imgLogo ? "d-none" : "d-block"}`}
           >
             <img
-              src={`${import.meta.env.VITE_API_DOMAIN}${imgLogo}`}
+              src={`${
+                import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL
+              }${imgLogo}`}
               alt=""
               className="brand-logo"
             />

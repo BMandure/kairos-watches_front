@@ -6,7 +6,7 @@ import SubBanner from "../components/SubBanner";
 import ButtonBanner from "../components/ButtonBanner";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import FeaturedContainer from "../components/featuredContainer";
+import FeaturedContainer from "../components/FeaturedContainer";
 
 function Home() {
   const [brands, setBrands] = useState(null);
@@ -41,7 +41,6 @@ function Home() {
             logo={brands[0].logo}
             link="/rolex/lines"
           />
-
           <BrandLeft
             name={brands[1].name}
             description={brands[1].description}
@@ -49,7 +48,6 @@ function Home() {
             videos={brands[1].video}
             link="/victorinox-swiss-army/lines"
           />
-
           <BrandRight
             name={brands[3].name}
             description={brands[3].description}
@@ -57,7 +55,6 @@ function Home() {
             logo={brands[3].logo}
             link="/omega/lines"
           />
-
           <BrandLeft
             name={brands[2].name}
             description={brands[2].description}

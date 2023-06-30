@@ -44,7 +44,6 @@ function ProductCard({ product }) {
       dispatch(deleteItem({ productId: product._id }));
     }
   };
-
   return (
     <>
       <Card className="product-card">
@@ -60,7 +59,7 @@ function ProductCard({ product }) {
           <Card.Img
             className="product-img"
             variant="top"
-            src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
+            src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_IMG_URL}${
               product.image[0]
             }`}
           />

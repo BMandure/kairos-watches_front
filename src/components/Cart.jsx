@@ -79,7 +79,9 @@ function Cart() {
               >
                 <i className="bi bi-cart3 me-2"></i>
                 <span className="px-2">Checkout</span>
-                <span className="px-2">USD {totalPrice}</span>
+                <span className="px-2">
+                  USD {new Intl.NumberFormat("de-DE").format(totalPrice)}
+                </span>
               </button>
             </Link>
             <div className="info-cart-container">

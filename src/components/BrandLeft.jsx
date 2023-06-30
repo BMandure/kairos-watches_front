@@ -22,7 +22,9 @@ function BrandLeft({ name, logo, description, videos, link }) {
                     className="brandLeft-carousel-video"
                   >
                     <source
-                      src={`${import.meta.env.VITE_API_DOMAIN}${video}`}
+                      src={`${
+                        import.meta.env.VITE_SUPABASE_PRODUCTS_VIDEOS_URL
+                      }${video}`}
                       type="video/mp4"
                     />
                   </video>
@@ -34,7 +36,7 @@ function BrandLeft({ name, logo, description, videos, link }) {
         <Col xs={{ span: 12, order: 1 }} lg={{ span: 6, order: 2 }}>
           <div className="brandLeft-info">
             <img
-              src={`${import.meta.env.VITE_API_DOMAIN}${logo}`}
+              src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL}${logo}`}
               alt={`${name} logo`}
               id="brandLeft-logo"
               className="img-fluid brandLeft-logo"

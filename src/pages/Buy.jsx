@@ -127,7 +127,8 @@ function Buy({ setOrderAddress, setNumberPhone }) {
                   type="submit"
                 >
                   <i className="bi bi-cart3 me-2"></i>
-                  Continue to payment - USD {totalPrice}
+                  Continue to payment - USD{" "}
+                  {new Intl.NumberFormat("de-DE").format(totalPrice)}
                 </button>
               </div>
               <div className="d-flex w-100 justify-content-between mt-2">

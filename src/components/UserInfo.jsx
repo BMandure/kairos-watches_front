@@ -70,7 +70,7 @@ function UserInfo() {
         <div className="user-info-fields w-75 pt-2 mx-auto">
           <Row className="form-container m-0 w-100">
             <Col xs={4}>
-              <p className="form-title info-field">Full name:</p>s
+              <p className="form-title info-field">Full name:</p>
               <p>
                 {userInfo.firstname} {userInfo.lastname}
               </p>

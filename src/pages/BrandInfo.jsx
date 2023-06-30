@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import { Col, Row } from "react-bootstrap";
-import BackButton from "../components/BackButton";
 
 function BrandInfo() {
   const params = useParams();
@@ -34,7 +33,9 @@ function BrandInfo() {
             <div className="brand-info-logo-container">
               <img
                 className="brand-info-logo"
-                src={`${import.meta.env.VITE_API_DOMAIN}${lines[0].brand.logo}`}
+                src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL}${
+                  lines[0].brand.logo
+                }`}
                 alt="brand-logo"
               />
             </div>

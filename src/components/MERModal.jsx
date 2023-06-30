@@ -26,8 +26,14 @@ function MERModal() {
         centered
         dialogClassName="modal-90w"
       >
-        <Modal.Header closeButton closeVariant="white"></Modal.Header>
-        <Modal.Body>
+        <Modal.Header
+          closeButton
+          closeVariant="white"
+          className="modal-content-article border-bottom-0"
+        >
+          MER
+        </Modal.Header>
+        <Modal.Body className="modal-content-article">
           <img
             src="src/assets/mer.png"
             alt="MER Image"

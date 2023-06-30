@@ -32,7 +32,9 @@ function ArticleModal({ article }) {
         >
           <img
             className="about-project-title-brand-modal"
-            src={`${import.meta.env.VITE_API_DOMAIN}${article.modalPic}`}
+            src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL}${
+              article.modalPic
+            }`}
             alt="brand-logo"
           />
         </Modal.Header>

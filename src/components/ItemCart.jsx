@@ -37,7 +37,7 @@ function ItemCart({ product }) {
         </div>
         <div className="img-item-cart-container">
           <img
-            src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
+            src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_IMG_URL}${
               product.image[0]
             }`}
             alt=""
@@ -66,7 +66,8 @@ function ItemCart({ product }) {
             </p>
           </div>
           <span className="my-1 fs-5 text-white">
-            USD {product.price * product.qty}
+            USD{" "}
+            {new Intl.NumberFormat("de-DE").format(product.price * product.qty)}
           </span>
         </div>
       </div>

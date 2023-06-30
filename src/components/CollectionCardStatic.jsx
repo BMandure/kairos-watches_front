@@ -11,7 +11,9 @@ function CollectionCardStatic({
     <div
       className="collection-thumbnail-img-static"
       style={{
-        backgroundImage: `url(${import.meta.env.VITE_API_DOMAIN}${img})`,
+        backgroundImage: `url(${
+          import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL
+        }${img})`,
       }}
     >
       <div className="collection-background">
@@ -21,8 +23,10 @@ function CollectionCardStatic({
             className={`logo-container mt-3 ${!imgLogo ? "d-none" : "d-block"}`}
           >
             <img
-              src={`${import.meta.env.VITE_API_DOMAIN}${imgLogo}`}
-              alt=""
+              src={`${
+                import.meta.env.VITE_SUPABASE_PRODUCTS_BRAND_URL
+              }${imgLogo}`}
+              alt="Brand Logo"
               className="brand-logo"
             />
           </div>

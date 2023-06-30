@@ -167,9 +167,6 @@ function Shop() {
           )}
         </Row>
       </Container>
-      <div className="mx-5">
-        <BackButton link="/" text="Home" />
-      </div>
     </>
   );
 }

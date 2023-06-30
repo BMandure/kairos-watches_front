@@ -47,7 +47,9 @@ function Product() {
         }/products?filterBrand=${filterBrand}`,
       });
       setProducts(response.data);
-      setProductIndex(response.data.findIndex((p) => p.id === product.id));
+      if (product) {
+        setProductIndex(response.data.findIndex((p) => p.id === product.id));
+      }
     };
     getProducts();
   }, [product]);
@@ -78,9 +80,9 @@ function Product() {
                       <img
                         className="img-carousel"
                         src={`${
-                          import.meta.env.VITE_API_DOMAIN
-                        }/img/products/${img}`}
-                        alt="..."
+                          import.meta.env.VITE_SUPABASE_PRODUCTS_IMG_URL
+                        }${img}`}
+                        alt="Product Image"
                       />
                     </Carousel.Item>
                   ))}
@@ -108,7 +110,9 @@ function Product() {
                 <h2 className="mt-2">{`${product.brand.name} ${product.line.name} ${product.name} - ${product.gender}`}</h2>
                 <div className="list-group-flush col-5 product-list-group mt-2">
                   <h2>
-                    <em>{`USD ${product.price}`}</em>
+                    <em>{`USD ${new Intl.NumberFormat("de-DE").format(
+                      product.price
+                    )}`}</em>
                   </h2>
                 </div>
                 <div>

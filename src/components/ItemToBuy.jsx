@@ -20,7 +20,7 @@ function ItemToBuy({ product }) {
         >
           <div style={{ width: "100%" }} className="my-auto">
             <img
-              src={`${import.meta.env.VITE_API_DOMAIN}/img/products/${
+              src={`${import.meta.env.VITE_SUPABASE_PRODUCTS_IMG_URL}${
                 product.image[0]
               }`}
               alt="product-img"
@@ -47,7 +47,12 @@ function ItemToBuy({ product }) {
             className="my-1 fs-5 text-white d-flex align-items-center justify-content-end"
             style={{ minWidth: "25%" }}
           >
-            <span>USD {product.price * product.qty}</span>
+            <span>
+              USD{" "}
+              {new Intl.NumberFormat("de-DE").format(
+                product.price * product.qty
+              )}
+            </span>
           </div>
         </div>
         <div className=" pe-3 pt-2">

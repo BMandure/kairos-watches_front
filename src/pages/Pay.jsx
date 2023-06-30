@@ -177,6 +177,7 @@ function Pay({ orderAddress, numberPhone }) {
                   </span>
                 </div>
                 <button className="buy-btn" type="submit">
+                  <i className="bi bi-cart3 me-2"></i>
                   Confirm Purchase
                 </button>
               </form>
