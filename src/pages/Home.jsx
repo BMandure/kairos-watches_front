@@ -8,6 +8,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import FeaturedContainer from "../components/FeaturedContainer";
 
+import bannerAbout from "../src/assets/banner.png";
+
 function Home() {
   const [brands, setBrands] = useState(null);
 
@@ -29,7 +31,7 @@ function Home() {
       <ButtonBanner
         buttonText="VIEW ALL WATCHES"
         link="/shop"
-        img="https://kairos-watches.vercel.app/src/assets/banner.png"
+        img={bannerAbout}
       />
       <FeaturedContainer />
       {brands && (
