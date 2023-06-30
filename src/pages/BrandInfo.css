@@ -49,7 +49,6 @@
   gap: 1.5px;
 }
 .background-logo-collections {
-  background-image: url("../src/assets/backgroundLogoCollections.jpeg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: right center;

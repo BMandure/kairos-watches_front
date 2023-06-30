@@ -5,6 +5,8 @@ import CollectionCard from "../components/CollectionCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import backgroundBrandInfo from "../assets/backgroundLogoCollections.jpeg";
+
 import { Col, Row } from "react-bootstrap";
 
 function BrandInfo() {
@@ -29,7 +31,10 @@ function BrandInfo() {
     lines && (
       <>
         <div className="brand-info-container">
-          <div className="background-logo-collections">
+          <div
+            className="background-logo-collections"
+            style={{ backgroundImage: `url(${backgroundBrandInfo})` }}
+          >
             <div className="brand-info-logo-container">
               <img
                 className="brand-info-logo"
