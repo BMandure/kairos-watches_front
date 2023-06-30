@@ -1,4 +1,4 @@
-import "./itemCart.css";
+import "./ItemCartStyles.css";
 import deleteProduct from "../assets/delete.svg";
 import add from "../assets/add.svg";
 import rest from "../assets/rest.svg";

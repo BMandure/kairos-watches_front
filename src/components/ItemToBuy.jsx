@@ -1,4 +1,4 @@
-import "./ItemToBuy.css";
+import "./ItemToBuyStyles.css";
 import deleteProduct from "../assets/delete.svg";
 
 import { useDispatch, useSelector } from "react-redux";
