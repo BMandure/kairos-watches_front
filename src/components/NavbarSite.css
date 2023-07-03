@@ -126,5 +126,6 @@ a {
 
 .dropdown-menu {
   border-radius: 0;
-  left: -25px !important;
+  left: -140px !important;
+  top: 30px !important;
 }

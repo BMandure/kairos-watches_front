@@ -85,20 +85,24 @@ function NavbarSite() {
           ) : (
             <div className="d-flex align-items-center justify-content-center gap-2">
               <div>
+                <span className="text-white me-2 d-none d-sm-inline">
+                  {user.firstname} {user.lastname}
+                </span>
                 <i className="bi bi-person-fill dropdown-style  text-light"></i>
               </div>
 
               <NavDropdown
                 className="text-white"
                 id="nav-dropdown-dark-example"
-                drop="down-centered"
-                title={<>{`${user.firstname} ${user.lastname}`}</>}
                 menuVariant=""
               >
+                <NavDropdown.Item className="d-sm-none">
+                  {user.firstname} {user.lastname}
+                </NavDropdown.Item>
+                <NavDropdown.Divider className="d-sm-none" />
                 <NavDropdown.Item href="/profile/user-info">
                   My profile
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
                 <NavDropdown.Item href="/" onClick={handleLogout}>
                   Logout
                 </NavDropdown.Item>
