@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import UserInfo from "../components/UserInfo";
 import "./Profile.css";
 import Orders from "../components/Orders";
+import Wishlist from "../components/Wishlist";
 
 function Profile() {
   const user = useSelector((state) => state.user);
@@ -20,6 +21,7 @@ function Profile() {
             <Routes>
               <Route path="/user-info" element={<UserInfo />} />
               <Route path="/orders" element={<Orders />} />
+              <Route path="/wishlist" element={<Wishlist />} />
             </Routes>
           </div>
         </Col>
