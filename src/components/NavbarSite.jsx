@@ -12,7 +12,7 @@ import { removeToken } from "../redux/userSlice";
 import { NavDropdown } from "react-bootstrap";
 import axios from "axios";
 
-function NavbarSite() {
+function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
   const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [brands, setBrands] = useState(null);
@@ -50,6 +50,11 @@ function NavbarSite() {
 
     getBrands();
     getLines();
+
+    if (firstLoad) {
+      handleShow();
+      setFirstLoad(false);
+    }
   }, []);
 
   return (
@@ -105,7 +110,7 @@ function NavbarSite() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/" onClick={handleLogout}>
                   Logout
-                </NavDropdown.Item>
+                </Link>
               </NavDropdown>
             </div>
           )}
