@@ -12,7 +12,7 @@ import { removeToken } from "../redux/userSlice";
 import { NavDropdown } from "react-bootstrap";
 import axios from "axios";
 
-function NavbarSite() {
+function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
   const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [brands, setBrands] = useState(null);
@@ -50,6 +50,11 @@ function NavbarSite() {
 
     getBrands();
     getLines();
+
+    if (firstLoad) {
+      handleShow();
+      setFirstLoad(false);
+    }
   }, []);
 
   return (
@@ -93,15 +98,21 @@ function NavbarSite() {
                 id="nav-dropdown-dark-example"
                 drop="down-centered"
                 title={<>{`${user.firstname} ${user.lastname}`}</>}
-                menuVariant=""
               >
-                <NavDropdown.Item href="/profile/user-info">
+                <Link
+                  to="/profile/user-info"
+                  className="px-2 text-black border-0"
+                >
                   My profile
-                </NavDropdown.Item>
+                </Link>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/" onClick={handleLogout}>
+                <Link
+                  to="/"
+                  className="px-2 text-black border-0"
+                  onClick={handleLogout}
+                >
                   Logout
-                </NavDropdown.Item>
+                </Link>
               </NavDropdown>
             </div>
           )}
