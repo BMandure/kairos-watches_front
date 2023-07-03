@@ -83,7 +83,7 @@ function Shop() {
             md={6}
             className="back-style mb-0 mt-auto d-flex align-items-bottom"
           >
-            <BackButton link="/" text={"Home"} />
+            <BackButton link="/" />
           </Col>
           <Col xs={12} md={6} className="filter-shop">
             <div className="filter-container">

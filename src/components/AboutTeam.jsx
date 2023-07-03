@@ -14,8 +14,8 @@ import joaquinImg from "../assets/joaquinFotoPerfil.jpeg";
 function AboutTeam() {
   return (
     <Container className="mt-4 team-container">
-      <h2 className="about-team-title  p-0 px-4">Our Team</h2>
-      <Row className="d-flex mt-2 px-2 justify-content-between g-4">
+      <h2 className="about-team-title text-center text-sm-start">Our Team</h2>
+      <Row className="d-flex mt-2 justify-content-between g-4">
         <TeamCard
           img={imgAugusto}
           name="Augusto"
