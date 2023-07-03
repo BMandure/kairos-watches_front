@@ -99,16 +99,21 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
               <NavDropdown
                 className="text-white"
                 id="nav-dropdown-dark-example"
-                menuVariant=""
+                drop="down-centered"
+                title={<>{`${user.firstname} ${user.lastname}`}</>}
               >
-                <NavDropdown.Item className="d-sm-none">
-                  {user.firstname} {user.lastname}
-                </NavDropdown.Item>
-                <NavDropdown.Divider className="d-sm-none" />
-                <NavDropdown.Item href="/profile/user-info">
+                <Link
+                  to="/profile/user-info"
+                  className="px-2 text-black border-0"
+                >
                   My profile
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/" onClick={handleLogout}>
+                </Link>
+                <NavDropdown.Divider />
+                <Link
+                  to="/"
+                  className="px-2 text-black border-0"
+                  onClick={handleLogout}
+                >
                   Logout
                 </Link>
               </NavDropdown>
