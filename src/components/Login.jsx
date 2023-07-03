@@ -6,6 +6,7 @@ import { setToken } from "../redux/userSlice";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import AdminButton from "./AdminButton";
 
 function Login() {
   const cart = useSelector((state) => state.cart);
@@ -124,6 +125,7 @@ function Login() {
             </Link>
           </strong>
         </p>
+        <AdminButton link="https://kairoswatches-admin.vercel.app/" />
       </div>
     </div>
   );

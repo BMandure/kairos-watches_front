@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-
+import AdminButton from "./AdminButton";
 import "./AboutIntroductionStyles.css";
 import MERModal from "./MERModal";
 import BackButton from "./BackButton";
@@ -7,8 +7,8 @@ import BackButton from "./BackButton";
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
-      <div className="back-style px-4 mx-2 mb-2">
-        <BackButton link="/" text={"Home"} />
+      <div className="back-style px-4 mx-2 mb-2 d-flex align-items-end justify-content-between w-100">
+        <BackButton link="/" text={"Home"} /> <AdminButton />
       </div>
       <h2 className="about-intro-title p-0 px-4 mx-2">About The Project</h2>
       <Row className="mx-2 mt-4 text-center">

@@ -134,3 +134,7 @@
   line-height: 1rem;
   color: var(--color-white);
 }
+
+.btn-text {
+  text-transform: none;
+}
