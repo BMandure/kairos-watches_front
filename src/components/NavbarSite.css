@@ -126,6 +126,19 @@ a {
 
 .dropdown-menu {
   border-radius: 0;
-  left: -140px !important;
+  left: -40px !important;
   top: 30px !important;
+}
+
+.dropdown-menu-profile {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 14px;
+}
+
+@media screen and (max-width: 576px) {
+  .dropdown-menu {
+    left: -120px !important;
+  }
 }

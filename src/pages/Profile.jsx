@@ -21,7 +21,6 @@ function Profile() {
             <Routes>
               <Route path="/user-info" element={<UserInfo />} />
               <Route path="/orders" element={<Orders />} />
-              <Route path="/wishlist" element={<Wishlist />} />
             </Routes>
           </div>
         </Col>

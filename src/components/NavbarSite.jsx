@@ -89,28 +89,28 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
             </Link>
           ) : (
             <div className="d-flex align-items-center justify-content-center gap-2">
-              <div>
-                <span className="text-white me-2 d-none d-sm-inline">
-                  {user.firstname} {user.lastname}
-                </span>
-                <i className="bi bi-person-fill dropdown-style  text-light"></i>
-              </div>
-
               <NavDropdown
                 className="text-white"
                 id="nav-dropdown-dark-example"
                 drop="down-centered"
+                title={
+                  <>
+                    <span className="text-white me-2 d-none d-sm-inline">
+                      {user.firstname} {user.lastname}
+                    </span>
+                    <i className="bi bi-person-fill dropdown-style  text-light"></i>
+                  </>
+                }
               >
                 <NavDropdown.Item disabled className="text-black d-sm-none">
                   {user.firstname} {user.lastname}
                 </NavDropdown.Item>
                 <NavDropdown.Divider className="d-sm-none" />
-                <NavDropdown.Item>
+                <div className="dropdown-menu-profile">
                   <Link to="/profile/user-info" className="text-black border-0">
                     My profile
                   </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
+
                   <Link
                     to="/"
                     className="text-black border-0"
@@ -118,7 +118,7 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
                   >
                     Logout
                   </Link>
-                </NavDropdown.Item>
+                </div>
               </NavDropdown>
             </div>
           )}
