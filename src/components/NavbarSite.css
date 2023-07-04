@@ -137,6 +137,18 @@ a {
   gap: 14px;
 }
 
+.btn-reset {
+  display: flex;
+  align-self: end;
+  position: fixed;
+  bottom: 2rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+  font-size: 1.2rem;
+  height: auto;
+}
+
 @media screen and (max-width: 576px) {
   .dropdown-menu {
     left: -120px !important;
