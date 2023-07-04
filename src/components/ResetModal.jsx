@@ -1,17 +1,19 @@
+import axios from "axios";
 import Modal from "react-bootstrap/Modal";
 
 function ResetModal({ handleShow, handleClose, show }) {
-  const resetDB = async () => {
-    const response = await axios({
-      method: "GET",
-      url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
-    });
-    handleClose();
-  };
   const handleReset = () => {
+    const resetDB = async () => {
+      await axios({
+        method: "GET",
+        url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
+      });
+      console.log("se corrio el reset");
+      handleClose();
+    };
     resetDB();
-    handleClose();
   };
+
   return (
     <>
       <Modal
