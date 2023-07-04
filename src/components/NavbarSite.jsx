@@ -12,7 +12,7 @@ import { removeToken } from "../redux/userSlice";
 import { NavDropdown } from "react-bootstrap";
 import axios from "axios";
 
-function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
+function NavbarSite({ handleShow }) {
   const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [brands, setBrands] = useState(null);
@@ -50,11 +50,6 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
 
     getBrands();
     getLines();
-
-    if (firstLoad) {
-      handleShow();
-      setFirstLoad(false);
-    }
   }, []);
 
   return (
@@ -89,30 +84,36 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
             </Link>
           ) : (
             <div className="d-flex align-items-center justify-content-center gap-2">
-              <div>
-                <i className="bi bi-person-fill dropdown-style  text-light"></i>
-              </div>
-
               <NavDropdown
                 className="text-white"
                 id="nav-dropdown-dark-example"
                 drop="down-centered"
-                title={<>{`${user.firstname} ${user.lastname}`}</>}
+                title={
+                  <>
+                    <span className="text-white me-2 d-none d-sm-inline">
+                      {user.firstname} {user.lastname}
+                    </span>
+                    <i className="bi bi-person-fill dropdown-style  text-light"></i>
+                  </>
+                }
               >
-                <Link
-                  to="/profile/user-info"
-                  className="px-2 text-black border-0"
-                >
-                  My profile
-                </Link>
-                <NavDropdown.Divider />
-                <Link
-                  to="/"
-                  className="px-2 text-black border-0"
-                  onClick={handleLogout}
-                >
-                  Logout
-                </Link>
+                <NavDropdown.Item disabled className="text-black d-sm-none">
+                  {user.firstname} {user.lastname}
+                </NavDropdown.Item>
+                <NavDropdown.Divider className="d-sm-none" />
+                <div className="dropdown-menu-profile">
+                  <Link to="/profile/user-info" className="text-black border-0">
+                    My profile
+                  </Link>
+
+                  <Link
+                    to="/"
+                    className="text-black border-0"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Link>
+                </div>
               </NavDropdown>
             </div>
           )}

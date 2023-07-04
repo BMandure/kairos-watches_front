@@ -10,13 +10,13 @@ function Sidemenu() {
             className="justify-content-start fw-bold btn-nav"
             to="/profile/user-info"
           >
-            My information
+            Personal Info
           </Link>{" "}
           <Link
             className="justify-content-start fw-bold btn-nav mt-3"
             to="/profile/orders"
           >
-            My orders
+            My Orders
           </Link>
         </div>
       </div>

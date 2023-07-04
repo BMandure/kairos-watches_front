@@ -89,7 +89,7 @@ function Product() {
           <div className="row d-flex justify-content-center align-items-center mt-4 p-4 w-100">
             <div className="col-12 col-lg-6 p-4">
               <div className="back-style">
-                <BackButton link="/shop" text="Shop" />
+                <BackButton link="/shop" />
               </div>
               <div>
                 <Carousel indicators={true}>
