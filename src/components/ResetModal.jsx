@@ -9,7 +9,7 @@ function ResetModal({ handleShow, handleClose, show }) {
     handleClose();
   };
   const handleReset = () => {
-    resetDB;
+    resetDB();
     handleClose();
   };
   return (
