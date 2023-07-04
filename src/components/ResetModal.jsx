@@ -2,18 +2,15 @@ import axios from "axios";
 import Modal from "react-bootstrap/Modal";
 
 function ResetModal({ handleClose, show }) {
-  const handleReset = () => {
-    const resetDB = async () => {
-      console.log("se va a hacer la llamada");
-      await axios({
-        method: "GET",
-        url: `${import.meta.VITE_API_DOMAIN}/reset`,
-      });
-      console.log("se hizo la llamada");
-    };
-    return resetDB();
+  const handleReset = async () => {
+    console.log("se va a hacer la llamada");
+    await axios({
+      method: "GET",
+      url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
+    });
+    console.log("se hizo la llamada");
   };
-
+  console.log(`${import.meta.env.VITE_API_DOMAIN}/reset`);
   return (
     <>
       <Modal

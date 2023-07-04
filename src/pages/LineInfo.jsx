@@ -61,16 +61,17 @@ function LineInfo() {
                 <BackButton link="/" text="Home" />
               </div>
               <Row>
-                {products.map((product) => (
-                  <Col
-                    key={product.id}
-                    xs={{ span: 10, offset: 1 }}
-                    md={{ span: 6, offset: 0 }}
-                    lg={{ span: 3, offset: 0 }}
-                  >
-                    <ProductCard product={product} />
-                  </Col>
-                ))}
+                {products.lenght > 0 &&
+                  products.map((product) => (
+                    <Col
+                      key={product.id}
+                      xs={{ span: 10, offset: 1 }}
+                      md={{ span: 6, offset: 0 }}
+                      lg={{ span: 3, offset: 0 }}
+                    >
+                      <ProductCard product={product} />
+                    </Col>
+                  ))}
               </Row>
             </Container>
           </div>

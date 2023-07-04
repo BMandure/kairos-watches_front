@@ -24,9 +24,12 @@ function FeaturedContainer() {
         method: "GET",
         url: `${import.meta.env.VITE_API_DOMAIN}/products`,
       });
+      console.log(response.data);
+
       const responseFiltered = response.data.filter(
         (product) => product.trending === true
       );
+
       responseFiltered.map((product, i) =>
         setItems((prevItems) => [
           ...prevItems,
@@ -37,19 +40,21 @@ function FeaturedContainer() {
     getTrendings();
   }, []);
   return (
-    <div className="featured-container">
-      <p className="featured-title mt-5">FEATURED PRODUCTS</p>
-      <AliceCarousel
-        autoPlay={true}
-        autoPlayInterval={3000}
-        disableDotsControls
-        mouseTracking
-        items={items}
-        responsive={responsive}
-        controlsStrategy="alternate"
-        infinite={true}
-      />
-    </div>
+    items.length > 0 && (
+      <div className="featured-container">
+        <p className="featured-title mt-5">FEATURED PRODUCTS</p>
+        <AliceCarousel
+          autoPlay={true}
+          autoPlayInterval={3000}
+          disableDotsControls
+          mouseTracking
+          items={items}
+          responsive={responsive}
+          controlsStrategy="alternate"
+          infinite={true}
+        />
+      </div>
+    )
   );
 }
 
