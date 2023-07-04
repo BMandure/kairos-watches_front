@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 
 function AdminButton() {
   return (
-    <Link to="https://kairoswatches-admin.vercel.app/">
+    <a
+      href="https://kairoswatches-admin.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div className="btn-add-cart ">
         <div className="btn-kairos-content text-center btn-text">
           Admin Site
         </div>
       </div>
-    </Link>
+    </a>
   );
 }
 

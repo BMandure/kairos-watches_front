@@ -125,7 +125,7 @@ function Login() {
             </Link>
           </strong>
         </p>
-        <AdminButton link="https://kairoswatches-admin.vercel.app/" />
+        <AdminButton />
       </div>
     </div>
   );
