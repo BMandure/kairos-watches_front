@@ -88,7 +88,7 @@ function AboutTechnologies() {
         <Col xs={6} md={4} lg={2} className="tech-container">
           <div className="technology-card">
             <img className="tech-img" src={mongoose} alt="tech-vercel-icon" />
-            Express
+            Mongoose
           </div>
         </Col>
       </Row>
