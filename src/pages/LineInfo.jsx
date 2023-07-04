@@ -58,20 +58,19 @@ function LineInfo() {
           <div className="d-flex flex-column">
             <Container className="shop-container">
               <div className="back-style">
-                <BackButton link="/" text="Home" />
+                <BackButton link={`/${brandSlug}/lines`} text="back" />
               </div>
               <Row>
-                {products.lenght > 0 &&
-                  products.map((product) => (
-                    <Col
-                      key={product.id}
-                      xs={{ span: 10, offset: 1 }}
-                      md={{ span: 6, offset: 0 }}
-                      lg={{ span: 3, offset: 0 }}
-                    >
-                      <ProductCard product={product} />
-                    </Col>
-                  ))}
+                {products.map((product) => (
+                  <Col
+                    key={product.id}
+                    xs={{ span: 10, offset: 1 }}
+                    md={{ span: 6, offset: 0 }}
+                    lg={{ span: 3, offset: 0 }}
+                  >
+                    <ProductCard product={product} />
+                  </Col>
+                ))}
               </Row>
             </Container>
           </div>

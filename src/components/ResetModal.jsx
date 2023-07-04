@@ -1,16 +1,23 @@
 import axios from "axios";
+import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function ResetModal({ handleClose, show }) {
+  const [statusMsg, setStatusMsg] = useState("");
   const handleReset = async () => {
     console.log("se va a hacer la llamada");
-    await axios({
+    const response = await axios({
       method: "GET",
       url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
     });
+
+    setStatusMsg(response.data);
+
     console.log("se hizo la llamada");
   };
-  console.log(`${import.meta.env.VITE_API_DOMAIN}/reset`);
+
+  console.log(statusMsg);
+
   return (
     <>
       <Modal

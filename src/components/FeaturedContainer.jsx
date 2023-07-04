@@ -24,7 +24,6 @@ function FeaturedContainer() {
         method: "GET",
         url: `${import.meta.env.VITE_API_DOMAIN}/products`,
       });
-      console.log(response.data);
 
       const responseFiltered = response.data.filter(
         (product) => product.trending === true
