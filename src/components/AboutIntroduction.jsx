@@ -7,7 +7,9 @@ import BackButton from "./BackButton";
 function AboutIntroduction() {
   return (
     <Container className="about-intro-banner">
-      <BackButton link="/" text={"Home"} />
+      <div className="back-style d-flex align-items-center justify-content-between w-100">
+        <BackButton link="/" text={"Home"} /> <AdminButton />
+      </div>
 
       <h2 className="about-intro-title px-0 text-center text-sm-start">
         About The Project
