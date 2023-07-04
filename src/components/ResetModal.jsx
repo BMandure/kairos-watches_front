@@ -1,17 +1,17 @@
 import axios from "axios";
 import Modal from "react-bootstrap/Modal";
 
-function ResetModal({ handleShow, handleClose, show }) {
+function ResetModal({ handleClose, show }) {
   const handleReset = () => {
     const resetDB = async () => {
+      console.log("se va a hacer la llamada");
       await axios({
         method: "GET",
-        url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
+        url: `${import.meta.VITE_API_DOMAIN}/reset`,
       });
-      console.log("se corrio el reset");
-      handleClose();
+      console.log("se hizo la llamada");
     };
-    resetDB();
+    return resetDB();
   };
 
   return (
@@ -33,12 +33,8 @@ function ResetModal({ handleShow, handleClose, show }) {
           For a better experience you may want to reset the database.
         </Modal.Body>
         <Modal.Footer className="modal-content-article border-top-0">
-          <div className="btn-kairos pointer">
-            <div
-              variant="primary"
-              className="btn-kairos-content"
-              onClick={handleReset}
-            >
+          <div className="btn-kairos pointer" onClick={handleReset}>
+            <div variant="primary" className="btn-kairos-content">
               Reset Database
             </div>
           </div>
