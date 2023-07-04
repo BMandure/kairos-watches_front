@@ -8,8 +8,6 @@ import Cart from "./components/Cart";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ResetModal from "./components/ResetModal";
-import useSelection from "antd/es/table/hooks/useSelection";
 
 function App() {
   const location = useLocation();
@@ -17,7 +15,6 @@ function App() {
   const dispatch = useDispatch();
 
   const [modalShow, setModalShow] = useState(true);
-  const [firstLoad, setFirstLoad] = useState(true);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -29,15 +26,10 @@ function App() {
 
   return (
     <div className="app">
-      <NavbarSite
-        handleShow={handleShow}
-        setFirstLoad={setFirstLoad}
-        firstLoad={firstLoad}
-      />
+      <NavbarSite handleShow={handleShow} />
       <Router />
       {cartState.length > 0 && <Cart />}
       <Footer />
-      <ResetModal show={show} handleClose={handleClose} />
     </div>
   );
 }

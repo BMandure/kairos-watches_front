@@ -12,7 +12,7 @@ import { removeToken } from "../redux/userSlice";
 import { NavDropdown } from "react-bootstrap";
 import axios from "axios";
 
-function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
+function NavbarSite({ handleShow }) {
   const user = useSelector((state) => state.user);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const [brands, setBrands] = useState(null);
@@ -50,11 +50,6 @@ function NavbarSite({ handleShow, setFirstLoad, firstLoad }) {
 
     getBrands();
     getLines();
-
-    if (firstLoad) {
-      handleShow();
-      setFirstLoad(false);
-    }
   }, []);
 
   return (
