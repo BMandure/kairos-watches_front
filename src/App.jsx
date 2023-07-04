@@ -16,6 +16,8 @@ function App() {
 
   const [modalShow, setModalShow] = useState(true);
 
+  const [firstLoad, setFirstLoad] = useState(true);
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -24,9 +26,21 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (firstLoad) {
+      handleShow();
+      setFirstLoad(false);
+    }
+  }, [firstLoad]);
+
   return (
     <div className="app">
-      <NavbarSite handleShow={handleShow} />
+      <NavbarSite
+        handleShow={handleShow}
+        firstLoad={firstLoad}
+        handleClose={handleClose}
+        show={show}
+      />
       <Router />
       {cartState.length > 0 && <Cart />}
       <Footer />
