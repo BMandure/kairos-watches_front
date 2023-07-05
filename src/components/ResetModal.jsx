@@ -7,7 +7,7 @@ function ResetModal({ handleClose, show }) {
   const handleReset = async () => {
     console.log("se va a hacer la llamada");
     const response = await axios({
-      method: "GET",
+      method: "PATCH",
       url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
     });
 
