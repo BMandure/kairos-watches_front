@@ -43,7 +43,11 @@ function LineInfo() {
   }, [line]);
 
   return (
-    line && (
+    line &&
+    line[0] &&
+    line[0].name &&
+    line[0].image &&
+    line[0].brand.logo && (
       <>
         {" "}
         <div className="brand-info-container">
