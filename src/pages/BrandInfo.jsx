@@ -28,7 +28,9 @@ function BrandInfo() {
   }, [slug]);
 
   return (
-    lines && (
+    lines &&
+    lines[0] &&
+    lines[0].brand && (
       <>
         <div className="brand-info-container">
           <div
