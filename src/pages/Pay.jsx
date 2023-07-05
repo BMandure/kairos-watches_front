@@ -146,17 +146,19 @@ function Pay({ orderAddress, numberPhone }) {
                     <label className="w-100">Expiry Date / CVV</label>
                     <div className="d-flex justify-content-between w-100">
                       <input
-                        type="text"
-                        placeholder="00/00"
+                        type="month"
+                        placeholder="12/25"
                         name="expiryDate"
                         id="expiryDate"
                         value={expiryDate}
                         onChange={(event) => setExpiryDate(event.target.value)}
-                        className="w-75 "
+                        className="w-75"
                         required
                       />
                       <input
-                        type="text"
+                        type="number"
+                        size="3"
+                        max="999"
                         placeholder="000"
                         name="cvv"
                         id="cvv"

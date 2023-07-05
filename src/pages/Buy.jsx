@@ -70,7 +70,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
               <p className="text-white fs-5 mb-2">Shipping address</p>
               <div className="input-group">
                 <input
-                  type="country"
+                  type="text"
                   name="country"
                   id="country"
                   onChange={(event) => setCountry(event.target.value)}
@@ -81,7 +81,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
               </div>
               <div className="input-group mt-2">
                 <input
-                  type="city"
+                  type="text"
                   name="city"
                   id="city"
                   onChange={(event) => setCity(event.target.value)}
@@ -92,7 +92,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
               </div>
               <div className="input-group mt-2">
                 <input
-                  type="address"
+                  type="text"
                   name="address"
                   id="address"
                   onChange={(event) => setAddress(event.target.value)}
@@ -103,7 +103,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
               </div>
               <div className="input-group mt-2">
                 <input
-                  type="postalCode"
+                  type="number"
                   name="postalCode"
                   id="postalCode"
                   placeholder="Postal code"
@@ -112,7 +112,7 @@ function Buy({ setOrderAddress, setNumberPhone }) {
               </div>
               <div className="input-group mt-2">
                 <input
-                  type="phone"
+                  type="tel"
                   name="phone"
                   id="phone"
                   value={number}
