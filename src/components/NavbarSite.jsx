@@ -187,9 +187,9 @@ function NavbarSite({ firstLoad, handleClose, show }) {
                     </div>
                   ))}
               </Nav>
-              <div className="btn-kairos pointer btn-reset">
+              {/*               <div className="btn-kairos pointer btn-reset">
                 <div className="btn-kairos-content">Reset Database</div>
-              </div>
+              </div> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
