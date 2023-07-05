@@ -32,7 +32,7 @@ function ResetModal({ handleClose, show }) {
           closeVariant="white"
           className="modal-content-article "
         >
-          <Modal.Title>Welcome to Kairos!</Modal.Title>
+          <Modal.Title>Welcome to Karios!</Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal-content-article p-40">
           For a better experience you may want to reset the database.
