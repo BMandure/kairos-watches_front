@@ -3,14 +3,13 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function ResetModal({ handleClose, show }) {
-  const [statusMsg, setStatusMsg] = useState("");
   const handleReset = async () => {
     const response = await axios({
       method: "PATCH",
       url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
     });
 
-    setStatusMsg(response.data);
+    handleClose();
   };
 
   return (
