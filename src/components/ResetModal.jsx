@@ -14,7 +14,6 @@ function ResetModal({ handleClose, show }) {
     setStatusMsg(response.data);
 
     console.log("se hizo la llamada");
-    handleClose();
   };
 
   console.log(statusMsg);
