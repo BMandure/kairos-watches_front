@@ -31,6 +31,14 @@ function NavbarSite({ firstLoad, handleClose, show }) {
 
     navigate("/");
   }
+  const handleReset = async () => {
+    const response = await axios({
+      method: "PATCH",
+      url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
+    });
+
+    handleToggleOffcanvas();
+  };
 
   useEffect(() => {
     const getBrands = async () => {
@@ -187,7 +195,10 @@ function NavbarSite({ firstLoad, handleClose, show }) {
                     </div>
                   ))}
               </Nav>
-              <div className="btn-kairos pointer btn-reset">
+              <div
+                className="btn-kairos pointer btn-reset"
+                onClick={handleReset}
+              >
                 <div className="btn-kairos-content">Reset Database</div>
               </div>
             </Offcanvas.Body>
