@@ -5,18 +5,13 @@ import Modal from "react-bootstrap/Modal";
 function ResetModal({ handleClose, show }) {
   const [statusMsg, setStatusMsg] = useState("");
   const handleReset = async () => {
-    console.log("se va a hacer la llamada");
     const response = await axios({
-      method: "GET",
+      method: "PATCH",
       url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
     });
 
     setStatusMsg(response.data);
-
-    console.log("se hizo la llamada");
   };
-
-  console.log(statusMsg);
 
   return (
     <>
@@ -31,7 +26,7 @@ function ResetModal({ handleClose, show }) {
           closeVariant="white"
           className="modal-content-article "
         >
-          <Modal.Title>Welcome to Karios!</Modal.Title>
+          <Modal.Title>Welcome to Kairos!</Modal.Title>
         </Modal.Header>
         <Modal.Body className="modal-content-article p-40">
           For a better experience you may want to reset the database.
