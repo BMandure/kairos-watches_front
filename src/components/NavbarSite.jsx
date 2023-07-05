@@ -194,7 +194,7 @@ function NavbarSite({ firstLoad, handleClose, show }) {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-      <ResetModal handleClose={handleClose} show={show} />
+      {/* <ResetModal handleClose={handleClose} show={show} /> */}
     </>
   );
 }
