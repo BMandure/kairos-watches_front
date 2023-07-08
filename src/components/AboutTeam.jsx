@@ -6,7 +6,7 @@ import "./AboutTeam.css";
 
 import img from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
 import imgAugusto from "../assets/Augusto.jpg";
-import maxiImg from "../assets/IMG_9221-PhotoRoom.png-PhotoRoom.png";
+import maxiImg from "../assets/IMG_6619-PhotoRoom.png-PhotoRoom.png";
 import brunoImg from "../assets/fotoBruno.jpg";
 import gastonImg from "../assets/gastonFotoPerfil.png";
 import joaquinImg from "../assets/joaquinFotoPerfil.jpeg";
