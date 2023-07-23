@@ -73,7 +73,7 @@ function Footer() {
         </Col>
         <Col xs={12} md={6} lg={4} lg-offset={4}>
           <p className="footer-text-copy-names">
-            © 2022 Joaquin González, Gastón Laffitte, Augusto Riccardi,
+            © 2023 Joaquin González, Gastón Laffitte, Augusto Riccardi,
             Maximiliano Quintana & Bruno Manduré.
           </p>
         </Col>
