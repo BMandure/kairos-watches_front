@@ -3,13 +3,17 @@ import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function ResetModal({ handleClose, show }) {
-  const handleReset = async () => {
-    const response = await axios({
-      method: "PATCH",
-      url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
-    });
+  const [textReset, setTextReset] = useState("Reset Database");
 
-    handleClose();
+  const handleReset = async () => {
+    if (textReset !== "Please wait...") {
+      setTextReset("Please wait...");
+      const response = await axios({
+        method: "PATCH",
+        url: `${import.meta.env.VITE_API_DOMAIN}/reset`,
+      });
+      handleClose();
+    }
   };
 
   return (
@@ -33,7 +37,7 @@ function ResetModal({ handleClose, show }) {
         <Modal.Footer className="modal-content-article border-top-0">
           <div className="btn-kairos pointer" onClick={handleReset}>
             <div variant="primary" className="btn-kairos-content">
-              Reset Database
+              {textReset}
             </div>
           </div>
         </Modal.Footer>
